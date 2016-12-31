@@ -32,7 +32,7 @@ type: page
 
 #### 给我留言
 
-<form action="https://getsimpleform.com/messages?form_api_token=970b952628537ad7a2e389fdd91bd127" method="post">
+<form action="https://getsimpleform.com/messages?form_api_token=635207fe87a9b8e111b6790052148d41" method="post">
   <!-- the redirect_to is optional, the form will redirect to the referrer on submission -->
   <input type='hidden' name='redirect_to' value='{{ site.url }}/page/5thankyou'  />
   <!-- all your input fields here.... -->
