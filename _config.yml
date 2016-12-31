@@ -6,24 +6,24 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-title: HyG
-brief-intro: Front-end Dev Engineer
+title: TmmGeek
+brief-intro: Artificial Intelligence and Big Data Developer
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://gaohaoyang.github.io" # the base hostname & protocol for your site
 
 permalink: /:year/:month/:day/:title/
 
 # other links
-twitter_username: gaohaoyang126
+twitter_username: JizongLiang
 facebook_username: gaohaoyang.water
-github_username:  Gaohaoyang
-email: gaohaoyang126@126.com
-weibo_username: 3115521wh
+github_username:  JizongL
+email: 2015rpro@gmail.com
+weibo_username: CindeFella
 zhihu_username: gaohaoyang
-linkedIn_username: gaohaoyang
+linkedIn_username: jizongliang
 dribbble_username:
 
-description_footer: 本站记录我前端之旅的沿途风景！
+description_footer: Computer and Math related
 
 # comments
 # two ways to comment, only choose one, and use your own short name
@@ -40,6 +40,9 @@ google_analytics_id: UA-72449510-4 # google 分析追踪id
 
 # Build settings
 markdown: kramdown
+
+redcarpet: 
+extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "strikethrough", "superscript", "with_toc_data"]
 
 kramdown:
   input: GFM
