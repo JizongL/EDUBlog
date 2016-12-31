@@ -9,34 +9,34 @@
 title: TmmGeek
 brief-intro: Artificial Intelligence and Big Data Developer
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://gaohaoyang.github.io" # the base hostname & protocol for your site
+url: "http://www.tmmlab.com/TmmGeekBlog/" # the base hostname & protocol for your site
 
 permalink: /:year/:month/:day/:title/
 
 # other links
 twitter_username: JizongLiang
-facebook_username: gaohaoyang.water
+facebook_username: jizong.liang
 github_username:  JizongL
 email: 2015rpro@gmail.com
-weibo_username: CindeFella
-zhihu_username: gaohaoyang
+weibo_username: ΤmmGeek
+zhihu_username: TmmGeek
 linkedIn_username: jizongliang
-dribbble_username:
+dribbble_username: JizongLiang
 
 description_footer: Computer and Math related
 
 # comments
 # two ways to comment, only choose one, and use your own short name
 # 两种评论插件，选一个就好了，使用自己的 short_name
-duoshuo_shortname: hygblog
+duoshuo_shortname: tmmgeek
 disqus_shortname: #gaohaoyang
 
 # statistic analysis 统计代码
 # 百度统计 id，将统计代码替换为自己的百度统计id，即
 # hm.src = "//hm.baidu.com/hm.js?xxxxxxxxxxxx";
 # xxxxx字符串
-baidu_tongji_id: cf8506e0ef223e57ff6239944e5d46a4
-google_analytics_id: UA-72449510-4 # google 分析追踪id
+## baidu_tongji_id: cf8506e0ef223e57ff6239944e5d46a4
+google_analytics_id: UA-89660816-1 # google 分析追踪id
 
 # Build settings
 markdown: kramdown
