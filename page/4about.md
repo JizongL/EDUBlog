@@ -23,17 +23,6 @@ type: page
 
 ## 联系我
 
-## Contact form
-
-<form action="https://getsimpleform.com/messages?form_api_token=970b952628537ad7a2e389fdd91bd127" method="post">
-  <!-- the redirect_to is optional, the form will redirect to the referrer on submission -->
-  <input type='hidden' name='redirect_to' value='{{ site.url }}{{ site.baseurl }}/page/5thankyou/index.html'  />
-  <!-- all your input fields here.... -->
-  <input type='text' name='test' />
-  <textarea name="message" placeholder="Enter your message here..." id="message" cols="30" rows="7"></textarea>
-  <input type='submit' value='Test form' />
-</form>
-
 * GitHub：[JizongL](https://github.com/JizongL)
 * email：2015rpro@gmail.com
 * [Weibo](http://weibo.com/1884297404)
@@ -41,7 +30,17 @@ type: page
 * [Facebook](https://www.facebook.com/jizong.liang)
 * [Twitter](https://twitter.com/JizongLiang)
 
+#### 给我留言
 
+<form action="https://getsimpleform.com/messages?form_api_token=970b952628537ad7a2e389fdd91bd127" method="post">
+  <!-- the redirect_to is optional, the form will redirect to the referrer on submission -->
+  <input type='hidden' name='redirect_to' value='{{ site.url }}/page/5thankyou'  />
+  <!-- all your input fields here.... -->
+  <p><input required="required" id="name" placeholder="* Name" type='text' name='name' /></p>
+  <p><input required="required" id="email" placeholder="* Email" type='email' name='email' /></p>
+  <textarea name="message" placeholder="Enter your message here..." id="message" cols="70" rows="25"></textarea>
+  <p><input type='submit' value='Submit' /></p>
+</form>
 
 
 ## 友情链接
