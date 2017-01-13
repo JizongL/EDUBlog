@@ -9,7 +9,7 @@
 title: TmmGeek
 brief-intro: Artificial Intelligence and Big Data student
 baseurl: "/TmmGeekBlog" # the subpath of your site, e.g. /blog
-url: "http://www.tmmlab.com/TmmGeekBlog/" # the base hostname & protocol for your site
+url: "http://www.tmmlab.com" # the base hostname & protocol for your site
 
 permalink: /:year/:month/:day/:title/
 
