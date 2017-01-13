@@ -76,7 +76,7 @@ layout: default
                 </div>
                 <ul class="content-ul" recent>
                     {% for post in site.posts offset: 0 limit: 10  %}
-                        <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+                        <li><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></li>
                     {% endfor %}
                 </ul>
             </div>
@@ -161,5 +161,6 @@ layout: default
         </div>
     </div>
 </div>
-<!-- <script src="{{ "/js/scroll.min.js " | prepend: site.baseurl }}" charset="utf-8"></script> -->
-<!-- <script src="{{ "/js/pageContent.js " | prepend: site.baseurl }}" charset="utf-8"></script> -->
+<!--<script src="{{ "/js/scroll.min.js " | prepend: site.baseurl }}" charset="utf-8"></script> 
+ <script src="{{ "/js/pageContent.js " | prepend: site.baseurl }}" charset="utf-8"></script>
+-->
