@@ -9,6 +9,9 @@ type: page
 * content
 {:toc}
 
+## About me
+You can read my English Bio [here](http://www.tmmlab.com/about/)
+
 ## 关于我
 
 我喜欢人工智能，电脑编程和数学。
@@ -45,7 +48,7 @@ type: page
 
 ## 友情链接
 
-[HyG's Blog](https://gaohaoyang.github.io/) \| [MSU](http://www.msstate.edu/) 
+[HyG's Blog](https://gaohaoyang.github.io/) \| [MSU](http://www.msstate.edu/) \|[Jeremy Blum](http://www.jeremyblum.com)
 
 ## Comments
 

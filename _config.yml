@@ -7,7 +7,7 @@
 
 # Site settings
 title: TmmGeek
-brief-intro: Artificial Intelligence and Big Data Developer
+brief-intro: Artificial Intelligence and Big Data student
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://www.tmmlab.com/TmmGeekBlog/" # the base hostname & protocol for your site
 
@@ -49,7 +49,7 @@ extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "strikethrou
 kramdown:
   input: GFM
   syntax_highlighter: rouge
-
+gravatar_md5:    0f8154e563aa3319f1ebc77be5fca304
 # port
 # port: 1234
 

@@ -274,6 +274,11 @@ Syntax Theme: Atom Dark or One Dark
 
     首页的卡片翻动效果非常赞。
 
+## IoT
+- [Exploring Arduino](http://www.exploringarduino.com/content/ch2/)
+
+- [Spark Fun](www.sparkfun.com)
+
 ## Comments
 
 {% include comments.html %}
