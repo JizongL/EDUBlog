@@ -7,6 +7,11 @@ tags: proof induction keywords keyphrases
 ---
 
 
+set system or family of sets.
+
+singleton set
 
 often mistakes in proof
 mistaking the particular for the general.
+
+Cardinality
