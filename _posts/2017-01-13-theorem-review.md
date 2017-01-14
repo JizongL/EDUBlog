@@ -42,7 +42,7 @@ The ordered n-tuple $$(a1, a2, . . . , a_{n})$$ is the ordered collection that h
 
 Let A and B be sets. The Cartesian product of A and B, denoted by $$A × B$$, is the set of all ordered pairs (a, b), where a ∈ A and b ∈ B. Hence,
 
-$$ A × B = \{(a, b) | a \ ∈ A \cup b ∈ B\}. $$
+$$ A × B = \{(a, b) | a \ ∈ A \land b ∈ B\}. $$
 
 **DEFINITION 9**
 The Cartesian product of the sets $$A_{1},A_{2},...,A_{n}$$, denoted by $$A_(1) × A_{2} ×···× A_{n}$$, is the set of ordered n-tuples (a_{1},a_{2},...,a_{n}), where a_{i} belongs to A_{i} for i = 1,2,...,n. In other words,
