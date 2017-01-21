@@ -15,3 +15,5 @@ often mistakes in proof
 mistaking the particular for the general.
 
 Cardinality
+
+characteristic function of the set A.  

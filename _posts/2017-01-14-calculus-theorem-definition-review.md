@@ -9,6 +9,10 @@ tags: Calculus review theorem definition
 
 Let f be a function of two variables whose domain D includes points arbitrarily close to  a, b . Then we say that the limit of f  x, y  as  x, y  approaches  a, b  is L and we write
 
+
+
+
+
 $$\lim{(x,y) \to (a,b)} f (x, y)=L$$ 
 
 if for every number $$ \epsilon > 0$$ there is a corresponding number $$ \delta > 0$$ such that

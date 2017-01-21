@@ -10,6 +10,10 @@ tags: Calculus Calculus_4 concept understanding
 
 To determine if $$\lim_{(x,y) \to (a,b)}f(x,y)$$ exists and it is continuous, we need to do 2 things. 
 
+
+
+
+
 * Find its limit (if exists)
 * See if $$\lim_{(x,y) \to (a,b)}f(x,y) = f(a,b)$$
 

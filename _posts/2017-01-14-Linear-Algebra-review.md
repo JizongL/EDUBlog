@@ -12,6 +12,10 @@ tags: Linear_algebra review
 uniqueness of the Reduced Echelon Form
 Each matrix is row equivalent to one and only one reduced echelon matrix. 
 
+
+
+
+
 **Theorem 2**
 A linear system is consistent if and only if the rightmost column of the augmented matrix is not a pivot column -that is , if and only if an echelon form of the augmented matrix has no row of the form
 				[0 ... 0   b]		with b nonzero
