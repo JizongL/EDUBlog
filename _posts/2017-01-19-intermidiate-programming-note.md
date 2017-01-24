@@ -153,3 +153,8 @@ import copy
 x=[1,[2,3],"z"]
 y = copy.copy(x)
 ```
+
+
+Deep copy -create a copy of the original structure and all nested structures. 
+
+
