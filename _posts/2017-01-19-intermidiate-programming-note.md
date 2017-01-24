@@ -6,6 +6,8 @@ categories: Programming
 tags: Computer_science MSU python
 ---
 
+## class 1
+
 Immutable- do not change 
 - examples: ints, floats, strings
 
@@ -139,3 +141,15 @@ main()
 ```
 
 ![see hand drawn diagram]({{root_url | prepend: site.baseurl}}/asset/programming-note-images/class-1/class-1-d.jpeg)
+
+
+
+## class 2
+
+Shallow copy - create a copy of one structure and the references in the original
+
+```
+import copy 
+x=[1,[2,3],"z"]
+y = copy.copy(x)
+```
