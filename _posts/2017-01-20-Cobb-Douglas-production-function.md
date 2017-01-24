@@ -5,6 +5,7 @@ date: 2017-01-20 20:30:05
 categories: Math
 tag: Cobb-Douglas_production_function calculus least_square
 ---
+
 Cobb-Douglas production function
 
 In 1928 Charles Cobb and Paul Douglas published a study in which they modeled the growth of the American economy during the period 1899 - 1922. They considered a simplified view of the economy in which production output is determined by the amount of labor involved and the amount of capital invested. While there are many other factors affecting economic performance, their model proved to be remarkably accurate. The function they used to model production was of the form

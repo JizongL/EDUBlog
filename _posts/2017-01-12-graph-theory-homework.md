@@ -9,7 +9,9 @@ tags: homework induction proof 1.3 3.1
 * content
 {:toc}
 
-## section 1.2 Numbers and sets: notation
+## Assignment 1
+
+### section 1.2 Numbers and sets: notation
 
 Prove that for any two sets A, B we have
 
@@ -41,8 +43,8 @@ Therefore
 (A \ B) ∪ (B \ A) = (A ∪ B) \ (A ∩ B)
 Q.E.D
 
-## section 1.3 Mathematical induction and other proofs
-## 1.
+### section 1.3 Mathematical induction and other proofs
+### 1.
 
 Prove the following formulas by mathematical induction:
 
@@ -100,7 +102,7 @@ $$P(k+1) = \sum_{i=1}^{k} i \cdot 2^{i}+(k+1) \cdot 2^{k+1}= ((k-1)+(k+1))2^{k+1
 
 $$P(k+1) = \sum_{i=1}^{k+1} (i+1) \cdot 2^{i+1}= ((2k)2^{k+1}+2= k \cdot 2^{k+2}+2$$
 
-## 2. 
+### 2. 
 
 The numbers $$F_{0},F_{1},F_{2},...$$ are defined as follows (this is a definition
 by mathematical induction, by the way): $$F_{0} = 0, F_{1} = 1, F_{n+2} =
@@ -158,7 +160,7 @@ By PMI, $$p(n) \implies p(n+1) \implies p(n+2) \ and p(n)$$ is true.
 
 [solution](http://math.stackexchange.com/questions/2095760/need-help-with-the-proof-for-the-fibonacci-sequence/2095762#2095762)
 
-## 3
+### 3
 (a) Let us draw n lines in the plane in such a way that no two are parallel and no three intersect in a common point. Prove that the plane is divided into exactly n(n + 1)/2 + 1 parts by the lines.
 
 let p(n) be the proposition
@@ -210,7 +212,7 @@ so $$p(k) \implies p(k+1)$$ is true, and by PMI $$p(n)$$ is true.
 
 [solution](http://web.stanford.edu/class/cs103x/midtermsolutions2007.pdf) exercise 5.
 
-## 3.1 Permutations and factorials
+### 3.1 Permutations and factorials
 
 4.
 Among the numbers $$1, 2, . . . , 10^{10}$$, are there more of those containing the digit 9 in their decimal notation, or of those with no 9?
@@ -271,15 +273,65 @@ Because 3486784401 < 6513215599
 we conclude that M < N, therefore, there are more numbers contain 9 than without it. Q.E.D
 
 
+## Assignment 2
+
+3.1 Functions and subsets
+
+p 64
+
+Determine the number of ordered pairs (A,B), where A ⊆ B ⊆ {1,2,...,n}.
+
+[2](http://math.stackexchange.com/questions/429652/how-to-find-the-number-of-ordered-pairs-a-b-where-a-and-b-are-subsets-of-s-an)
 
 
 
 
+1. How many permutations of {1, 2, . . . , n} have a single cycle?
 
 
 
+6. Let π be a permutation of the set {1,2,...,n}. We say that an ordered pair (i,j) ∈ {1,2,...,n} × {1,2,...,n} is an inversion of π if i < j and π(i) > π(j).
+(a) Prove that the set I(π) of all inversions, regarded as a relation on {1, 2, . . . , n}, is transitive.
 
 
+[some description about inversion](http://www.informatik.uni-leipzig.de/~paxton/algorithmics/week10/Perms/statement.htm)
+
+DESCRIPTION
+
+Given a permutation a1, a2, a3,..., an of the n integers 1, 2, 3, ..., n, an inversion is a pair (ai, aj) where i < j and ai > aj. The number of inversions in a permutation gives an indication on how "unsorted" a permutation is. If we wish to analyze the average running time of a sorting algorithm, it is often useful to know how many permutations of n objects will have a certain number of inversions.
+
+In this problem you are asked to compute the number of permutations of n values that have exactly k inversions.
+
+For example, if n = 3, there are 6 permutations with the indicated inversions as follows:
+
+| P | inversions |
+|:----|:-------------|
+| 123 | 0 inversions |
+| 132 | 1 inversion (3 > 2)    	 |
+| 213 | 1 inversion (2 > 1)    	 |
+| 231 | 2 inversions (2 > 1, 3 > 1)    	 |
+| 312 | 2 inversions (3 > 1, 3 > 2)	 |
+| 321 | 3 inversions (3 > 2, 3 > 1, 2 > 1) |
+    	
+
+Therefore, for the permutations of 3 things
+
+1 of them has 0 inversions<br>
+2 of them have 1 inversion<br>
+2 of them have 2 inversions<br>
+1 of them has 3 inversions<br>
+0 of them have 4 inversions<br>
+0 of them have 5 inversions<br>
+etc.
+
+
+[inversion of a permutation](http://math.stackexchange.com/questions/512333/inversions-of-a-permutation)
+
+(a) ∗Find out what is the largest power of 10 dividing the number 70! (i.e. the number of trailing zeros in the decimal notation for 70!).
+[help source](http://mathandmultimedia.com/2014/01/25/zeros-are-there-in-n-factorial/)
+
+
+2. Prove the addition formula (3.5) by using the definition (3.1) of binomial coefficients and by manipulating expressions.
 
 
 

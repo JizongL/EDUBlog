@@ -46,3 +46,17 @@ for example
 [additional note]({{ post.url | prepend: site.baseurl }}{% post_url 2017-01-18-rules-of-inference-additional-note %})
 {% endraw %}
 {% endhighlight %}  
+
+
+right alight text
+
+```
+<div style="text-align: right"> Q.E.D</div>
+
+```
+
+internal link to a section of the post
+
+```
+<a name="prop3.1.1"></a>
+```
