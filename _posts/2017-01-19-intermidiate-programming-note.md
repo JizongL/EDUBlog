@@ -5,6 +5,8 @@ date:   2017-01-19 10:00:00
 categories: Programming
 tags: Computer_science MSU python
 ---
+* content
+{: toc}
 
 ## class 1
 
@@ -148,13 +150,103 @@ main()
 
 Shallow copy - create a copy of one structure and the references in the original
 
+### example 1
+
 ```
 import copy 
 x=[1,[2,3],"z"]
 y = copy.copy(x)
 ```
 
+### example 2
 
 Deep copy -create a copy of the original structure and all nested structures. 
+
+```
+import
+
+list1 = [1,2,3,4]
+
+list2 = [5,6,7,8]
+
+my_list = [list1, list2]
+
+new_list = copy.copy(my.list)
+
+list1.append(10)
+
+print(my_list, new_list)
+
+### use deepcopy
+
+import
+
+list1 = [1,2,3,4]
+
+list2 = [5,6,7,8]
+
+my_list = [list1, list2]
+
+new_list = copy.copy(my.list)
+
+list1.append(10)
+
+print(my_list, new_list)
+
+```
+
+### example 3: 
+
+c is alias
+
+```
+import copy
+
+b = [[1,2],[3,4,5],6]
+c = b
+c[0] = 0
+d = copy.copy(c)
+e = copy.deepcopy(d)
+c.append(7)
+
+print(b)
+print(c)
+print(d)
+print(e)
+```
+
+![see hand drawn diagram]({{root_url | prepend: site.baseurl}}/asset/programming-note-images/class-2/class-2-a.jpeg)
+
+### example 4
+
+```
+import copy
+a =[[1,2,3],[5,6,7]]
+b = [8,9]
+a.append(b)
+c=copy.copy(a)
+d=copy.deepcopy(a)
+e = a
+a.append(20)
+b.append(10)
+a[0].append(20)
+d[0].append(15)
+print("a:",a)
+print("b:",b)
+print("c:",c)
+print("d:",d)
+print("e:",e)
+
+[[1,2,3],[5,6,7],20]
+e,a ->[20,[5,6,7],20]
+b-> [8,9,10]
+c-> [[1,2,3],[5,6,7],[8,9]]
+d-> [15,[5,6,7],[8,9]]
+
+
+```
+
+![see hand drawn diagram]({{root_url | prepend: site.baseurl}}/asset/programming-note-images/class-2/class-2-b.jpeg)
+
 
 
