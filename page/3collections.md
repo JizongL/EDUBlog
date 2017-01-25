@@ -279,6 +279,16 @@ Syntax Theme: Atom Dark or One Dark
 
 - [Spark Fun](www.sparkfun.com)
 
+## graph theory
+-[Kiran Kuppa youtube channel](https://www.youtube.com/playlist?list=PLoJC20gNfC2gmT_5WgwYwGMvgCjYVsIQg)
+
+## math
+
+- [The Math Page](http://www.themathpage.com/alg/difference-two-squares-2.htm)
+
+## python
+- [Nael Shiab](http://naelshiab.com/tutorial-how-to-code-a-robot-reporter/)
+
 ## Comments
 
 {% include comments.html %}

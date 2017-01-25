@@ -35,7 +35,7 @@ You can read my English Bio [here](http://www.tmmlab.com/about/)
 
 #### 给我留言
 
-<form action="https://getsimpleform.com/messages?form_api_token=635207fe87a9b8e111b6790052148d41" method="post">
+<form action="https://getsimpleform.com/messages?form_api_token=635207fe87a9b8e111b6790052148d41" method="get">
   <!-- the redirect_to is optional, the form will redirect to the referrer on submission -->
   <input type='hidden' name='redirect_to' value='{{root_url | prepend: site.baseurl}}/page/5thankyou'  />
   <!-- all your input fields here.... -->
