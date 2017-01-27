@@ -249,4 +249,98 @@ d-> [15,[5,6,7],[8,9]]
 ![see hand drawn diagram]({{root_url | prepend: site.baseurl}}/asset/programming-note-images/class-2/class-2-b.jpeg)
 
 
+## class 3
+
+class 
+
+an object is an instance of a class
+
+A reference variable holds the address of an object
+
+`my_list` is the reference and `[12,7,9]` is the python list object. 
+
+```
+my_list = [12,7,9]
+
+```
+
+2 parts to define inside a class. 
+
+* data - member data, instance data, fields, attributes
+
+* functions - member functions, methods, behaviors
+
+class circle:
+
+`def__init__(self)` `self` is the reference variable for the object.
+
+`self.radius = 1` this is a public reference
+
+```
+class Circle:
+	def __init__(self)
+		self.radius = 1
+
+def main()
+	a_circle = Circle()
+	a_circle.radius = 7
+
+```
+
+Usually, we do not want our class to be pubic, then we need to add `self.__radius = 1` to become private 
+
+to ensure the right radius is entered, add `raise ValueError("Must be great than 0")` to raise error. 
+
+Also we need to add a set and get methods
+
+`get_radius()` and `set_radius` methods can allow access to the private member data inside the class. 
+
+```
+
+class Circle:
+	def __init__(self)
+		self.radius = 1
+
+	def set_radius(self, radius):
+		if radius < = 0:
+			raise ValueError("Must be great than 0")
+		self.__radius = radius	
+
+	def get_radius(self, radius):	
+		return self.__radius
+
+def main()
+	a_circle = Circle()
+	a_circle.set.radius(7)
+	print(a_circle.get_radius())
+
+```
+
+Include more methods
+
+```
+
+class Circle:
+	def __init__(self)
+		self.radius = 1
+
+	def set_radius(self, radius):
+		if radius < = 0:
+			raise ValueError("Must be great than 0")
+		self.__radius = radius	
+
+	def get_radius(self, radius):	
+		return self.__radius
+
+def main()
+	a_circle = Circle()
+	a_circle.set.radius(7)
+	print(a_circle.get_radius())
+
+def get_area(self):
+	return (self.__radius**2)*3.1416	
+
+```
+
+
 

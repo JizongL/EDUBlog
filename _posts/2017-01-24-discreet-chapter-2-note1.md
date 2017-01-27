@@ -84,3 +84,36 @@ In either case $$x \in \overline{A \land B}$$
 
 $$\overline{A} \lor \overline{B} ≤ \overline{A \land B}$$
 
+## using set notation 
+
+$$\overline{A \land B} = \overline{A} \lor \overline{B}$$
+
+
+## Homework not to be turned in. 
+
+1.7
+
+6,17,38
+
+1.8
+
+1,3,11,23,30
+
+## Function 
+
+Let A, B be non empty sets, A function f from A to B is an assingment of exactly one element of B to each element of A. 
+
+$$f: A \to B$$
+
+$$(f_{1}+f_{2})(x) = f_{1}(x)+f_{2}(x)$$
+$$(f_{1}f_{2})(x) = f_{1}(x)f_{2}(x)$$
+
+f is one to one 
+
+f(x)=x+2
+
+$$g(x)=x^{2}$$
+
+f:
+
+
