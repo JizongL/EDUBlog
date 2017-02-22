@@ -78,7 +78,7 @@ def fun_a():
 
 def main():
 	print(x)	
-	fun.a()
+	fun_a()
 	print(x)
 
 
@@ -320,27 +320,150 @@ Include more methods
 
 ```
 
-class Circle:
-	def __init__(self)
-		self.radius = 1
+class Square:
+    def __init__(self,length, width):
+        self.__length = length
+        self.__width = width
 
-	def set_radius(self, radius):
-		if radius < = 0:
-			raise ValueError("Must be great than 0")
-		self.__radius = radius	
 
-	def get_radius(self, radius):	
-		return self.__radius
 
-def main()
-	a_circle = Circle()
-	a_circle.set.radius(7)
-	print(a_circle.get_radius())
 
-def get_area(self):
-	return (self.__radius**2)*3.1416	
+
+    def set_square_side(self,length,width):
+        self.__length = length
+        self.__width = width
+
+    def get_square_sides(self):
+        return self.__length, self.__width
+
+    def get_square(self):
+        return(self.__length* self.__width)
+
+
+def main():
+    print("calculate the area of a square")
+    a_square = Square(1,1)
+    length = int(input("Enter the length of the square"))
+    width = int(input("Enter the width of the square"))
+
+    a_square.set_square_side(length,width)
+    print("the length and width you entered are:",a_square.get_square_sides())
+
+    print("The area of the square is: ",a_square.get_square())
+
+main()
+
 
 ```
+
+
+## class 4
+
+UML Diagrams unified modeling language
+
+communicate design of your classes
+
+![see hand drawn diagram]({{root_url | prepend: site.baseurl}}/asset/programming-note-images/class-4/class-4-a.jpg)
+
+### Television Example
+
+![see hand drawn diagram]({{root_url | prepend: site.baseurl}}/asset/programming-note-images/class-4/class-4-b.jpg)
+
+
+
+```
+class Television:
+    def __init__(self,channel=1,volume=1):
+        if channel <=0:
+            raise ValueError("ERROR; Channels must be great than 0.")
+        if volume < 0:
+            raise ValueError("ERROR; Volume must be great than 0.")
+        self.__channel = channel
+        self.__volume = volume
+
+    def set_channel(self,channel):
+        if channel <=0:
+            raise ValueError("ERROR; Channels must be great than 0.")
+        self.__channel= channel
+
+
+    def get_channel(self):
+        return self.__channel
+
+    def set_volume(self,volume):
+        if volume < 0:
+            raise ValueError("ERROR; Volume must be great than 0.")
+        self.__volume = volume
+
+    def get_volume(self):
+        return self.__volume
+
+    def __str__(self):
+        a_str = "Channel: " + str(self.__channel) + "\n"
+        a_str += "Volume: " + str(self.__volume)
+        return a_str
+
+    def channel_up(self):
+        self.__channel+=1
+
+    def channel_down(self):
+        self.__channel-=1
+
+def main():
+    ## Testing Constructor
+    tv = Television()
+    ## print(tv.get_channel(),tv.get_volume())
+    your_tv = Television(4,5)
+    ##print(your_tv.get_channel(),your_tv.get_volume())
+    ## print(your_tv)
+    ## Testing set_channel and get_channel
+
+    print(tv)
+    tv.channel_down()
+
+    print(tv)
+
+    tv.channel_up()
+
+    print(tv)
+main()
+
+
+
+
+```
+
+
+
+
+### Song class
+
+![see hand drawn diagram]({{root_url | prepend: site.baseurl}}/asset/programming-note-images/class-4/class-4-c.jpeg)
+
+
+
+## class 5
+
+review on the quiz
+
+![last-question]({{root_url | prepend: site.baseurl}}/asset/programming-note-images/class-5/class-5-a.jpeg)
+
+### Inheritance
+
+Inheritance 
+
+- method that allows for modular and hierarchical organization
+
+- create a new class from an existing one. 
+
+Existing 
+
+- Base class, super class, parent class
+
+New
+
+- Derived class, subclass, child class. 
+
 
 
 

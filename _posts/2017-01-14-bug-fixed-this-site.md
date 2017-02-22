@@ -58,5 +58,12 @@ right alight text
 internal link to a section of the post
 
 ```
+## target
 <a name="prop3.1.1"></a>
+
+##from where to target
+<a href="#top">link to top</a>
 ```
+
+
+

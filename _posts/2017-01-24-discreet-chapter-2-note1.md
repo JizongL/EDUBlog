@@ -5,6 +5,8 @@ date:   2017-01-24 08:28:05
 categories: Discrete
 tags: Nested_Quantifier
 ---
+* content
+{:toc}
 
 Subsets
 
@@ -115,5 +117,45 @@ f(x)=x+2
 $$g(x)=x^{2}$$
 
 f:
+
+## 2.4 sequences
+
+Geometric progression
+
+$$ a, ar, ar^{2}, ar^{3}, ..., ar^{n}$$
+
+Initial term a
+
+common ratio r
+
+$$\{b_{n}\}$$ $$b_{n} = (-1)^{n}$$ a=1, r = -1
+
+Arithemetic progression 
+
+a, a + d, a + 2d, a + nd
+
+Initial term: a
+common difference: d
+
+$$\{S_n\} \ s_{n} = 1+4n$$
+$$\{S_n\} \ s_{n} = 7 - 3n $$
+
+## Summation notation
+
+$$\sum_{j = m}^n a_{j} = a + a_{m},...+ a_{n}$$
+
+A recurrence relation for the sequence $$\{a{n}\}$$ is an equation that expresses an in terms of one or more of the previous terms of the sequence, namely, $$a_{0}, a_{1}, . . . , a_{n−1}$$, for all integers n with $$n ≥ n_{0}$$, where $$n_{0}$$ is a nonnegative integer. A sequence is called a solution of a recurrence relation if its terms satisfy the recurrence relation. (A recurrence relation is said to recursively define a sequence. 
+
+
+Homework
+
+2.4
+2,16,23,31,34
+3.1 
+2,9,22,41,42
+3.2
+2,7,30
+
+
 
 

@@ -205,8 +205,58 @@ For n =3, it is as follow
 \underbrace{ \lvert A_1 \cap A_2 \lvert }_{\text{relative to $\{1,3\}$}})+
 (-1)^{3-1}(\underbrace{ \lvert A_1 \cap A_2 \cap A_3 \lvert }_{\text{relative to $\{1,2,3\}$}}).$$	
 
-Thank you for reading this post, I hope it is helpful. 
+### Some examples
 
-I will include First proof of the inclusion–exclusion principle: by induction. later. 
+1. A survey of households in the United States reveals that 96% have at least one television set, 98% have telephone service, and 95% have telephone service and at least one television set. What percentage of households in the United States have neither telephone service nor a television set?
 
-have fun studying. 
+we are given $\lvert V \lvert = 96, \lvert P \lvert = 98, and \lvert V \cup P \lvert = 95$$. Therefore $$\lvert V U P \lvert = 96 + 98 - 95 = 99$$, so only 1% of the households have neither telephones nor televisions.
+
+We can also do it the opposite way
+100 -96 = 4
+100 - 98 = 2
+100 - 99 = 1
+
+4+2-1 = 1% 
+
+So the relationship perserved. 
+
+2.Find the number of positive integers not exceeding 100 that are either odd or the square of an integer.
+
+There are 50 odd integers and 10 perfect squares not exceeding 100. And 5 of the perfect squares are odd too. so 50 +10 -5 = 55. 
+
+3. How many permutations of the 26 letters of the English alphabet do not contain any of the strings fish, rat or bird?
+
+$$A \cup B \cup C $$ 26! in total
+$$A = fish \\ B = rat \\ C = bird$$
+
+$$A = 23! \\ B = 24! \\ C = 23!$$ see the words as blocks.
+
+
+$$A \cup B  = \emptyset $$ 21! see bird and rat as two blocks, then 19 other letters to choose.
+$$ A \cup C = \emptyset because "i" can't appear twice.
+$$ B \cup C = \emptyset because "i" can't appear twice.
+
+$$A \cup B \cup C = \emptyset$$ 
+
+26! -(24! + 2 (23!) - 21! )
+26! - 24! - 2 (23!) + 21! = 402619359782336797900800000
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

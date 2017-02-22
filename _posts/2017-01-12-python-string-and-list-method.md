@@ -12,8 +12,31 @@ This is my collection of Python string methods
 {: toc}
 
 
+### remove the braket of a list
 
+```
+str(list)[1:-1]
+```
 
+### Check if set1 is a subset of set2
+```
+set(set1).issubset(set2)
+```
+
+### Check if an element exists in a list
+
+```
+if x in list:
+	return True
+else:
+	return False
+```
+
+### Delete the whole list
+
+```
+del self.__set[:]
+```
 
 ### .join()
 
