@@ -6,9 +6,17 @@ categories: Graph_Theory
 tags: Graph_Theory_homework homework
 ---
 
+* content
+{: toc}
+
 
 ### Question 1 (Q5)
 Call a graph $$G = (V, E)$$ vertex-transitive if for any two vertices $$v, v′ ∈ V$$ an automorphism $$f : V → V$$ of G exists (see Exercise 3) $$with \ f(v) = v′$$. Similarly, G is edge-transitive if for any two edges $$e,e′ ∈ E$$ an automorphism $$f:V →V$$ exists with $$f(e)=e′$$ (if$$ e=\{u,v\}$$ then the notation $$f(e)$$ stands for the set $$\{f(u),f(v)\})$$.
+
+
+
+
+
 
 **(a) Prove that the graphs in Exercise 1 is vertex-transitive**
 
