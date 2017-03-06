@@ -224,6 +224,11 @@ Hamiltonian cycle can be converted to a Hamiltonian path by removing one edge.
 
 If G is Hamiltonian, then any supergraph $$G', G \subset G'$$ where G' is obtained by adding new edges between non-adjcent vertices of G. Then G' is also Hamiltonian. 
 
+<figure>
+<img src = "{{root_url | prepend: site.baseurl}}/asset/graph_theory/pic/Sarada-Herke/V-27/v-27-b.png" width = "500">
+<figurecpation>Figure 1</figurecpation>
+</figure>
+
 Clearly $$C_{n}$$ is Hamiltonian $$C_{n}=G$$. $$K_{n}=G'$$. then $$K_{n}$$ is Hamiltonian. 
 
 3 problems to try. 
