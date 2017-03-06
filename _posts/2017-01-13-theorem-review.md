@@ -338,3 +338,40 @@ $$0=0^{n}=((-1)+1)^{n} = \sum_{k=0}{n}\binom{n}{k}(-1)^{n-k}1^{k}$$
 
 
 
+## 4.1 Divisibility and Modular Arithmetic 
+
+Let a, b, and c be integers, where a ≠ 0. Then
+(i) if a|b and a|c,then a|(b+c); 
+(ii) if a|b,then a|bc for all integers c;
+(iii) if a|b and b|c,then a|c.
+
+
+If a, b, and c are integers, where a ̸= 0, such that a | b and a | c, then a | mb + nc whenever m and n are integers
+
+THE DIVISION ALGORITHM Let a be an integer and d a positive integer. Then there are unique integers q and r, with 0 ≤ r < d, such that a = dq + r.
+
+In the equality given in the division algorithm, d is called the divisor, a is called the dividend, q is called the quotient, and r is called the remainder. This notation is used to express the quotient and remainder:
+q=a div d, r=a mod d.
+
+If a and b are integers and m is a positive integer, then a is congruent to b modulo m if m divides a − b. We use the notation a ≡ b (mod m) to indicate that a is congruent to b modulo m. We say that a ≡ b (mod m) is a congruence and that m is its modulus (plural moduli). If a and b are not congruent modulo m, we write a ̸≡ b (mod m).
+
+Let a and b be integers, and let m be a positive integer. Then a ≡ b (mod m) if and only if a mod m = b mod m.
+
+Let m be a positive integer. The integers a and b are congruent modulo m if and only if there
+is an integer k such that a = b + km.
+
+Let m be a positive integer. If a ≡ b (mod m) and c ≡ d (mod m), then a + c ≡ b + d (mod m) and ac ≡ bd (mod m).
+
+note: if ac ≡ bc (mod m), the congruence a ≡ b (mod m) may be false.
+
+
+## 4.2 Integer Representations and Algorithms
+Let b be an integer greater than 1. Then if n is a positive integer, it can be expressed uniquely in the form
+$$n=a_{k}b^{k} +a_{k−1}b^{k−1} +···+a_{1}b+a_{0}$$,
+where k is a nonnegative integer, $$a_{0}, a_{1}, . . .$$ , ak are nonnegative integers less than b, and ak ≠ 0.
+
+## 4.3 Primes and Greatest Common Divisors
+An integer p greater than 1 is called prime if the only positive factors of p are 1 and p. A positive integer that is greater than 1 and is not prime is called composite.
+
+
+

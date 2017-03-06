@@ -466,4 +466,247 @@ New
 
 
 
+## Class 17
 
+### Recursion: a function that calls itself. 
+
+**Recursive functions have:**
+
+* a test(if statement)
+* base case - does not recurse, simple to sovle. 
+* recursive case - has recursive function call gets closer to the base case. 
+
+```
+def count.down(num):
+    if num ==0:
+        print("Blast off!")
+    else:
+        print(num,"...")    
+        count.down(num-1)    
+        print(num,"done")
+count.down(10)
+
+```
+
+Output  | Lisa H
+10...   | Gary (num = 9)
+9...    | James (num = 8)
+8...    | Grant (num = 7)
+7...    | Nisha (num = 6)
+6...    | Lena (num = 5)
+5...    | ...... 
+4...    | ...... 
+3       | ...... 
+2       | ...... 
+1       | ...... 
+
+Then it return the result and delete the memory. 
+
+
+**The following lacks a base case. **
+
+```
+def message():
+    print("Recurrsive message")
+    message()
+message()    
+
+```
+
+
+```
+def add.list(x):
+    if len(x)==0
+        return 0
+    
+    else:
+        return x[0]+add.list(x[1:])
+
+a = [2,7,12,15,20]
+print(add.list(a))
+```
+
+add_list
+x -> [2,7,12,15,20]
+
+return 2+ ________
+
+add_list'
+
+x -> [7,12,15,20]
+
+return 7+
+
+add_list''
+x -> [12,15,20]
+return 12+
+
+add_list'''
+x -> [15,20]
+return 15+
+
+add_list''''
+x -> [20]
+return 20+
+``` 
+The depth of recursion is 5. 
+
+Then unwinding and returning the result, as well as clearing its memory. 
+
+
+## class 18
+
+### greatest common divisor example
+```
+def gcd(x,y):
+    if x % y ==0:
+        return y
+    else:
+        return gcd(y,x%y)
+
+print(gcd(15,42))
+
+print(gcd(42,15))
+```
+
+### Recursive function steps
+
+2 steps
+write the base case
+write the recursive case. 
+
+![stepping through]({{root_url | prepend: site.baseurl}}/asset/programming-note-images/class-18/class-18-a.jpeg)
+
+### factorial example
+
+```
+def factorial(n):
+    if n ==0:
+        return 1 ## base case
+    else:
+        return n * factorial(n-1)  ## recursive case.  
+
+print(factorial(4))        
+```
+stepping through the function. 
+
+factorial(4)
+4>0
+return 4 * (6) = 24
+
+
+factorial(3)
+3>0
+return 3*(2) = 6
+
+factorial(2)
+2>0
+return 2*(1) = 2 
+
+factorial(1)
+1 > 1
+return 1*1
+
+factorial 0
+0
+return 1
+
+
+
+![factorial]({{root_url | prepend: site.baseurl}}/asset/programming-note-images/class-18/class-18-b.jpg)
+
+### Example 3
+
+```
+def print_numbers(n):
+    if n == 1:
+        print(1)
+    else:
+        print_numbers(n-1) ## to print in ascending order
+        print(n)
+
+print_numbers(5)
+```
+
+
+## class 19
+
+### Indirect Recursive function
+
+function a calls function b. Recursively. 
+```
+def func_a(n):
+    print(n, "...")
+    if n > 0:
+        func_b(n)
+    else:
+        print("Blast off!")
+
+def func_b(n):
+    #print("Recursion from func_a to func_b which is indirect recursion")
+    func_a(n - 1)
+
+func_a(5)
+```
+
+Linear Search
+```
+def linear_search(data, key):
+    for item in data:
+        if item == key:
+            return True
+    return False
+```
+
+
+[See animation](http://www.cs.armstrong.edu/liang/animation/web/LinearSearch.html)
+
+
+### Binary Search
+
+```
+def binary_search(data, key, low, high):
+        if low > high:
+                return False
+        else:
+                mid = (low + high) / 2
+        if target == data[mid]:
+                return True
+        elif target < data[mid]:
+                return binary_search(data, target, low, mid-1)
+        else:
+                return binary_search(data, target, mid+1, high)
+
+```
+
+Linear V.S Binary
+
+Linear Search 
+Big is O(n)
+Binary Search
+Binary is O(n log(n))
+
+Linear is still used because it is useful when list is not sorted. 
+
+### Sorting
+
+*Exchange - rearrange pairs of elements which are out of order, until no such pairs remain
+*Selection - extract the largest element from the list, remove it, and repeat
+*Insertion - putting an element in the appropriate place in a sorted list yields a larger sorted list
+*Distribution - separate into piles, then sort each pile
+*Merging - Two sorted lists can be easily combined to form a sorted list
+
+### Bubble Sort
+
+[See Animation](http://cathyatseneca.github.io/DSAnim/web/bubble.html)
+
+### Merge Sort
+[See Animation](http://www.ee.ryerson.ca/~courses/coe428/sorting/mergesort.html)
+
+### Quick
+[See Animation](https://www.youtube.com/watch?v=aQiWF4E8flQ)
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/aQiWF4E8flQ" frameborder="0" allowfullscreen></iframe>
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/vxENKlcs2Tw" frameborder="0" allowfullscreen></iframe>

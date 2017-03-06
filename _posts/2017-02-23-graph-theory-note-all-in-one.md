@@ -1,13 +1,15 @@
 ---
 layout: post
-title:  class 1 Introductory
-date:   2017-01-09 19:06:05
+title:  Graph Theory Note 
+date:   2017-02-23 19:06:05
 categories: Graph_Theory_note
 tags: intro 
 ---
 
 * content
 {:toc}
+
+
 
 ## The mathematical theory of pairwise relation
 
@@ -219,10 +221,10 @@ Any nonempty subset of natural numbers possesses a smallest element. This is exp
 from the well-ordering property. For contradiction, let us assume that a set X satisfies both (i) and (ii), but it doesn’t contain all natural numbers. Among all natural numbers n not lying in X, let us choose the smallest one and denote it by n0. By condition (i) we know that n0 > 1, and since n0 was the smallest possible, the number n0 − 1 is an element of X. However, using (ii) we get that n0 is an element of X, which is a contradiction.
 
 
- ### Do a preliminary check: 
- does the problem make sense in the way you understand it? 
- Does it have a suspiciously trivial solution? 
- Could there be another meaning?
+### Do a preliminary check: 
+does the problem make sense in the way you understand it? 
+Does it have a suspiciously trivial solution? 
+Could there be another meaning?
 
 
 

@@ -14,3 +14,5 @@ Download the book Math "History and Its Application" [here](https://www.google.c
 ### Math History 1a: Pythagoras' theorem
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/dW8Cy6WrO94?list=PL55C7C83781CF4316" frameborder="0" allowfullscreen></iframe>
+
+
