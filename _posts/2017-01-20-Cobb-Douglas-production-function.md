@@ -9,7 +9,7 @@ tag: Cobb-Douglas_production_function calculus least_square
 Cobb-Douglas production function
 
 
-
+Right click to download Mathemtica file [here]({{root_url | prepend: site.baseurl}}/asset/calculus4/mathemtica/Cobb-Douglas.nb)
 
 
 In 1928 Charles Cobb and Paul Douglas published a study in which they modeled the growth of the American economy during the period 1899 - 1922. They considered a simplified view of the economy in which production output is determined by the amount of labor involved and the amount of capital invested. While there are many other factors affecting economic performance, their model proved to be remarkably accurate. The function they used to model production was of the form
@@ -81,7 +81,7 @@ $$P(L,K) = 1.01L^{0.75}K^{0.25}$$
 
 | 
 
-$$ P = b L^{\alpha} K^{1-\alpha} \implies \frac{P}{K} = b L^{a}K^{-\alpha} \implies \frac{P}{K} = b \left( \frac{L}{K} \right)^{\alpha} \implies ln \frac{P}{K} = ln \left(b\left( \frac{L}{K}\right) \right) \\ \implies ln \frac{P}{K} = ln b + \alpha ln\left( \frac{L}{K} \right)$$
+$$ P = b L^{\alpha} K^{1-\alpha} \implies \frac{P}{K} = b L^{a}K^{-\alpha} \implies \frac{P}{K} = b \left( \frac{L}{K} \right)^{\alpha} \implies ln \frac{P}{K} = ln \left(b\left( \frac{L}{K}\right) \right) \\ \implies ln \frac{P}{K} = Ln(b) + \alpha \ Ln\left( \frac{L}{K} \right)$$
 
 
 

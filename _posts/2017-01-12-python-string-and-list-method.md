@@ -12,6 +12,12 @@ This is my collection of Python string methods
 {: toc}
 
 
+### remove punctuation 
+
+```
+out = "".join(c for c in asking if c not in ('!','.',':'))
+```
+
 ### remove the braket of a list
 
 ```
@@ -174,7 +180,19 @@ Use zip function, **note**, x and y must be the same length and same type.
 ```
 
 
+###
 
+convert list of intable strings to int
+```
+def try_int(x):
+    try:
+        return int(x)
+    except ValueError:
+        return x
+
+[try_int(x) for x in  ['sam', '1', 'dad', '21']]        
+
+```
 
 
 ### collect all lines of text file into a list

@@ -282,6 +282,10 @@ Syntax Theme: Atom Dark or One Dark
 ## graph theory
 -[Kiran Kuppa youtube channel](https://www.youtube.com/playlist?list=PLoJC20gNfC2gmT_5WgwYwGMvgCjYVsIQg)
 
+## LaTex tools
+-[Detexify](http://detexify.kirelabs.org/classify.html)
+-[StackExchange reference](http://meta.math.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference)
+
 ## math
 
 - [The Math Page](http://www.themathpage.com/alg/difference-two-squares-2.htm)

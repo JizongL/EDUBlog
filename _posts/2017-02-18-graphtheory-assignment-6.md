@@ -1,190 +1,185 @@
 ---
 layout: post 
 title: Graph Theory Assignment 6
-date: 2017-02-26 11:01:00
-categories: Graph_Theory
-tags: Graph_Theory_homework homework
+date: 2017-02-18 11:01:00
+categories: Graph_Theory_homework
+tags: Graph_Theory_homework 
 ---
+
 * content
 {: toc}
 
-Assignment 6
+##Assignment 5
 
-### Question 4.2.5
-
-b) Let G be a graph on n vertices, $$A = A_{G}$$ its adjacency matrix, and In the n×n identity matrix (with 1s on the diagonal and 0s elsewhere). Prove that G is connected if and only if the matrix ($$I_{n} + A)^{n−1}$$ has no 0s.
-
+### Question 1 (Q5)
+Call a graph $$G = (V, E)$$ vertex-transitive if for any two vertices $$v, v′ ∈ V$$ an automorphism $$f : V → V$$ of G exists (see Exercise 3) $$with \ f(v) = v′$$. Similarly, G is edge-transitive if for any two edges $$e,e′ ∈ E$$ an automorphism $$f:V →V$$ exists with $$f(e)=e′$$ (if$$ e=\{u,v\}$$ then the notation $$f(e)$$ stands for the set $$\{f(u),f(v)\})$$.
 
 
 
 
 
-Let $$A^k$$ be the matrix that will have entry $$i,j$$, which is non-zero (strictly positive) if, and only if, there exists a path of length exactly $$k$$ between vertices $$i$$ and $$j$$.
 
-By definition, a graph is connected iff there exists a path of length at most $$n-1$$ between any pair of vertice $$\{i,j\}$$. 
+**(a) Prove that the graphs in Exercise 1 is vertex-transitive**
 
-Furthermore, to expand $$(I+A)^{n-1}$$ by the binomial expansion, it then has entry $$\{i,j\}$$ non-zero iff there exists a path of length $$1$$, or $$2$$, or ..., or $$n-1$$ between vertices $$i$$ and $$j$$.
+The graphs from Exercise 1 are Petersen graph and also called Kneser graph $$KG_{5,2}$$; this means that it has one vertex for each 2-element subset of a 5-element set, and two vertices are connected by an edge if and only if the corresponding 2-element subsets are disjoint from each other.
 
-$$(I+A)^{n-1} = \sum_{k=0}^{n-1} \binom{n-1}{k} A^k$$
+From the images, we see that $$G_{1} \cong G_{2} \cong G_{3}$$, thus they are automorphic and $$V(G_{1})=\{a,b,...j\},V(G_{2})=\{I,II,III,...,X\},V(G_{3})=\{A,B,....J\}$$. Let there be a set $$ N = \{1,2,3,4,5\}$$ Then, by definition of Kneser graph $$KG_{5,2}$$, $$\forall x \in V(G_{1}),\forall y \in V(G_{2}),\forall z \in V(G_{3})$$, such that $$x,y,z$$ is labelled uniquely with $${i,j}$$ and $$i,j \in N$$. 
 
-so for any $$1\leq i,j\leq n$$,
+Finally, we see that there is a bijection between $$G_{1}$$ and $$G_{2}$$, such that $$f:V(G_{1}) \to V(G_{2})$$. For example, a from $$G_{1}$$ is mapped to VII from $$G_{2}$$ and edges are perserved(see figures below). Then, there is also a bijection between $$G_{2}$$ and $$G_{3}$$, such that $$g:V(G_{2}) \to V(G_{3})$$, For instance, VII from $$G_{2}$$ is mapped to A from $$G_{3}$$. We also observe that $$G_{1} ,G_{2}, G_{3}$$ obey the rules of Kneser graph $$KG_{5,2}$$, such that two vertices are connected by an edge if and only if the corresponding 2-element subsets are disjoint from each other. For example, $$\{\{5,2\},\{1,3\}\}=\{a,b\} \to \{f(a),f(b)\}=\{VII,VI\}=\{\{5,2\},\{1,3\}\}$$ and $$\{\{5,2\},\{1,3\}\}$$ are disjoint.
 
-$$\begin{align}
-\left( (I+A)^{n-1} \right)_{ij} &= \sum_{k=0}^{n-1} \binom{n-1}{k} \left(A^k\right)_{ij}\\
-&= \binom{n-1}{0} \left(A^0\right)_{ij}
-+ \binom{n-1}{1} \left(A^1\right)_{ij} + \dots + \binom{n-1}{n-1} \left(A^{n-1}\right)_{ij}\\
-&= \sum_{k=0}^{n-1} \binom{n-1}{k}\cdot \text{(number of paths between $i$ and $j$ of length exactly $k$)}
-\end{align}$$
-
-And the answer is 0 iif there is no path of length at most $$n-1$$ between $$i$$ and $$j$$, which is not having any path at all between $$i$$ and $$j$$. therefore, the prove is concluded, G is connected iif ($$I_{n} + A)^{n−1}$$ has no 0s . Q.E.D.
-
-
-### Question 4.2.10
-
-Show that a graph G contains a triangle (i.e. a $$K_{3}$$) if and only if there exist indices i and j such that both the matrices $$A_{G}$$ and $$A^{2}_{G}$$ have the entry (i,j) nonzero, where $$A_{G}$$ is the adjacency matrix of G.
-
-Let $$a_{ij}^{(k)}$$ be an element of $$A^{k}$$ at any position (i,j). Then $$a_{ij}^{(k)}$$ is the number of walks of length k from vertex $$v_{i}$$ to the vertex $$v_{j}$$ in the graph. 
-
-Let $$A_G=\{(a_{ij})\}_{1\le i \le j \le n}$$ the adjacent matrix of the graph $$G$$ and $$A^2_G=\{(b_{ij})\}_{1\le i \le j \le n}$$. Observe that there exists a triangle in $$G$$ iif there exists $$i,j,k$$ such that $$a_{ik}\cdot a_{kj}\cdot a_{ij}=1$$. 
-
-$$(\Rightarrow)$$ If $$a_{ik}\cdot a_{kj}\cdot a_{ij}=1$$, then $$a_{ij}=1$$ and $$b_{ij}=\sum_{l=1}^{n}a_{il}\cdot a_{lj} \neq 0$$ (because $$(a_{ik}\cdot a_{kj})\cdot a_{ij}=1$$)
-
-$$(\Leftarrow)$$ If $$b_{ij}=\sum_{l=1}^{n}a_{il}\cdot a_{lj} \neq 0$$ and $$a_{ij}=1$$, then $$\exists k \in \{1,...,n\}$$ such that $$a_{ik}\cdot a_{kj}=1$$. So, $$a_{ik}\cdot a_{kj}\cdot a_{ij}=1$$.
+In conclusion, there is a bijection between $$G_{1}$$ and $$G_{3}$$ such that, $$g \circ f:G_{1} \to G_{3}$$. Therefore, $$G_{1}, G_{2}, G_{3}$$ are vertex transitive. 
 
 <figure>
-<img src = "{{root_url | prepend: site.baseurl}}/asset/graph_theory/pic/homework/assign-6/6-d.png" width = "300">
-<figurecpation>Figure 1</figurecpation>
-</figure>
-
-Therefore, the proof concluded,a graph G contains a triangle,iif, $$\exists i \ and \ j$$ such that both the matrices $$A_{G}$$ and $$A^{2}_{G}$$ have the entry (i,j) nonzero . 
-
-### Question 4.3.1. 
-
-Prove that the three graphs in Fig. 4.3 are pairwise nonisomorphic.
-
-Let's label the graph as following
-
-**Definition of isomorphism** 
-
-Let two graphs be G = (V, E) and G′ = (V ′, E′) and they are called isomorphic if a bijection f : V → V ′ exists such that $$\{x,y\} ∈ E$$ if and only if $$\{f(x),f(y)\} ∈ E′$$
-
-![graph]({{root_url | prepend: site.baseurl}}/asset/graph_theory/pic/homework/assign-6/6-b.png)
-
-
-**Graph 1 V.S Graph 2**
-
-Let graph 1 be G and graph 2 be G', now let's label all vertice in G as $$\{A,B,C,D,E,F,G,H,I,J\}$$ and, Assume that G and G' are isomorphic and V(G) are mapped to V(G') =$$\{a,b,c,d,e,f,g,h,i,j,k\}$$ respectively such that edges should be preserved, as shown on the graph above. But we see that $$\{A,G\} \in E(G)$$, but $$\{f(A),F(G)\}  = \{a,g\} \not\in E(G')$$, and $$\{D,J\} \in E(G)$$ but $$\{f(D),F(J)\}  = \{d,j\} \not\in E(G')$$. Without the need to list all counter examples, it is suffice to say that this is a contradition. Therefore, G and G' are non pairwise isomorphic. 
-
-**Graph 1 V.S Graph 3**
-Let graph 1 be G and graph 3 be G', now let's label all vertice in G, $$\{A,B,C,D,E,F,G,H,I,J\}$$ Assume that G and G' are isomorphic and V(G) are mapped to V(G')= $$\{aa,bb,cc,dd,ee,ff,gg,hh,ii,jj,kk\}$$respectively, respectively such that edges should be preserved,as shown in the graph. We see that $$\{A,G\} \in E(G)$$, but $$\{f(A),F(G)\}  = \{aa,gg\} \not\in E(G')$$, and $$\{D,J\} \in E(G)$$ but $$\{f(D),F(J)\}  = \{dd,jj\} \not\in E(G')$$. Without the need to list all counter examples, it is suffice to say this is a contradition, therefore, by definition, G and G' are non pairwise isomorphic. 
-
-**Graph 2 V.S Graph 3**
-
-Let graph 2 be G and graph 3 be G', now let's label all vertice in G, $$\{a,b,c,d,e,f,g,h,i,j\}$$. Assume that G and G' are isomorphic and V(G) are mapped to V(G')= $$\{aa,bb,cc,dd,ee,ff,gg,hh,ii,jj,kk\}$$according to the definition of automorphism which edges should be preserved, as shown in the graph. But, We see that $$\{a,j\} \in E(G)$$, but $$\{f(a),F(j)\}  = \{aa,jj\} \not\in E(G')$$, and $$\{g,d\} \in E(G)$$ but $$\{f(g),F(d)\}  = \{gg,dd\}\not\in E(G')$$. Without the need to list all counter examples, it is suffice to say this is a contradition, therefore, by definition, G and G' are non pairwise isomorphic. 
-
-
-Inconclusion, Graph 1,2,3 are pairwise non-isomorphic. Q.E.D.
-
-### Question 4.3.5
-Draw all nonisomorphic graphs with score(6,3,3,3,3,3,3).Prove that none was left out!
-
-Let G has V and E, and $$y \in V(G)$$ and $$deg_{G}(y) = 6$$. And there are 6 other vertices $$\{v_{1},v_{2}...v_{6}\}$$ and let $$v_{i}$$ be any of the 6 vertices such that $$deg_{G}(v_{i})=3$$. Since $$deg_{G}(y) = 6$$, it is incident with all other 6 vertices. then the remaining degrees for all the other 6 vertices are 2 after subtracting the one with y(see graph 1). Then no matter how they connect, all the possible connection from the remaining 2 degrees of each of the 6 other vertices are isomorphic to each other. (See graph 2)
-
-We see that any $$v_{i}$$ and y, mapped to $$f(v_{i})$$ and f(y) and $$\{v_{i},y\} \in E(G)$$, and $$\{f(v_{i}),f(y)\} \in E(G')$$. and any pair of $$\{v_{i},v_{i-1}\} \in E(G)$$, are mapped to $$\{f(v_{i}),f(v_{i-1})\} \in E(G')$$. Therefore, by definition, it proves the only nonisomorphic graph with this score is the only graph itself. 
-
-<figure>
-<img src = "{{root_url | prepend: site.baseurl}}/asset/graph_theory/pic/homework/assign-6/6-c.png" width = "300">
-<figurecpation>graph 1</figurecpation>
+<img src = "{{root_url | prepend: site.baseurl}}/asset/graph_theory/pic/homework/assign-5/automorphism-a.png" width = "500">
+<figcaption> G1</figcaption>
 </figure>
 
 <figure>
-<img src = "{{root_url | prepend: site.baseurl}}/asset/graph_theory/pic/homework/assign-6/6-d.png" width = "300">
-<figurecpation>graph 2</figurecpation>
+<img src = "{{root_url | prepend: site.baseurl}}/asset/graph_theory/pic/homework/assign-5/automorphism-b.jpeg" height = "500">
+<figcaption> G2</figcaption>
 </figure>
-
-
-### Question 4.3.6
-Find an example, as small as possible, of a graph with 6 vertices of degree 3, other vertices of degree ≤ 2, and with 12 edges.
-
-$$\sum deg(V)=2\lvert E \lvert$$
-
-There are 12 edges, therefore, the $$\sum deg(V)=24$$. Since 6 vertices of degree 3. 
-so, let $$\{a,b,c,d,i,h\}$$ be degree 3, then $$\{g,e\}$$ have to connect to h and d to make them degree 3. And now g and e are degree 1. See graph 1. 
 
 <figure>
-<img src = "{{root_url | prepend: site.baseurl}}/asset/graph_theory/pic/homework/assign-6/6-f.jpeg" width = "300">
-<figurecpation>graph 1</figurecpation>
+<img src = "{{root_url | prepend: site.baseurl}}/asset/graph_theory/pic/homework/assign-5/automorphism-d.png" width = "500">
+<figcaption> G3</figcaption>
 </figure>
 
-So far, the total degrees are 20. We need 4 more. Since the question states that it wants the graph as small as possible, then the best choice would be to add f to connect g and e. This would result in the total degrees to be 24. 
+
+
+**(b) Decide whether each vertex-transitive graph is edge-transitive as well.**
+
+By the definition above, if a graph is vertex-transitive, then it must be edge-transitive too. Because any automorphism of G perserves edges, therefore, if $$e_{i} \in G(E)$$ and $$e_{i} = \{u,v\}$$ and $$ u,v \in G(V)$$, then there exists $$e_{j} \in G'$$, and $$e_{j} =\{f(u),f(v)\}$$ such that $$f(u),f(v) \in G'(V)$$, such graph is called symetric. 
+
+**(c) Find a graph that is edge-transitive but not vertex-transitive.**
+
+This following graph is not vertex transitive, because it is a bipartite graph which has two groups of vertices, $$V_{1}$$ and $$V_{2}$$, and vertices from either set can not be connected to each other, therefore, G is not vertex transitive
 
 <figure>
-<img src = "{{root_url | prepend: site.baseurl}}/asset/graph_theory/pic/homework/assign-6/6-e.jpeg" width = "300">
-<figurecpation>graph 2</figurecpation>
+<img src = "{{root_url | prepend: site.baseurl}}/asset/graph_theory/pic/homework/assign-5/bipartite.png" width = "300">
+<figcaption>Example graph</figcaption>
 </figure>
 
-### Question 7.1.5
-(Sperner’s lemma in dimension 3)
-(a) ∗Consider a tetrahedron $$T = A_{1}A_{2}A_{3}A_{4}$$ in the 3-dimensional space and some subdivision of T into small tetrahedra, such that each face of each small tetrahedron either lies on a face of the big tetrahedron or is also a face of another small tetrahedron. Let us label the vertices of the small tetrahedra by labels 1, 2, 3, 4, in such a way that the vertex A_{i} gets i, the edge $$A_{i}A_{j}$$ only contains vertices labeled i and j, and the face A_{i}A_{j}A_{k} has only labels i,j, and k. Prove that there exists a small tetrahedron labeled 1, 2, 3, 4.
+### Question 2 (Q6)
 
-small tetrahedron either lies on a face of the big tetrahedron (odd)
+**How many graphs on the vertex set $$\{1,2,...,2n\}$$ are isomorphic to the graph consisting of n vertex-disjoint edges (i.e. with edge set $$\{\{1,2\},\{3,4\},...,\{2n−1,2n\}\}$$?**
 
-Define a graph $$G_{T}$$
+![graph]({{root_url | prepend: site.baseurl}}/asset/graph_theory/pic/homework/assign-5/graph-question-4-1-6.png)
 
-$$T = \{\text{all inside small tetrahedrons} \ t_{1},t_{2},...,t_{n} \ \text{and} \ T_{outer} \text{those facing the outer face of the big tetrahedron} \\ A_{1}A_{2}A_{3}A_{4}\}$$
+By definition, G is a 1-regular with disjoint union of $$k_{2}$$'s, From the limited example figure above, We see the even number of vertices are colored red, and the odd number ones are colored blue. So, there are n edges in G, and there are n! possible edges that are isomorphic to G, also each edge has two 2 possible vertice pair, namely $$\{a,b\}$$ and $$\{b,a\}$$,thus it has $$2^{n}$$ possibility. According to the product rule, there are $$n!2^{n}-1$$ graphs isomorphic to it. 
 
-First, find degree $$t_{i}$$ for each small tetrahedron $$t_{1},t_{2},...,t_{n}$$
 
-Let's fix corner 1,2,3 as referenced facet.
+### Question 3 (Q7)
 
-Then 
+**Let V be a finite set. Let G denote the set of all possible graphs with vertex set V . Verify that ∼= (“to be isomorphic”) is an equivalence relation on G.**
 
-case 1: $$deg t_{i} = 0$$ if $$t_{i}$$ has no 1 or 2 or 3 corners. 
+An equivalence relation has the 3 qualities, being reflexive, symmetric, and transitive. 
 
-case 2: $$deg t_{i} > 0$$ if $$t_{i}$$ has face 1 or 2 or 3, so the corners 1 and 2 and 3. 
-(See figure 1)
+It is reflexive since the identity function from a graph to itself provides the isomorphism (the one-to-one correspondence)-certainly the identity function preserves adjacency and nonadjacency. 
+
+It is symmetric, since if f is a one-to-one correspondence that makes G1 isomorphic to G2, then $$f^{-1}$$ is a one-to-one correspondence that makes G2 isomorphic to G1; that is, $$f^{-1}$$ is a one-to-one and onto function from $$V_{2}$$ to $$V{1}$$ such that c and d are adjacent in G2 if and only if $$f^{1}(c)$$ and $$f_{1}(d)$$ are adjacent in G1 . 
+
+It is transitive, since if $$f$$ is a one-to-one correspondence that makes G1 isomorphic to G2, and g is a one-to-one correspondence that makes G2 isomorphic to G3, then $$g o f$$ is a one-to-one correspondence that makes G1 isomorphic to G3.
+
+Therefore, ("to be isomorphic") is an equivalence relation on G. 
+
+
+## 4.2
+
+### Question 4 (Q1)
+
+**Prove that the complement of a disconnected graph G is connected. (The complement of a graph G = (V, E) is the graph $$(V,  \binom{V}{2} \setminus E).)$$**
+
+
+Let there be a disconnected graph G and its complement $$\overline{G}$$. Then, let's select two vertices x and y in $$\overline{G}$$. Then by definition, if x and y are nonadjacent in G, then they are adjacent in $$\overline{G}$$. Moreover,if x and y are adjacent in G then they must be from the same component of G. Let z be an abitrary vertex from a different component of G. Then this implies that $$\{x,z\},\{y,z\} \notin G(E)$$, and $$\{x,z\},\{y,z\} \in \overline{G}(E)$$. Then there exists a path x-z-y in $$\overline{G}$$.Therefore, according to the definition of connectness of of graphs, "a graph G is connected if for any two vertices x,y ∈ V(G), G contains a path from x to y.", In conclusion, the complement of a disconnected graph G is connected. Q.E.D
+
+
+### Question 5 (Q2)
+
+**What is the maximum possible number of edges of a graph with n vertices and k components?**
+
+When all the components are complete, then they have maximum number of edges.  
+
+Claim: 
+When one of the components has only 1 vetex, then the max number of edges is achieved. 
+
+Proof by contradiction. 
+
+Assume that there exist two components and they have n and m vertices, where n,m >1. And suppose that the maximum is achieved here. 
+
+Suppose m > n, and one of the vertices in m is deleted, then this removes m−1 edges. now let's add a new additional vertex to the component with n vertices, and connect it to all its vertices. This will add n edges to that component. Obviously, this contradicts the premise that the graph had maximum number of edges, because the graph has more edges now.
+
+Thus, the maximum is attained for $$n_{1} =n−k+1 and ni = 1 for i=2,3,...,n.$$. As a result, it has $$\frac{(n−k+1)(n−k)}{2}$$ edges.
+
+
+
+### Question 6 (Q4)
+
+**Prove that a graph is bipartite if and only if it contains no cycle of odd length.**
+
+
+Suppose G is bipartite, then $$V(G) = U \cup W, \ and \ U \cap W = \emptyset$$
+
+for every $$e \in E(G),e = \{u,v\}$$ where $$u \in U  \ and \ v \in W$$
+
+Suppose G has (at least) one odd cycle. 
+Let $$C = (v_{1},v_{2},...,v_{n})$$ be an odd cycle in G, and n is odd. 
+
+$$v_{1} \in U$$ then $$v_{2} \in W$$
+
+$$
+v_{i} \in
+\begin{cases}
+U & \text{if i is odd} \\[2ex]
+W & \text{if i is even}
+\end{cases}
+$$
+
+
+Then $$v_{n} \in U$$, and it is odd, and $$v_{1},v_{n} \in U$$ such that $$\{v_{1},v_{n}\} \in E(G)$$By the definition of bipartite graph, this is a contradition $$#$$. In conclusion, it is impossible to have odd cycle in G, if G is bipartite. 
+
+Now, suppose that G has no odd cycle, then it is a bipartite. 
+
+Suppose all cycles in G has even length. 
+
+* if G is disconnected, then any cycle in G is contained in one of its components $$\{G_{1},G_{2},...,G_{n}\}$$. Then there must be $$X_{1},Y_{1}, X_{2},Y_{2},....X_{n},Y_{n}$$ then let $$X = \{X_{1} \cup X_{2},...,\cup X_{n}\}$$ and $$Y = \{Y_{1} \cup Y_{2},...,\cup Y_{n}\}$$
+
+It suffices to show the claim for connected graphs, so let's assume G is connected. 
+
+Let $$v \in V(G)$$, then there is distance(minimum length) such that $$ X = \{u |d_{G}(u,x) \ is \ even \ \}$$ and $$Y = \{v |d_{G}(v,x) \ is \ odd \ \}$$. Since G is connected, $$X \cup Y = V(G)$$
+and $$X \cap Y = \emptyset$$, because there is no distance both even and odd. 
+
+Then any $$e \in E(G)$$ is of the form $$e = \{x,y\},x \in X,y \in Y$$. We need to show that $$\{x,y\} \in E(G)$$ and $$\{x,y\} \in X \ or \ \{x,y\} \in Y$$ is impossible, that is $$\{x,y\} \in X$$, show $$\{x,y\} \not\in X$$
+
+Suppose $$P: v \to x$$ be a shortest path from v to x. $$Q: v \to y$$ be a shortest path from v to y. Since $$\{x,y\} \in X$$, then P and Q are both of the same parity. (see Figure 1)
 
 <figure>
-<img src = "{{root_url | prepend: site.baseurl}}/asset/graph_theory/pic/homework/assign-6/6-g.jpeg" width = "300">
-<figurecpation>Figure 1</figurecpation>
+<img src = "{{root_url | prepend: site.baseurl}}/asset/graph_theory/pic/homework/assign-5/bipartite-odd.jpeg" width = "400">
+<figcaption> Figure 1</figcaption>
 </figure>
 
-if the 4th corner is 4, then $$deg t_{i} = 1$$ and $$t_{i}$$ is a rainbow tetrahedron.
-(See Figure 2)
+Now let w be the last common vertex of P and Q. $$P_{1}: v \to w$$ and $$P_{2}: w \to x$$ Then $$P = \{P_{1},P_{2}\}$$
+
+similarly, $$Q_{1}: v \to w$$ and $$Q_{2}: w \to y$$. Then $$Q = \{Q_{1},Q_{2}\}$$
+
+Since P and Q are shortest, it follows that $$\lvert P_{1}\lvert = \lvert Q_{1}\lvert$$
+
+Then $$\lvert P_{2}\lvert$$ and $$\lvert Q_{2}\lvert$$ have the same parity. 
+
+$$\require{AMScd}$$
+$$\begin{CD}
+      x @>{\text{$P_{2}^{-1}$}}>> w  @>{\text{$Q_{2}$}}>> y
+\end{CD}$$
+
+Now if $$x,y \in E(G)$$ then $$\{P_{2}^{-1},Q_{2}\}$$ together with x,y will form a cycle of odd length. Because cycles in G has even length. So this is a contradiction. So $$\{x,y\} \not \in E(G)$$. Therefore, there is no path exists connecting any 2 elements from either $$V_{1}$$ or $$V_{2}$$. So, to complete a cycle, a path has to be even. 
+
+
+### Question 7 (Q5)
+
+**Describe all graphs containing no path (not necessarily induced!) of length 3.**
+
+
+If v is a vertex with at least 2 neighbors it has to be connected to all vertices of its component. Each component has to be K3 or K1,n .
 <figure>
-<img src = "{{root_url | prepend: site.baseurl}}/asset/graph_theory/pic/homework/assign-6/6-h.jpeg" width = "300">
-<figurecpation>Figure 2</figurecpation>
+<img src = "{{root_url | prepend: site.baseurl}}/asset/graph_theory/pic/homework/assign-5/graph-no-p3.png" width = "500">
+<figcaption>Example graph</figcaption>
 </figure>
-
-if the 4th corner is 1 or 2 or 3, then $$deg t_{i} = 2$$ because there are two faces with 1,2,3 corners. (see Figure 3)
-
-<figure>
-<img src = "{{root_url | prepend: site.baseurl}}/asset/graph_theory/pic/homework/assign-6/6-i.jpeg" width = "300">
-<figurecpation>Figure 3</figurecpation>
-</figure>
-
-
-Finally, there will never have any degree 3 (or higher) and $$deg t_{i} = 1 \iff t_{i}$$ is a rainbow.
-
-Now, let's look at deg $$T_{outer}$$
-
-deg $$T_{outer}$$ = number of alternations of triangular facets of the tetrahedrons that has the corners 1,2,3 on the triangular facet,$$A_{1}A_{2}A_{3}$$, of the big tetrahedron T. Therefore, $$deg T_{outer}$$ is odd. (See Figure 4)
-
-<figure>
-<img src = "{{root_url | prepend: site.baseurl}}/asset/graph_theory/pic/homework/assign-6/6-k.jpeg" width = "300">
-<figurecpation>Figure 4</figurecpation>
-</figure>
-
-Since from class, we alrady proved the 1 and 2 d cases, and know that there are odd numbers of rainbow triangles, with corners 1,2,3. (therefore, I do not repeat the prove here)
-
-
-
-because $$deg \ t_{i} = 2 =$$ even 
-
-and if 
-$$deg \ t_{outers} = odd \\ deg \ t_{rainbow} = 1 = odd $$
-
-By the Handshaking Lemma, G has even number of odd degree vertices. 
-
-Therefore, the number of rainbow small tetrahedron $$deg \ t_{rainbow}$$ must be odd and
-is particularly non-zero.     Q.E.D

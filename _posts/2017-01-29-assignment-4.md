@@ -3,7 +3,7 @@ layout: post
 title:  graph theory homework assignment 4
 date:   2017-02-01 07:06:05
 categories: Graph_Theory_homework
-tags: homework induction proof 1.3 3.1
+tags: Graph_Theory_homework
 ---
 ## Assignment 4
 

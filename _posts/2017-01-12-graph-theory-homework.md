@@ -3,7 +3,7 @@ layout: post
 title:  graph theory homework note
 date:   2017-01-09 19:06:05
 categories: Graph_Theory_homework
-tags: homework induction proof 1.3 3.1
+tags: Graph_Theory_homework
 ---
 
 * content
@@ -11,15 +11,16 @@ tags: homework induction proof 1.3 3.1
 
 ## Assignment 1
 
-### section 1.2 Numbers and sets: notation
 
-Prove that for any two sets A, B we have
 
-(A \ B) ∪ (B \ A) = (A ∪ B) \ (A ∩ B)
+### Question 1.26 Prove that for any two sets A, B we have (A \ B) ∪ (B \ A) = (A ∪ B) \ (A ∩ B)
 
-Proof
-First prove
-$$(A \ B) ∪ (B \ A) \subset (A ∪ B) \ (A ∩ B)$$<br>
+(Matoušek-Nešetřil p15: 6)
+
+**Proof**
+
+$$\implies$$ $$(A \ B) ∪ (B \ A) \subset (A ∪ B) \ (A ∩ B)$$<br>
+
 $$x \in (A \setminus B) \cup (B \setminus A) $$ -- By law of union  <br>
 $$x \in (A \setminus B) \cup (x \in (B \setminus A)$$ <br>
 $$(x \in A \cap x \notin B) \cup (x \in B \cap x\notin A) $$ -- By law of complement<br>
@@ -537,6 +538,10 @@ Chapter 3.7
 
 ### Question 1: 
 
+
+
+
+
 (Sieve of Eratosthenes) How many numbers are left in the set
 {1, 2, . . . , 1000} after all multiples of 2, 3, 5, and 7 are crossed out?
 (Q 3.7.3)
@@ -678,9 +683,9 @@ What is wrong with the following inductive “proof” that D(n) = (n−1)! for 
 The mistake is in the following step:
 
 it defines that $$π′(n) = π(i), π′(i) = n$$, and $$π′(j) = π(j)$$. Then we can see that according to this definition, 
-since $$π′(j) = π(j), π′(j) = j$$. But $$π(j) = j$$ implies there is a fixed point. So, it is a contradiction. 
+since π′(j) = π(j), π′(j) = j. But π(j) = j implies there is a fixed point. So, it is a contradiction. 
 
-also if $$π$$ be a permutation of $$\{1,2,...,n−1\}$$ and $$π′$$ as a permuntation of $$\{1,2,...,n\}$$ with no fixed point, as an extension of  $$π$$. Let's assume that it is indeed $$π′(j) = π(j)$$, then $$π′(j) =\{1,2,...,j\} = j! $$ and $$π(j)=\{1,2,...,j-1\}=(j-1)!$$ according to its own definition of $$π(j)$$ and $$π′(j)$$, but $$j! ≠ (j-1)!$$, so this is a contradition. 
+also if π be a permutation of $$\{1,2,...,n−1\}$$ and π′ as a permuntation of $$\{1,2,...,n\}$$ with no fixed point, as an extension of  π. Let's assume that it is indeed $$π′(j) = π(j)$$, then $$π′(j) =\{1,2,...,j\} = j! $$ and $$π(j)=\{1,2,...,j-1\}=(j-1)!$$ according to its own definition of π(j) and π′(j), but j! ≠ (j-1)!, so this is a contradition. 
 
 ### Question 7
 How many permutations of the numbers 1, 2, . . . , 10 exist that map no even number to itself?
@@ -688,11 +693,14 @@ Applying the answer from question 5. we know that there are 5 even numbers in th
 so, k = 5 and n = 10. Therefore, the formula is
 $$10!-\binom{5}{1}(10-1)!+\binom{5}{2}(10-2)!-\binom{5}{3}(10-3)!+\binom{5}{4}(10-4)!-\binom{5}{5}(10-5)! = 2170680$$.
 
-## Assignment 5
 
+
+
+##Assignment 5
 
 ### Question 1 (Q5)
 Call a graph $$G = (V, E)$$ vertex-transitive if for any two vertices $$v, v′ ∈ V$$ an automorphism $$f : V → V$$ of G exists (see Exercise 3) $$with \ f(v) = v′$$. Similarly, G is edge-transitive if for any two edges $$e,e′ ∈ E$$ an automorphism $$f:V →V$$ exists with $$f(e)=e′$$ (if$$ e=\{u,v\}$$ then the notation $$f(e)$$ stands for the set $$\{f(u),f(v)\})$$.
+
 
 **(a) Prove that the graphs in Exercise 1 is vertex-transitive**
 
@@ -727,7 +735,7 @@ By the definition above, if a graph is vertex-transitive, then it must be edge-t
 
 **(c) Find a graph that is edge-transitive but not vertex-transitive.**
 
-This following graph is not vertex transitive, because it is a bipartite graph which has two groups of vertices, $$V_{1}$$ and $$V_{2}$$, and vertices from either set can not be connected to each other, according to the definition of bipartite graph. G is called bipartite if the set V(G) can be divided into two disjoint sets $$V_{1}$$ and $$V_{2}$$ in such a way that each edge of G connects a vertex from V1 to a vertex from $$V_{2}$$. Written in symbols, $$E(G) ⊆ \{\{v,v′\}: v ∈ V_\{1\},v′ ∈ V_{2}\}$$
+This following graph is not vertex transitive, because it is a bipartite graph which has two groups of vertices, $$V_{1}$$ and $$V_{2}$$, and vertices from either set can not be connected to each other, therefore, G is not vertex transitive
 
 <figure>
 <img src = "{{root_url | prepend: site.baseurl}}/asset/graph_theory/pic/homework/assign-5/bipartite.png" width = "300">
@@ -758,9 +766,11 @@ It is transitive, since if $$f$$ is a one-to-one correspondence that makes G1 is
 Therefore, ("to be isomorphic") is an equivalence relation on G. 
 
 
-## 4.2
 
-### Question 4 (Q1)
+
+### Question 4.2.1
+
+
 
 **Prove that the complement of a disconnected graph G is connected. (The complement of a graph G = (V, E) is the graph $$(V,  \binom{V}{2} \setminus E).)$$**
 
@@ -785,27 +795,68 @@ Suppose m > n, and one of the vertices in m is deleted, then this removes m−1 
 
 Thus, the maximum is attained for $$n_{1} =n−k+1 and ni = 1 for i=2,3,...,n.$$. As a result, it has $$\frac{(n−k+1)(n−k)}{2}$$ edges.
 
-[reference1](http://math.stackexchange.com/questions/1075692/number-of-edges-in-a-graph-with-n-vertices-and-k-connected-components)
-[reference2](https://www.quora.com/What-is-the-maximum-number-of-edges-in-graph-with-n-vertices-and-k-components)
-
-Hint
-4.2.2. The most edges are clearly obtained if the components are complete graphs. If their numbers of vertices are $$n1, . . . , nk, \sum ni = k$$, we have  $$\binom{n1}{2}  + ··· +  \binom{nk}{2} $$ edges and we need to maximize this expression as a function of n1,...,nk. Show that if, for example, n1 ≥ n2 > 1, the value doesn’t decrease by increasing n1 by 1 and decreasing n2 by 1. Hence 
 
 
 ### Question 6 (Q4)
 
 **Prove that a graph is bipartite if and only if it contains no cycle of odd length.**
 
-[reference](http://math.stackexchange.com/questions/311665/proof-a-graph-is-bipartite-if-and-only-if-it-contains-no-odd-cycles)
 
-If G is bipartite, then by definition, it has $$V_{1} \cup V_{2}$$ and an edge is formed by a vertex from $$V_{1}$$ to a vertex in $$V_{2}$$, therefore, there is no path exists connecting any 2 elements from either $$V_{1}$$ or $$V_{2}$$. So, to complete a cycle, a path has to be even. 
+Suppose G is bipartite, then $$V(G) = U \cup W, \ and \ U \cap W = \emptyset$$
+
+for every $$e \in E(G),e = \{u,v\}$$ where $$u \in U  \ and \ v \in W$$
+
+Suppose G has (at least) one odd cycle. 
+Let $$C = (v_{1},v_{2},...,v_{n})$$ be an odd cycle in G, and n is odd. 
+
+$$v_{1} \in U$$ then $$v_{2} \in W$$
+
+$$
+v_{i} \in
+\begin{cases}
+U & \text{if i is odd} \\[2ex]
+W & \text{if i is even}
+\end{cases}
+$$
+
+
+Then $$v_{n} \in U$$, and it is odd, and $$v_{1},v_{n} \in U$$ such that $$\{v_{1},v_{n}\} \in E(G)By the definition of bipartite graph,$$ this is a contradition $$#$$. In conclusion, it is impossible to have odd cycle in G, if G is bipartite. 
+
+Now, suppose that G has no odd cycle, then it is a bipartite. 
+
+Suppose all cycles in G has even length. 
+
+* if G is disconnected, then any cycle in G is contained in one of its components $$\{G_{1},G_{2},...,G_{n}\}$$. Then there must be $$X_{1},Y_{1}, X_{2},Y_{2},....X_{n},Y_{n}$$ then let $$X = \{X_{1} \cup X_{2},...,\cup X_{n}\}$$ and $$Y = \{Y_{1} \cup Y_{2},...,\cup Y_{n}\}$$
+
+It suffices to show the claim for connected graphs, so let's assume G is connected. 
+
+Let $$v \in V(G)$$, then there is distance(minimum length) such that $$ X = \{u |d_{G}(u,x) \ is \ even \ \}$$ and $$Y = \{v |d_{G}(v,x) \ is \ odd \ \}$$. Since G is connected, $$X \cup Y = V(G)$$
+and $$X \cap Y = \emptyset$$, because there is no distance both even and odd. 
+
+Then any $$e \in E(G)$$ is of the form $$e = \{x,y\},x \in X,y \in Y$$. We need to show that $$\{x,y\} \in E(G)$$ and $$\{x,y\} \in X \ or \ \{x,y\} \in Y$$ is impossible, that is $$\{x,y\} \in X$$, show $$\{x,y\} \not\in X$$
+
+Suppose $$P: v \to x$$ be a shortest path from v to x. $$Q: v \to y$$ be a shortest path from v to y. Since $$\{x,y\} \in X$$, then P and Q are both of the same parity. (see Figure 1)
 
 <figure>
-<img src = "{{root_url | prepend: site.baseurl}}/asset/graph_theory/pic/homework/assign-5/bipartite.png" width = "300">
-<figcaption>Example graph</figcaption>
+<img src = "{{root_url | prepend: site.baseurl}}/asset/graph_theory/pic/homework/assign-5/bipartite-odd.jpeg" width = "400">
+<figcaption> Figure 1</figcaption>
 </figure>
 
-From the graph, we see that $${1,2,3} = V_{1}, {4,5,6}=V_{2}$$. All vertices in $$V_{1}$$ are colored blue and all vertice in $$V_{2}$$ are colored red. To complete any cycle, such as the highlighted one$$\{e1,e2,e3,e4\}$$, it length has to be 2n. 
+Now let w be the last common vertex of P and Q. $$P_{1}: v \to w$$ and $$P_{2}: w \to x$$ Then $$P = \{P_{1},P_{2}\}$$
+
+similarly, $$Q_{1}: v \to w$$ and $$Q_{2}: w \to y$$. Then $$Q = \{Q_{1},Q_{2}\}$$
+
+Since P and Q are shortest, it follows that $$\lvert P_{1}\lvert = \lvert Q_{1}\lvert$$
+
+Then $$\lvert P_{2}\lvert$$ and $$\lvert Q_{2}\lvert$$ have the same parity. 
+
+$$\require{AMScd}$$
+$$\begin{CD}
+      x @>{\text{$P_{2}^{-1}$}}>> w  @>{\text{$Q_{2}$}}>> y
+\end{CD}$$
+
+Now if $$x,y \in E(G)$$ then $$\{P_{2}^{-1},Q_{2}\}$$ together with x,y will form a cycle of odd length. Because cycles in G has even length. So this is a contradiction. So $$\{x,y\} \not \in E(G)$$. Therefore, there is no path exists connecting any 2 elements from either $$V_{1}$$ or $$V_{2}$$. So, to complete a cycle, a path has to be even. 
+
 
 ### Question 7 (Q5)
 
@@ -821,19 +872,16 @@ If v is a vertex with at least 2 neighbors it has to be connected to all vertice
 
 
 
-[dd](http://math.stackexchange.com/questions/272234/describe-all-graphs-without-a-path-of-length-3)
 
 
 
-Assignment 6
+
+
+## Assignment 6
 
 ### Question 4.2.5
 
 b) Let G be a graph on n vertices, $$A = A_{G}$$ its adjacency matrix, and In the n×n identity matrix (with 1s on the diagonal and 0s elsewhere). Prove that G is connected if and only if the matrix ($$I_{n} + A)^{n−1}$$ has no 0s.
-
-
-
-
 
 
 Let $$A^k$$ be the matrix that will have entry $$i,j$$, which is non-zero (strictly positive) if, and only if, there exists a path of length exactly $$k$$ between vertices $$i$$ and $$j$$.
@@ -1008,3 +1056,6 @@ By the Handshaking Lemma, G has even number of odd degree vertices.
 
 Therefore, the number of rainbow small tetrahedron $$deg \ t_{rainbow}$$ must be odd and
 is particularly non-zero.     Q.E.D
+
+
+

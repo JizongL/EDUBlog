@@ -12,6 +12,60 @@ tags: Sarada_Herke graph_theory
 This is a blog post I keep as my personal note in studying [Sarada Kerke's](https://www.youtube.com/playlist?list=PLoJC20gNfC2gmT_5WgwYwGMvgCjYVsIQg) graph theorem on YouTube. 
 I will update my note every time I finish studying one lecture. 
 
+
+## Graph Theory: 12. Spanning and Induced Subgraphs
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/dPHkyRvLtIU?list=PLoJC20gNfC2gmT_5WgwYwGMvgCjYVsIQg" frameborder="0" allowfullscreen></iframe>
+
+note: G-v, G / e. (vertex and edge deletion has different notation)
+<figure>
+<img src = "{{root_url | prepend: site.baseurl}}/asset/graph_theory/pic/Sarada-Herke/V-12/v-12-a.png" width = "500">
+<figurecpation></figurecpation>
+</figure>
+
+A graph F is a subgraph of a graph G if 
+1: $$V(F) \subset V(G)$$
+2: $$E(F) \subset E(E)$$
+
+If F is a subgraph of G we write $$F \subset G$$. We can say F is contained in G or G contains F. 
+
+<figure>
+<img src = "{{root_url | prepend: site.baseurl}}/asset/graph_theory/pic/Sarada-Herke/V-12/v-12-b.png" width = "500">
+<figurecpation></figurecpation>
+</figure>
+
+Spanning subgraph is a subgraph obtained only by edge deletions. In other words, the vertice set of the subgraph is the entirely vertice set of the original graph. 
+
+A subgraph obtained only by vertice deletion is called an induced subgraph. 
+
+Graph G and X is the set of vertices that are deleted, the resulting subgraph is G - X.
+
+<figure>
+<img src = "{{root_url | prepend: site.baseurl}}/asset/graph_theory/pic/Sarada-Herke/V-12/v-12-c.png" width = "500">
+<figurecpation></figurecpation>
+</figure>
+
+
+X=$$\{v_{1},v_{5}\}$$ 
+G- X. We are interested in the set of vertices Y=V\X. (all the vertices that are remained)
+Y=$$\{v_{2},v_{3},v_{4}\}$$
+G[Y] = graph induced by the vertices in Y. 
+
+The graph with vertex set Y and edge set consists of all edges of G which have both ends in Y. 
+<figure>
+<img src = "{{root_url | prepend: site.baseurl}}/asset/graph_theory/pic/Sarada-Herke/V-12/v-12-d.png" width = "500">
+<figurecpation></figurecpation>
+</figure>
+
+## Graph Theory: 13. Degrees at Least Two Means a Cycle Exists
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/voD1xLxZvAM?list=PLoJC20gNfC2gmT_5WgwYwGMvgCjYVsIQg" frameborder="0" allowfullscreen></iframe>
+
+Assume G is a simple graph. 
+
+Let P be a longest path in G. 
+
+
 ## Graph Theory: 23. Euler Trials and Euler Tours. 
 
 
@@ -216,7 +270,7 @@ If $$\exists$$ Hamilton cycle, the graph is hamiltonian.
 
 
 <figure>
-<img src = "{{root_url | prepend: site.baseurl}}/asset/graph_theory/pic/Sarada-Herke/V-27/v-27-a.png" width = "500">
+<img src = "{{root_url | prepend: site.baseurl}}/asset/graph_theory/pic/Sarada-Herke/V-27/v-27-a.png" width = "300">
 <figurecpation>Figure 1</figurecpation>
 </figure>
 
@@ -225,7 +279,7 @@ Hamiltonian cycle can be converted to a Hamiltonian path by removing one edge.
 If G is Hamiltonian, then any supergraph $$G', G \subset G'$$ where G' is obtained by adding new edges between non-adjcent vertices of G. Then G' is also Hamiltonian. 
 
 <figure>
-<img src = "{{root_url | prepend: site.baseurl}}/asset/graph_theory/pic/Sarada-Herke/V-27/v-27-b.png" width = "500">
+<img src = "{{root_url | prepend: site.baseurl}}/asset/graph_theory/pic/Sarada-Herke/V-27/v-27-b.png" width = "300">
 <figurecpation>Figure 1</figurecpation>
 </figure>
 
@@ -328,6 +382,86 @@ u and v are not similar(u is incident to 3 cycle, but v is not)
 
 
 
+## Graph Theory: 36. Definition of a Tree
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/QFQlxtz7f6g?list=PLoJC20gNfC2gmT_5WgwYwGMvgCjYVsIQg" frameborder="0" allowfullscreen></iframe>
+
+
+Tree
+
+A graph with no cycles is acyclic.
+
+A tree is a connected acyclic graph. 
+
+A forest is an acyclic graph. 
+
+Corollary: a connected graph is a tree $$\iff$$ all of its edges are bridges. 
+
+Cayley's formula: There are $$n^{n-2}$$ trees on a vertext set V of n elements.
+
+
+
+Collary: A forest F of order n with k connected components has 
+
+<figure>
+<img src = "{{root_url | prepend: site.baseurl}}/asset/graph_theory/pic/Sarada-Herke/V-36/v-36-a.png" width = "500">
+<figurecpation></figurecpation>
+</figure>
+ table for non-isomorphic trees 
+
+
+
+<figure>
+<img src = "{{root_url | prepend: site.baseurl}}/asset/graph_theory/pic/Sarada-Herke/V-36/v-36-b.png" width = "500">
+<figurecpation></figurecpation>
+</figure>
+pair-wise non isomorphic trees
+
+
+
+Let T be a tree, If $$v \in V(T)$$ and d(v) = 1 then v is a leaf. 
+
+Fact: Every tree T with $$\lvert V(T) \lvert ≥ 2$$ has at least 2 leaves. 
+
+Take a maximal path T.
+Each end vertex of this path is a leaf. 
+
+
+
+## Graph Theory 37. Which Graphs are Trees
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/BptJFixSseM?list=PLoJC20gNfC2gmT_5WgwYwGMvgCjYVsIQg" frameborder="0" allowfullscreen></iframe>
+
+Theorem: A graph G is a tree $$iff$$ G is acyclic and $$\lvert E(G) \lvert = \lvert V(G) \lvert -1 $$. 
+
+Proof
+
+$$\implies$$ G is a tree and acylic. (by definition)
+
+By induction 
+
+Base n=1 m = 0.  checked. 
+
+Induction hypothesis: Suppose all trees of order n have n-1 edges(n≥1).
+Let T be a tree of order n+1. $$\exists$$ at least 2 leaves. Let $$v \in V(T)$$ with degree 1 (leaf). 
+
+T' = T-v
+so T' has n-1 edges. T has(n-1)+1 = n edges. 
+
+$$\impliedby$$ Suppose G is acyclic and m = n-1
+
+We do not know if G is connected, but suppose there are k connected components$$G_{1},G_{2}...G_{i}...G_{k}$$ in G. Now that we know $$G_{i}$$ is connected, also by definition it is acylic. And $$G_{i}$$ has $$m_{i}$$ edges and $$n_{i}$$ vertices. So, by our hypothesis,$$m_{i}=n_{i}-1$$ and this implies that $$m=\sum_{i=1}^{k}m_{i}=\sum_{i=1}^{k}n_{i}-1$$=n-k. And from our hypothesis, m = n-1. so n-1=n-k. Therefore, k must be 1. This implies that there is only 1 connected component in G, so G is connected. 
+
+
+## Graph Theory: 38. Three ways to Identify Trees
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Yon2ndGQU5s?list=PLoJC20gNfC2gmT_5WgwYwGMvgCjYVsIQg" frameborder="0" allowfullscreen></iframe>
+
+Theorem: A graph G is a tree $$\iff$$ G is acyclic and $$\lvert E(G) \lvert = \lvert V(G)\lvert$$ -1. m=n-1
+
+Corollary: A forest F of order n with k connected compnents, has m = n-k edges. 
+
+spanning tree of a graph G: spanning subgraph of G that is a tree. 
 
 
 
