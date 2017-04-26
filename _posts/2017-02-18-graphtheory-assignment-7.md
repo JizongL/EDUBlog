@@ -125,7 +125,7 @@ So far, the total degrees are 20. We need 4 more. Since the question states that
 
 ### Question 7.1.5
 (Sperner’s lemma in dimension 3)
-(a) ∗Consider a tetrahedron $$T = A_{1}A_{2}A_{3}A_{4}$$ in the 3-dimensional space and some subdivision of T into small tetrahedra, such that each face of each small tetrahedron either lies on a face of the big tetrahedron or is also a face of another small tetrahedron. Let us label the vertices of the small tetrahedra by labels 1, 2, 3, 4, in such a way that the vertex A_{i} gets i, the edge $$A_{i}A_{j}$$ only contains vertices labeled i and j, and the face A_{i}A_{j}A_{k} has only labels i,j, and k. Prove that there exists a small tetrahedron labeled 1, 2, 3, 4.
+(a) ∗Consider a tetrahedron $$T = A_{1}A_{2}A_{3}A_{4}$$ in the 3-dimensional space and some subdivision of T into small tetrahedra, such that each face of each small tetrahedron either lies on a face of the big tetrahedron or is also a face of another small tetrahedron. Let us label the vertices of the small tetrahedra by labels 1, 2, 3, 4, in such a way that the vertex $$A_{i}$$ gets i, the edge $$A_{i}A_{j}$$ only contains vertices labeled i and j, and the face $$A_{i}A_{j}A_{k}$$ has only labels i,j, and k. Prove that there exists a small tetrahedron labeled 1, 2, 3, 4.
 
 small tetrahedron either lies on a face of the big tetrahedron (odd)
 
@@ -139,9 +139,9 @@ Let's fix corner 1,2,3 as referenced facet.
 
 Then 
 
-case 1: $$deg t_{i} = 0$$ if $$t_{i}$$ has no 1 or 2 or 3 corners. 
+case 1: $$deg(t_{i}) = 0$$ if $$t_{i}$$ has no 1 or 2 or 3 corners. 
 
-case 2: $$deg t_{i} > 0$$ if $$t_{i}$$ has face 1 or 2 or 3, so the corners 1 and 2 and 3. 
+case 2: $$deg (t_{i}) > 0$$ if $$t_{i}$$ has face 1 or 2 or 3, so the corners 1 and 2 and 3. 
 (See figure 1)
 
 <figure>

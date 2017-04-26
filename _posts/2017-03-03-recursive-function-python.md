@@ -187,3 +187,42 @@ main()
 
 
 ```
+
+
+
+Q7: Find a recurrence relation for the number of bit strings of length n that contain a pair of consecutive 0s.(Rosen Discrete Text P 510, Q7)
+
+Let an be the number of bit strings of length n containing a pair of consecutive O's. In order to construct a bit string of length n containing a pair of consecutive O's we could start with 1 and follow with a string of length n - 1 containing a pair of consecutive O's, or we could start with a 01 and follow with a string of length n - 2 containing a pair of consecutive O's, or we could start with a 00 and follow with any string of length n - 2. These three cases are mutually exclusive and exhaust the possibilities for how the string might start. From this analysis we can immediately write down the recurrence relation, valid for all $$n ≥ 2: a_{n}= a_{n-1} + a_{n-2} + 2_{n-2}+2^{n-2}$$. (Recall that there are $$2_{k}$$ bit strings of length k.)
+
+see the following code to calculate the result when $$a_{n} = 7$$
+
+```
+
+def num_bit_string_count(a):
+    if a == 0:
+        return 0
+    elif a == 1:
+        return 0
+
+    else:
+        return num_bit_string_count(a-1) + num_bit_string_count(a-2)+2**(a-2)
+
+
+print(num_bit_string_count(7))
+
+```
+
+Write a recursive function that accepts arument, n. The function should display n lines of asterisks on the screen, with the first line showing 1 asterisk, the second showing 2 up to nth line that shows n asterisks. 
+```
+def print_asterisk(n):
+    if n ==1:
+        print("*")
+
+    else:
+
+        print_asterisk(n-1)
+        print("*" * n)
+
+print_asterisk(5)
+
+```

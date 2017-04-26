@@ -210,3 +210,8 @@ import sys
 sys.stdout = open('file', 'w')
 print 'test'
 ```
+
+## find the mode of a list of integers.
+```
+max(set(max_total), key=max_total.count))
+```

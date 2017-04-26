@@ -48,7 +48,7 @@ In conclusion, there is a bijection between $$G_{1}$$ and $$G_{3}$$ such that, $
 
 **(b) Decide whether each vertex-transitive graph is edge-transitive as well.**
 
-By the definition above, if a graph is vertex-transitive, then it must be edge-transitive too. Because any automorphism of G perserves edges, therefore, if $$e_{i} \in G(E)$$ and $$e_{i} = \{u,v\}$$ and $$ u,v \in G(V)$$, then there exists $$e_{j} \in G'$$, and $$e_{j} =\{f(u),f(v)\}$$ such that $$f(u),f(v) \in G'(V)$$, such graph is called symetric. 
+A simple counterexample arises as follows: take triangles with vertex sets {1,2,3} and {4,5,6}, and add the edges {1,4}, {2, 5}, and {3, 6}. Obviously, the added edges are not part of either triangles, so the graph is not edge transitive though it is vertex transitive. 
 
 **(c) Find a graph that is edge-transitive but not vertex-transitive.**
 
@@ -109,6 +109,24 @@ Assume that there exist two components and they have n and m vertices, where n,m
 Suppose m > n, and one of the vertices in m is deleted, then this removes m−1 edges. now let's add a new additional vertex to the component with n vertices, and connect it to all its vertices. This will add n edges to that component. Obviously, this contradicts the premise that the graph had maximum number of edges, because the graph has more edges now.
 
 Thus, the maximum is attained for $$n_{1} =n−k+1 and ni = 1 for i=2,3,...,n.$$. As a result, it has $$\frac{(n−k+1)(n−k)}{2}$$ edges.
+
+#### corrected solution 
+
+Let each component i have $$c_{i}$$ vertices. If we put a complete graph for each
+connected component, we will maximize edges. So the total number of edges is
+
+$$\sum_{i=1}^{k}\binom{c_{i}}{2}=\sum_{i=1}^{k}\frac{c_{i}(c_{i}-1)}{2}=\frac{1}{2}(\sum_{i=1}^{k}c_{i}^{2}-c_{i})=\frac{1}{2}\sum_{i=1}^{k}c_{i}^{2}-n$$
+
+We now need to find some distribution of vertices for each connected component such that we maximize this expression. Consider some sequence $$\{c_{1},c_{2},...,c_{n}\}$$ such that $$c_{1} ≤ c_{2}≤,...≤ c_{n}$$. Let's compare the number of edges produced with sequence $$\{c_{1}-1, c_{2}+1,c_{3}...,c_{k}\}$$. Notice that this sequence is still in increasing order. The additional edges gained from using this new sequence for number of vertices for each of the components. 
+
+$$(c_{1}-1)^{2}+(c_{2}+1)^{2}-c_{1}^{2}-c_{2}^{2} = 2(c_{2}-c_{1}+1)$$ 
+
+(think of a number lines from the above formula)
+
+So this is positive increase as long as $$c_{1}≤c_{2}+1$$. We have assumed that $$c_{1}≤c_{2}$$, so this means that decreasing $$c_{1}$$ by 1 and increasing $$c_{2}$$ by 1 results in creation of additional edges. We can apply this argument to any two consecutive $$c_{i}$$ and $$c_{j}$$ repeatedly, thus resulting in $$c_{1}=c_{2}=...=c_{k-1}=1$$ and $$c_{k}=n-(k-1)$$
+.Therefore, the maximal number of edges that can be created is 
+
+$$\binom{n-(k-1)}{2}=\frac{(n-k+1)(n-k)}{2}$$. (note, this verifies with the previous answer)
 
 
 
@@ -178,7 +196,7 @@ Now if $$x,y \in E(G)$$ then $$\{P_{2}^{-1},Q_{2}\}$$ together with x,y will for
 **Describe all graphs containing no path (not necessarily induced!) of length 3.**
 
 
-If v is a vertex with at least 2 neighbors it has to be connected to all vertices of its component. Each component has to be K3 or K1,n .
+If v is a vertex with at least 2 neighbors it has to be connected to all vertices of its component. Each component has to be $$K_{3}$$ or $$K_{1,n}$$ .
 <figure>
 <img src = "{{root_url | prepend: site.baseurl}}/asset/graph_theory/pic/homework/assign-5/graph-no-p3.png" width = "500">
 <figcaption>Example graph</figcaption>

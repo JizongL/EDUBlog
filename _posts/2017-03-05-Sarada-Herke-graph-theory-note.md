@@ -459,16 +459,39 @@ We do not know if G is connected, but suppose there are k connected components$$
 
 Theorem: A graph G is a tree $$\iff$$ G is acyclic and $$\lvert E(G) \lvert = \lvert V(G)\lvert$$ -1. m=n-1
 
+
+
 Corollary: A forest F of order n with k connected compnents, has m = n-k edges. 
 
 spanning tree of a graph G: spanning subgraph of G that is a tree. 
 
+<figure>
+<img src = "{{root_url | prepend: site.baseurl}}/asset/graph_theory/pic/Sarada-Herke/V-38/v-38-a.png" width = "500">
+<figurecpation></figurecpation>
+</figure>
+
+Every connected graph G has a spanning tree. 
+
+remove edges of cycles until only bridges remain.
 
 
+m-(m-(n-1))= n-1 
+
+Corollary: every connected graph has m ≥ n-1.
+
+Theorem: A graph G is a tree $$iff$$ G is connected and has m=n-1.
+
+Proof: $$\implies$$ G has a tree $$\implies$$ connected, and previous theorem $$\implies$$ m = n-1. 
+
+$$\impliedby$$ G is connected m = n-1
+suppose C is a cycle in G. $$e \in C$$, and $$G \setminus e$$ is still connected and $$G \setminus e$$ has n-2. So, this is a contradiction. So, G is acyclic and connected, so G is a tree. 
 
 
+## Graph Theory: 39. Types of Trees 
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/2k_FFB5Rmwo?list=PLoJC20gNfC2gmT_5WgwYwGMvgCjYVsIQg" frameborder="0" allowfullscreen></iframe>
 
-
-
-
+<figure>
+<img src = "{{root_url | prepend: site.baseurl}}/asset/graph_theory/pic/Sarada-Herke/V-39/v-39-a.png" width = "500">
+<figurecpation></figurecpation>
+</figure>

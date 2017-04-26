@@ -8,6 +8,8 @@ tags: Computer_science MSU python
 * content
 {: toc}
 
+Download textbook example [source code here](http://bcs.wiley.com/he-bcs/Books?action=resource&bcsId=8029&itemId=1118290275&resourceId=31282)
+
 ## class 1
 
 Immutable- do not change 
@@ -710,3 +712,271 @@ Linear is still used because it is useful when list is not sorted.
 
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/vxENKlcs2Tw" frameborder="0" allowfullscreen></iframe>
+
+
+
+
+## class 25
+### linked list
+memory diagram
+
+head -> node1(3) -> node2(5) ->...->noden(3)
+
+head -> 3 link -> 7 link -> 11 link -> 12 link -> 17 link -> 20 link -> 24 link ->
+
+Download [code here]({{root_url | prepend: site.baseurl}}/asset/python_code/class_lecture/linked-list-editing.py)
+
+
+### build a linked list class
+
+```
+## linked list class
+class ListNode:
+    def __init__(self,item = None,link = None):
+        self.__item = item
+        self.__link = link
+
+    def get_item(self):
+        return self.__item
+
+    def set_item(self,item):
+        self.__item = item
+
+    def get_link(self):
+        return self.__link
+
+    def set_link(self,link):
+        self.__link = link
+
+
+```
+
+### build a linked list and travese it
+
+```
+## set the sequence as 3,5,6, 3 as the head,6 as the tail.
+head = ListNode(3)
+head = ListNode(5,head)
+head = ListNode(6,head)
+
+## traverse the link from tail back to head.
+while head != None:
+    print(head.get_item())
+    head = head.get_link()
+
+
+```
+
+### add item intenally, in the middle or around.
+
+```
+## set change as a pointer that points to 5, the target position where 
+## the new item will be inserted.
+change = head
+while change.get_item()!=5:
+    change = change.get_link()
+
+## make new node, and set its link to change.
+temp = ListNode(30,change.get_link())
+
+## set change to link to temp
+change.set_link(temp)
+
+## finally set head to link to change. 
+head.set_link(change)
+ 
+
+```
+
+
+### add item at the end. 
+
+```
+## add 20 to the end.
+
+## set pointer
+pointer = head
+
+while pointer.get_link()!=None:
+    pointer = pointer.get_link()
+new_item = ListNode(20)
+
+## link pointer to the new item.
+pointer.set_link(new_item)
+```
+
+remove the last item
+
+```
+target = head
+while target.get_link()!= None:
+    change = target
+    target = target.get_link()
+change.set_link(None)
+target = None ## target is garbage collected
+```
+
+
+
+```
+class Stack:
+    def __init__(self):
+        self.__top = None
+    
+    def push(self,item):
+        self.__top = ListNode(item, self.__top)    
+
+    def pop(self):
+        if self.__top == None:
+            raise Exception("Empty Stack")    
+        item = self.__top.get_item()
+        self.__top = self.__top.get.link()
+        return item 
+
+    def top(self):
+        if self.__top = None:
+            raise Exception("Empty Stack")
+        return self.__top.get.item()
+
+    def is_empty(self):
+        return self.__top ==None
+
+    def is_full(self):
+        return False
+
+    def destroy(self):
+        self.__top == None
+
+```
+Linked list Queue
+```
+class Queue:
+    def __init__(self):
+        self.__front = None
+        self.__rear = None
+
+    def enqueue(self,item):
+        if self.__front == None:
+            self.__front = ListNode(item)
+            self.__rear = self.__front
+
+        else:
+            temp = ListNode(item)    
+            self.__rear.set.link(temp)
+            self.__rear = temp
+
+    def dequeue(self):
+        if self.__front == None:
+            raise Exception("Empty Queue")                
+        item = self.__front.get_item()            
+        self.__front = self.__front.get_link()
+        if self.__front == None:
+            self.__rear = None
+        return item
+
+    def destroy(self):
+        self.__front = None
+        self.__rear = None
+
+
+    def is_empty(self):
+        return self.__front == None
+
+    def is_full(self):
+        return False
+                                                
+
+
+
+```
+
+## Tree
+
+```
+class TreeNode:
+    def __init__(self,data:None,left=None,right=None):
+        self.__data=data
+        self.__left = left
+        self.__right = right
+
+    def get_data(self):
+        return self.__data
+
+    def set_data(self,data):
+        self.__data = data
+
+    def get_left(self):
+        return self.__left
+
+    def set_left(self):
+        self.__left= left
+
+    def get_right(self):
+        return self.__right
+
+    def set_right(self):
+        self.__right= right    
+```
+## review
+
+```
+from ListNode import *
+
+head = ListNode(1)
+head = ListNode(5,head)
+head = ListNode(3,head)
+head = ListNode(7,head)
+
+## sum the list
+def sum_list(head):
+    sum = 0
+    node_ptr = head
+    while node_ptr != None:
+        item = node_ptr.get_item()
+        sum += item
+        node_ptr = node_ptr.get_item()
+
+    return sum
+
+## remove the last item
+def remove_last(head):
+    target = head
+    while target.get_link() != None:
+        change = target
+        target = target.get_link()
+    change.set_link(None)
+
+
+
+## move first node to the last.
+temp = head
+head = head.get_link()
+temp.set_link(None)
+pointer = head
+while pointer.get_link()!=None:
+    pointer = pointer.get_link()
+
+pointer.set_link(temp)
+
+```
+
+
+preorder traversial
+inorder traversial
+post-order traversial
+
+## Final exam review
+
+```
+def sum_double_linked(head):
+    sum = 0
+    pointer = head
+    while point.get_next()!=None:
+        item = point.get.item()
+        if item !=None:
+            sum += item
+        pointer = point.get_next()            
+    return sum
+
+```
+
