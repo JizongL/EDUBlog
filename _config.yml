@@ -40,10 +40,13 @@ google_analytics_id: UA-89660816-1 # google 分析追踪id
 
 # Build settings
 markdown: kramdown
+# markdown: redcarpet
+# highlighter: pygments
 contact_PK: 970b952628537ad7a2e389fdd91bd127
 
 # for mathjax markdown display, also see 
 redcarpet: 
+
 extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "strikethrough", "superscript", "with_toc_data"]
 
 kramdown:

@@ -1,12 +1,12 @@
 ---
 layout: post
-title:  bug fixed for this blog and jekyll techniques
+title:  jekyll cheatsheet and markdown and html tricks
 date:   2017-01-15 19:06:05
 categories: Jekyll
 tags: bug_fixed jekyll_technique jekyll_code
 ---
 
-## Fix issues
+### Fix issues
 
 recent post, category and tags are not linking to post properly. Issue found because in config.yml file, baseurl is set to "TmmGeekBlog", and the original code in the category.html,tag.html,and index.html is 
 
@@ -35,7 +35,7 @@ Display post outline in Archives, tags, category. But does not link to the post 
  post.url | prepend: site.baseurl 
 ```
 
-## internal post link
+### internal post link
 
 linking to internal page, adding `post.url | prepend: site.baseurl` is necessary
 
@@ -48,14 +48,14 @@ for example
 {% endhighlight %}  
 
 
-right alight text
+### right alight text
 
 ```
 <div style="text-align: right"> Q.E.D</div>
 
 ```
 
-internal link to a section of the post
+### internal link to a section of the post
 
 ```
 ## target
@@ -64,6 +64,26 @@ internal link to a section of the post
 ##from where to target
 <a href="#top">link to top</a>
 ```
+
+### Add looping video
+
+This will put a video playing continously in the frame. 
+```
+ <video controls loop>
+	  <source src="https://s3.amazonaws.com/content.udacity-data.com/courses/ud1111/conda_default_install.mp4" type="video/mp4">
+  		<source src="movie.ogg" type="video/ogg">
+  		Your browser does not support the video tag.
+</video> 
+
+```
+
+ <video controls loop>
+	  <source src="https://s3.amazonaws.com/content.udacity-data.com/courses/ud1111/conda_default_install.mp4" type="video/mp4">
+  		<source src="movie.ogg" type="video/ogg">
+  		Your browser does not support the video tag.
+</video> 
+
+
 
 
 
