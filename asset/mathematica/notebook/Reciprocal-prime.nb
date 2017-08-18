@@ -1,0 +1,592 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     20928,        582]
+NotebookOptionsPosition[     20291,        556]
+NotebookOutlinePosition[     20645,        572]
+CellTagsIndexPosition[     20602,        569]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"repeatingForm", "[", "x_Rational", "]"}], ":=", 
+    RowBox[{"Module", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{
+       "realDigits", ",", "integerPart", ",", "fractionalPart", ",", "start", 
+        ",", "repeat", ",", "exp"}], "}"}], ",", 
+      RowBox[{
+       RowBox[{"integerPart", "=", 
+        RowBox[{"IntegerPart", "[", "x", "]"}]}], ";", "\[IndentingNewLine]", 
+       
+       RowBox[{"fractionalPart", "=", 
+        RowBox[{"FractionalPart", "[", "x", "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"realDigits", "=", 
+        RowBox[{"RealDigits", "[", "fractionalPart", "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"Which", "[", 
+        RowBox[{
+         RowBox[{"MatchQ", "[", 
+          RowBox[{"realDigits", ",", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{"__Integer", ",", 
+               RowBox[{"{", "__Integer", "}"}]}], "}"}], ",", "_Integer"}], 
+            "}"}]}], "]"}], ",", 
+         RowBox[{
+          RowBox[{"start", "=", 
+           RowBox[{"Most", "[", 
+            RowBox[{"First", "[", "realDigits", "]"}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"repeat", "=", 
+           RowBox[{"Last", "[", 
+            RowBox[{"First", "[", "realDigits", "]"}], "]"}]}]}], ",", 
+         RowBox[{"MatchQ", "[", 
+          RowBox[{"realDigits", ",", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{"{", "__Integer", "}"}], "}"}], ",", "_Integer"}], 
+            "}"}]}], "]"}], ",", 
+         RowBox[{
+          RowBox[{"start", "=", 
+           RowBox[{"{", "}"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"repeat", "=", 
+           RowBox[{"Last", "[", 
+            RowBox[{"First", "[", "realDigits", "]"}], "]"}]}]}], ",", 
+         RowBox[{"MatchQ", "[", 
+          RowBox[{"realDigits", ",", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"{", "__Integer", "}"}], ",", "_Integer"}], "}"}]}], 
+          "]"}], ",", 
+         RowBox[{
+          RowBox[{"start", "=", 
+           RowBox[{"First", "[", "realDigits", "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"repeat", "=", 
+           RowBox[{"{", "}"}]}]}]}], "]"}], ";", "\[IndentingNewLine]", 
+       RowBox[{"exp", "=", 
+        RowBox[{"Last", "[", "realDigits", "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"If", "[", 
+        RowBox[{
+         RowBox[{"exp", "<", "0"}], ",", 
+         RowBox[{"start", "=", 
+          RowBox[{"Join", "[", 
+           RowBox[{
+            RowBox[{"Table", "[", 
+             RowBox[{"0", ",", 
+              RowBox[{"{", 
+               RowBox[{"-", "exp"}], "}"}]}], "]"}], ",", "start"}], 
+           "]"}]}]}], "]"}], ";", "\[IndentingNewLine]", 
+       RowBox[{"If", "[", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"Length", "[", "repeat", "]"}], ">", "0"}], ",", 
+         RowBox[{"Row", "[", 
+          RowBox[{"Flatten", "[", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"N", "[", "integerPart", "]"}], ",", "start", ",", 
+             RowBox[{"OverBar", "[", 
+              RowBox[{"Row", "[", "repeat", "]"}], "]"}]}], "}"}], "]"}], 
+          "]"}], ",", 
+         RowBox[{"Row", "[", 
+          RowBox[{"Flatten", "[", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"N", "[", "integerPart", "]"}], ",", "start"}], "}"}], 
+           "]"}], "]"}]}], "]"}]}]}], "]"}]}], ";"}], 
+  "\[IndentingNewLine]"}]], "Input",
+ CellChangeTimes->{3.7053997944388437`*^9}],
+
+Cell[BoxData[
+ RowBox[{"(*", 
+  RowBox[{
+  "Reciprocal", " ", "of", " ", "first", " ", "20", " ", "prime", " ", 
+   "numbers"}], "*)"}]], "Input",
+ CellChangeTimes->{{3.705400182907281*^9, 3.70540019390648*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"data", " ", "=", 
+    RowBox[{"1", "/", 
+     RowBox[{"Table", "[", 
+      RowBox[{
+       RowBox[{"Prime", "[", "n", "]"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"n", ",", "1", ",", "20"}], "}"}]}], "]"}]}]}], ";"}], 
+  "\[IndentingNewLine]"}]], "Input",
+ CellChangeTimes->{{3.705399804214197*^9, 3.7053998074699*^9}, 
+   3.70540019762773*^9}],
+
+Cell[BoxData[
+ RowBox[{"(*", 
+  RowBox[{
+  "Table", " ", "showing", " ", "the", " ", "first", " ", "20", " ", "prime", 
+   " ", "Reciprocal", " ", "with", " ", "their", " ", "repeating", " ", 
+   "decimals"}], "*)"}]], "Input",
+ CellChangeTimes->{{3.705400202031487*^9, 3.705400230457843*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"TableForm", "[", 
+  RowBox[{
+   RowBox[{"Transpose", "[", 
+    RowBox[{"{", 
+     RowBox[{"data", ",", 
+      RowBox[{"repeatingForm", "/@", "data"}]}], "}"}], "]"}], ",", 
+   RowBox[{"TableHeadings", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{
+       "\"\<Reciprocal of Prime\>\"", ",", "\"\<Repeating Decimal\>\""}], 
+       "}"}]}], "}"}]}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.705399829718213*^9, 3.705399990705058*^9}, {
+  3.705400039697566*^9, 3.70540013947139*^9}}],
+
+Cell[BoxData[
+ TagBox[
+  TagBox[GridBox[{
+     {
+      StyleBox["\[Null]",
+       ShowStringCharacters->False], 
+      TagBox["\<\"Reciprocal of Prime\"\>",
+       HoldForm], 
+      TagBox["\<\"Repeating Decimal\"\>",
+       HoldForm]},
+     {
+      TagBox[
+       StyleBox["\<\"\[Null]\"\>",
+        ShowStringCharacters->False],
+       StyleForm[#, ShowStringCharacters -> False]& ], 
+      FractionBox["1", "2"], 
+      TemplateBox[{"0.`","5"},
+       "RowDefault"]},
+     {
+      TagBox[
+       StyleBox["\<\"\[Null]\"\>",
+        ShowStringCharacters->False],
+       StyleForm[#, ShowStringCharacters -> False]& ], 
+      FractionBox["1", "3"], 
+      TemplateBox[{"0.`",OverscriptBox[
+         TemplateBox[{"3"}, "RowDefault"], "_"]},
+       "RowDefault"]},
+     {
+      TagBox[
+       StyleBox["\<\"\[Null]\"\>",
+        ShowStringCharacters->False],
+       StyleForm[#, ShowStringCharacters -> False]& ], 
+      FractionBox["1", "5"], 
+      TemplateBox[{"0.`","2"},
+       "RowDefault"]},
+     {
+      TagBox[
+       StyleBox["\<\"\[Null]\"\>",
+        ShowStringCharacters->False],
+       StyleForm[#, ShowStringCharacters -> False]& ], 
+      FractionBox["1", "7"], 
+      TemplateBox[{"0.`",OverscriptBox[
+         TemplateBox[{"1", "4", "2", "8", "5", "7"}, "RowDefault"], "_"]},
+       "RowDefault"]},
+     {
+      TagBox[
+       StyleBox["\<\"\[Null]\"\>",
+        ShowStringCharacters->False],
+       StyleForm[#, ShowStringCharacters -> False]& ], 
+      FractionBox["1", "11"], 
+      TemplateBox[{"0.`","0",OverscriptBox[
+         TemplateBox[{"9", "0"}, "RowDefault"], "_"]},
+       "RowDefault"]},
+     {
+      TagBox[
+       StyleBox["\<\"\[Null]\"\>",
+        ShowStringCharacters->False],
+       StyleForm[#, ShowStringCharacters -> False]& ], 
+      FractionBox["1", "13"], 
+      TemplateBox[{"0.`","0",OverscriptBox[
+         TemplateBox[{"7", "6", "9", "2", "3", "0"}, "RowDefault"], "_"]},
+       "RowDefault"]},
+     {
+      TagBox[
+       StyleBox["\<\"\[Null]\"\>",
+        ShowStringCharacters->False],
+       StyleForm[#, ShowStringCharacters -> False]& ], 
+      FractionBox["1", "17"], 
+      TemplateBox[{"0.`","0",OverscriptBox[
+         TemplateBox[{
+          "5", "8", "8", "2", "3", "5", "2", "9", "4", "1", "1", "7", "6", 
+           "4", "7", "0"}, "RowDefault"], "_"]},
+       "RowDefault"]},
+     {
+      TagBox[
+       StyleBox["\<\"\[Null]\"\>",
+        ShowStringCharacters->False],
+       StyleForm[#, ShowStringCharacters -> False]& ], 
+      FractionBox["1", "19"], 
+      TemplateBox[{"0.`","0",OverscriptBox[
+         TemplateBox[{
+          "5", "2", "6", "3", "1", "5", "7", "8", "9", "4", "7", "3", "6", 
+           "8", "4", "2", "1", "0"}, "RowDefault"], "_"]},
+       "RowDefault"]},
+     {
+      TagBox[
+       StyleBox["\<\"\[Null]\"\>",
+        ShowStringCharacters->False],
+       StyleForm[#, ShowStringCharacters -> False]& ], 
+      FractionBox["1", "23"], 
+      TemplateBox[{"0.`","0",OverscriptBox[
+         TemplateBox[{
+          "4", "3", "4", "7", "8", "2", "6", "0", "8", "6", "9", "5", "6", 
+           "5", "2", "1", "7", "3", "9", "1", "3", "0"}, "RowDefault"], "_"]},
+       
+       "RowDefault"]},
+     {
+      TagBox[
+       StyleBox["\<\"\[Null]\"\>",
+        ShowStringCharacters->False],
+       StyleForm[#, ShowStringCharacters -> False]& ], 
+      FractionBox["1", "29"], 
+      TemplateBox[{"0.`","0",OverscriptBox[
+         TemplateBox[{
+          "3", "4", "4", "8", "2", "7", "5", "8", "6", "2", "0", "6", "8", 
+           "9", "6", "5", "5", "1", "7", "2", "4", "1", "3", "7", "9", "3", 
+           "1", "0"}, "RowDefault"], "_"]},
+       "RowDefault"]},
+     {
+      TagBox[
+       StyleBox["\<\"\[Null]\"\>",
+        ShowStringCharacters->False],
+       StyleForm[#, ShowStringCharacters -> False]& ], 
+      FractionBox["1", "31"], 
+      TemplateBox[{"0.`","0",OverscriptBox[
+         TemplateBox[{
+          "3", "2", "2", "5", "8", "0", "6", "4", "5", "1", "6", "1", "2", 
+           "9", "0"}, "RowDefault"], "_"]},
+       "RowDefault"]},
+     {
+      TagBox[
+       StyleBox["\<\"\[Null]\"\>",
+        ShowStringCharacters->False],
+       StyleForm[#, ShowStringCharacters -> False]& ], 
+      FractionBox["1", "37"], 
+      TemplateBox[{"0.`","0",OverscriptBox[
+         TemplateBox[{"2", "7", "0"}, "RowDefault"], "_"]},
+       "RowDefault"]},
+     {
+      TagBox[
+       StyleBox["\<\"\[Null]\"\>",
+        ShowStringCharacters->False],
+       StyleForm[#, ShowStringCharacters -> False]& ], 
+      FractionBox["1", "41"], 
+      TemplateBox[{"0.`","0",OverscriptBox[
+         TemplateBox[{"2", "4", "3", "9", "0"}, "RowDefault"], "_"]},
+       "RowDefault"]},
+     {
+      TagBox[
+       StyleBox["\<\"\[Null]\"\>",
+        ShowStringCharacters->False],
+       StyleForm[#, ShowStringCharacters -> False]& ], 
+      FractionBox["1", "43"], 
+      TemplateBox[{"0.`","0",OverscriptBox[
+         TemplateBox[{
+          "2", "3", "2", "5", "5", "8", "1", "3", "9", "5", "3", "4", "8", 
+           "8", "3", "7", "2", "0", "9", "3", "0"}, "RowDefault"], "_"]},
+       "RowDefault"]},
+     {
+      TagBox[
+       StyleBox["\<\"\[Null]\"\>",
+        ShowStringCharacters->False],
+       StyleForm[#, ShowStringCharacters -> False]& ], 
+      FractionBox["1", "47"], 
+      TemplateBox[{"0.`","0",OverscriptBox[
+         TemplateBox[{
+          "2", "1", "2", "7", "6", "5", "9", "5", "7", "4", "4", "6", "8", 
+           "0", "8", "5", "1", "0", "6", "3", "8", "2", "9", "7", "8", "7", 
+           "2", "3", "4", "0", "4", "2", "5", "5", "3", "1", "9", "1", "4", 
+           "8", "9", "3", "6", "1", "7", "0"}, "RowDefault"], "_"]},
+       "RowDefault"]},
+     {
+      TagBox[
+       StyleBox["\<\"\[Null]\"\>",
+        ShowStringCharacters->False],
+       StyleForm[#, ShowStringCharacters -> False]& ], 
+      FractionBox["1", "53"], 
+      TemplateBox[{"0.`","0",OverscriptBox[
+         TemplateBox[{
+          "1", "8", "8", "6", "7", "9", "2", "4", "5", "2", "8", "3", "0"}, 
+          "RowDefault"], "_"]},
+       "RowDefault"]},
+     {
+      TagBox[
+       StyleBox["\<\"\[Null]\"\>",
+        ShowStringCharacters->False],
+       StyleForm[#, ShowStringCharacters -> False]& ], 
+      FractionBox["1", "59"], 
+      TemplateBox[{"0.`","0",OverscriptBox[
+         TemplateBox[{
+          "1", "6", "9", "4", "9", "1", "5", "2", "5", "4", "2", "3", "7", 
+           "2", "8", "8", "1", "3", "5", "5", "9", "3", "2", "2", "0", "3", 
+           "3", "8", "9", "8", "3", "0", "5", "0", "8", "4", "7", "4", "5", 
+           "7", "6", "2", "7", "1", "1", "8", "6", "4", "4", "0", "6", "7", 
+           "7", "9", "6", "6", "1", "0"}, "RowDefault"], "_"]},
+       "RowDefault"]},
+     {
+      TagBox[
+       StyleBox["\<\"\[Null]\"\>",
+        ShowStringCharacters->False],
+       StyleForm[#, ShowStringCharacters -> False]& ], 
+      FractionBox["1", "61"], 
+      TemplateBox[{"0.`","0",OverscriptBox[
+         TemplateBox[{
+          "1", "6", "3", "9", "3", "4", "4", "2", "6", "2", "2", "9", "5", 
+           "0", "8", "1", "9", "6", "7", "2", "1", "3", "1", "1", "4", "7", 
+           "5", "4", "0", "9", "8", "3", "6", "0", "6", "5", "5", "7", "3", 
+           "7", "7", "0", "4", "9", "1", "8", "0", "3", "2", "7", "8", "6", 
+           "8", "8", "5", "2", "4", "5", "9", "0"}, "RowDefault"], "_"]},
+       "RowDefault"]},
+     {
+      TagBox[
+       StyleBox["\<\"\[Null]\"\>",
+        ShowStringCharacters->False],
+       StyleForm[#, ShowStringCharacters -> False]& ], 
+      FractionBox["1", "67"], 
+      TemplateBox[{"0.`","0",OverscriptBox[
+         TemplateBox[{
+          "1", "4", "9", "2", "5", "3", "7", "3", "1", "3", "4", "3", "2", 
+           "8", "3", "5", "8", "2", "0", "8", "9", "5", "5", "2", "2", "3", 
+           "8", "8", "0", "5", "9", "7", "0"}, "RowDefault"], "_"]},
+       "RowDefault"]},
+     {
+      TagBox[
+       StyleBox["\<\"\[Null]\"\>",
+        ShowStringCharacters->False],
+       StyleForm[#, ShowStringCharacters -> False]& ], 
+      FractionBox["1", "71"], 
+      TemplateBox[{"0.`","0",OverscriptBox[
+         TemplateBox[{
+          "1", "4", "0", "8", "4", "5", "0", "7", "0", "4", "2", "2", "5", 
+           "3", "5", "2", "1", "1", "2", "6", "7", "6", "0", "5", "6", "3", 
+           "3", "8", "0", "2", "8", "1", "6", "9", "0"}, "RowDefault"], "_"]},
+       
+       "RowDefault"]}
+    },
+    GridBoxAlignment->{
+     "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+      "RowsIndexed" -> {}},
+    GridBoxDividers->{
+     "Columns" -> {False, True, {False}, False}, "ColumnsIndexed" -> {}, 
+      "Rows" -> {False, True, {False}, False}, "RowsIndexed" -> {}},
+    GridBoxSpacings->{"Columns" -> {
+        Offset[0.27999999999999997`], {
+         Offset[2.0999999999999996`]}, 
+        Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+        Offset[0.2], {
+         Offset[0.4]}, 
+        Offset[0.2]}, "RowsIndexed" -> {}}],
+   {OutputFormsDump`HeadedRows, OutputFormsDump`HeadedColumns}],
+  Function[BoxForm`e$, 
+   TableForm[
+   BoxForm`e$, 
+    TableHeadings -> {{}, {
+      "Reciprocal of Prime", "Repeating Decimal"}}]]]], "Output",
+ CellChangeTimes->{{3.705399826097663*^9, 3.705399928918619*^9}, {
+  3.705399962009614*^9, 3.7053999924493303`*^9}, {3.705400045991993*^9, 
+  3.7054000804316673`*^9}, {3.705400117880664*^9, 3.70540014014977*^9}}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"(*", 
+  RowBox[{"show", " ", "result", " ", "in", " ", "columns"}], "*)"}]], "Input",\
+
+ CellChangeTimes->{{3.705400156691587*^9, 3.705400168315693*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"repeatingForm", "/@", "data"}], "//", "Column"}]], "Input",
+ CellChangeTimes->{{3.705400030600556*^9, 3.705400031679348*^9}, {
+  3.705400151726152*^9, 3.705400153548458*^9}}],
+
+Cell[BoxData[
+ TagBox[GridBox[{
+    {
+     TemplateBox[{"0.`","5"},
+      "RowDefault"]},
+    {
+     TemplateBox[{"0.`",OverscriptBox[
+        TemplateBox[{"3"}, "RowDefault"], "_"]},
+      "RowDefault"]},
+    {
+     TemplateBox[{"0.`","2"},
+      "RowDefault"]},
+    {
+     TemplateBox[{"0.`",OverscriptBox[
+        TemplateBox[{"1", "4", "2", "8", "5", "7"}, "RowDefault"], "_"]},
+      "RowDefault"]},
+    {
+     TemplateBox[{"0.`","0",OverscriptBox[
+        TemplateBox[{"9", "0"}, "RowDefault"], "_"]},
+      "RowDefault"]},
+    {
+     TemplateBox[{"0.`","0",OverscriptBox[
+        TemplateBox[{"7", "6", "9", "2", "3", "0"}, "RowDefault"], "_"]},
+      "RowDefault"]},
+    {
+     TemplateBox[{"0.`","0",OverscriptBox[
+        TemplateBox[{
+         "5", "8", "8", "2", "3", "5", "2", "9", "4", "1", "1", "7", "6", "4",
+           "7", "0"}, "RowDefault"], "_"]},
+      "RowDefault"]},
+    {
+     TemplateBox[{"0.`","0",OverscriptBox[
+        TemplateBox[{
+         "5", "2", "6", "3", "1", "5", "7", "8", "9", "4", "7", "3", "6", "8",
+           "4", "2", "1", "0"}, "RowDefault"], "_"]},
+      "RowDefault"]},
+    {
+     TemplateBox[{"0.`","0",OverscriptBox[
+        TemplateBox[{
+         "4", "3", "4", "7", "8", "2", "6", "0", "8", "6", "9", "5", "6", "5",
+           "2", "1", "7", "3", "9", "1", "3", "0"}, "RowDefault"], "_"]},
+      "RowDefault"]},
+    {
+     TemplateBox[{"0.`","0",OverscriptBox[
+        TemplateBox[{
+         "3", "4", "4", "8", "2", "7", "5", "8", "6", "2", "0", "6", "8", "9",
+           "6", "5", "5", "1", "7", "2", "4", "1", "3", "7", "9", "3", "1", 
+          "0"}, "RowDefault"], "_"]},
+      "RowDefault"]},
+    {
+     TemplateBox[{"0.`","0",OverscriptBox[
+        TemplateBox[{
+         "3", "2", "2", "5", "8", "0", "6", "4", "5", "1", "6", "1", "2", "9",
+           "0"}, "RowDefault"], "_"]},
+      "RowDefault"]},
+    {
+     TemplateBox[{"0.`","0",OverscriptBox[
+        TemplateBox[{"2", "7", "0"}, "RowDefault"], "_"]},
+      "RowDefault"]},
+    {
+     TemplateBox[{"0.`","0",OverscriptBox[
+        TemplateBox[{"2", "4", "3", "9", "0"}, "RowDefault"], "_"]},
+      "RowDefault"]},
+    {
+     TemplateBox[{"0.`","0",OverscriptBox[
+        TemplateBox[{
+         "2", "3", "2", "5", "5", "8", "1", "3", "9", "5", "3", "4", "8", "8",
+           "3", "7", "2", "0", "9", "3", "0"}, "RowDefault"], "_"]},
+      "RowDefault"]},
+    {
+     TemplateBox[{"0.`","0",OverscriptBox[
+        TemplateBox[{
+         "2", "1", "2", "7", "6", "5", "9", "5", "7", "4", "4", "6", "8", "0",
+           "8", "5", "1", "0", "6", "3", "8", "2", "9", "7", "8", "7", "2", 
+          "3", "4", "0", "4", "2", "5", "5", "3", "1", "9", "1", "4", "8", 
+          "9", "3", "6", "1", "7", "0"}, "RowDefault"], "_"]},
+      "RowDefault"]},
+    {
+     TemplateBox[{"0.`","0",OverscriptBox[
+        TemplateBox[{
+         "1", "8", "8", "6", "7", "9", "2", "4", "5", "2", "8", "3", "0"}, 
+         "RowDefault"], "_"]},
+      "RowDefault"]},
+    {
+     TemplateBox[{"0.`","0",OverscriptBox[
+        TemplateBox[{
+         "1", "6", "9", "4", "9", "1", "5", "2", "5", "4", "2", "3", "7", "2",
+           "8", "8", "1", "3", "5", "5", "9", "3", "2", "2", "0", "3", "3", 
+          "8", "9", "8", "3", "0", "5", "0", "8", "4", "7", "4", "5", "7", 
+          "6", "2", "7", "1", "1", "8", "6", "4", "4", "0", "6", "7", "7", 
+          "9", "6", "6", "1", "0"}, "RowDefault"], "_"]},
+      "RowDefault"]},
+    {
+     TemplateBox[{"0.`","0",OverscriptBox[
+        TemplateBox[{
+         "1", "6", "3", "9", "3", "4", "4", "2", "6", "2", "2", "9", "5", "0",
+           "8", "1", "9", "6", "7", "2", "1", "3", "1", "1", "4", "7", "5", 
+          "4", "0", "9", "8", "3", "6", "0", "6", "5", "5", "7", "3", "7", 
+          "7", "0", "4", "9", "1", "8", "0", "3", "2", "7", "8", "6", "8", 
+          "8", "5", "2", "4", "5", "9", "0"}, "RowDefault"], "_"]},
+      "RowDefault"]},
+    {
+     TemplateBox[{"0.`","0",OverscriptBox[
+        TemplateBox[{
+         "1", "4", "9", "2", "5", "3", "7", "3", "1", "3", "4", "3", "2", "8",
+           "3", "5", "8", "2", "0", "8", "9", "5", "5", "2", "2", "3", "8", 
+          "8", "0", "5", "9", "7", "0"}, "RowDefault"], "_"]},
+      "RowDefault"]},
+    {
+     TemplateBox[{"0.`","0",OverscriptBox[
+        TemplateBox[{
+         "1", "4", "0", "8", "4", "5", "0", "7", "0", "4", "2", "2", "5", "3",
+           "5", "2", "1", "1", "2", "6", "7", "6", "0", "5", "6", "3", "3", 
+          "8", "0", "2", "8", "1", "6", "9", "0"}, "RowDefault"], "_"]},
+      "RowDefault"]}
+   },
+   DefaultBaseStyle->"Column",
+   GridBoxAlignment->{"Columns" -> {{Left}}},
+   GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+  "Column"]], "Output",
+ CellChangeTimes->{{3.705400027758863*^9, 3.705400032440468*^9}, 
+   3.7054001539485607`*^9}]
+}, Open  ]]
+},
+WindowSize->{808, 755},
+WindowMargins->{{36, Automatic}, {16, Automatic}},
+FrontEndVersion->"11.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (July 28, \
+2016)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 3643, 97, 369, "Input"],
+Cell[4204, 119, 211, 5, 32, "Input"],
+Cell[4418, 126, 396, 12, 54, "Input"],
+Cell[4817, 140, 293, 6, 32, "Input"],
+Cell[CellGroupData[{
+Cell[5135, 150, 569, 16, 54, "Input"],
+Cell[5707, 168, 9342, 247, 542, "Output"]
+}, Open  ]],
+Cell[15064, 418, 177, 4, 32, "Input"],
+Cell[CellGroupData[{
+Cell[15266, 426, 209, 4, 32, "Input"],
+Cell[15478, 432, 4797, 121, 407, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+

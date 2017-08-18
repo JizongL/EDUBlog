@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  bug fixed for this blog and jekyll techniques
+title:  Jekyll and Latex techniques and bug fixs for this site
 date:   2017-01-15 19:06:05
 categories: Jekyll
 tags: bug_fixed jekyll_technique jekyll_code
@@ -65,5 +65,13 @@ internal link to a section of the post
 <a href="#top">link to top</a>
 ```
 
+### add a spoiler
 
+```
+<details> 
+  <summary>Q1: What is the best Language in the World? </summary>
+   A1: JavaScript 
+</details>
+
+```
 
