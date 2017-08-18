@@ -11,6 +11,11 @@ tags: discrete_math finals prep
 
 ## 3.1 Algorithms
 
+
+
+
+
+
 ### Definitions
 
 Input. An algorithm has input values from a specified set.
@@ -71,13 +76,18 @@ return location{location is the subscript i of the term ai equal to x, or 0 if x
 ```
 
 ## 3 Algorithms
+
 ### 3.2 The Growth of Functions
+
 $$x^{2}+4x+17$$ is Big $$O(x^{3})$$
+
 $$x^{2}+4x+17 ≤ 6x^{2}$$ C = 6 and x>17 so k = 17
+
 $$6x^{2} < x^{3} $$ x>6
+
 C = 1 k = 6
 
-$$x^{2}+4x+17>x^{2}$$ is Big $$\omega(x^{2})$$ 
+$$x^{2}+4x+17>x^{2}$$ is Big $$\Omega(x^{2})$$ 
 
 
 
@@ -97,5 +107,29 @@ $$^{10}P_{10}=10! = 3628800.$$
 A man can be inserted in any one of the eleven positions marked off with a '*', and this will ensure no two men stand next to each other.
 $$ ^{11}P_6 = 11\times 10\times 9\times 8 \times 7\times 6 = 332640.$$
 $$3628800\times 332640 = 1,207,084,032,000$$
+
+
+
+## In class review
+
+### 4
+−17mod2
+-18+1
+2(-9)+1
+=1
+
+
+
+### Chapter 5
+Induction and strong induction
+
+### Chapter 8, Hanoi 
+$$H_{n}=2H_{n-1}+1$$
+
+### Relation
+
+### chapter 10
+Terminology
+DFS,SFS
 
 

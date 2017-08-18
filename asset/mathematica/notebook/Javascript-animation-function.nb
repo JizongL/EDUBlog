@@ -1,0 +1,485 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     18400,        477]
+NotebookOptionsPosition[     17951,        458]
+NotebookOutlinePosition[     18305,        474]
+CellTagsIndexPosition[     18262,        471]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"(*", 
+  RowBox[{"experiment", " ", "data"}], "*)"}]], "Input",
+ CellChangeTimes->{{3.703419968243211*^9, 3.703419986822907*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"field", "[", 
+    RowBox[{"a_", ",", "d_", ",", "x_", ",", "y_"}], "]"}], "=", 
+   RowBox[{"D", "[", 
+    RowBox[{
+     RowBox[{"Log", "[", 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{"x", "-", "d"}], ")"}], "^", "2"}], "+", 
+         RowBox[{"y", "^", "2"}]}], ")"}], "/", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{"x", "-", "a"}], ")"}], "^", "2"}], "+", 
+         RowBox[{"y", "^", "2"}]}], ")"}]}], "]"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"{", 
+       RowBox[{"x", ",", "y"}], "}"}], "}"}]}], "]"}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"images", "=", 
+   RowBox[{"With", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"r", "=", "1."}], "}"}], ",", 
+     RowBox[{"Table", "[", 
+      RowBox[{
+       RowBox[{"Show", "[", 
+        RowBox[{
+         RowBox[{"StreamPlot", "[", 
+          RowBox[{
+           RowBox[{"field", "[", 
+            RowBox[{
+             RowBox[{"1", "/", "d"}], ",", "d", ",", "x", ",", "y"}], "]"}], 
+           ",", 
+           RowBox[{"{", 
+            RowBox[{"x", ",", 
+             RowBox[{"-", "2"}], ",", "4"}], "}"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"y", ",", 
+             RowBox[{"-", "3"}], ",", "3"}], "}"}], ",", 
+           RowBox[{"FrameLabel", "\[Rule]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<x\>\"", ",", "\"\<y\>\""}], "}"}]}], ",", 
+           RowBox[{"StreamColorFunctionScaling", "\[Rule]", "False"}], ",", 
+           RowBox[{"StreamColorFunction", "\[Rule]", "\"\<Rainbow\>\""}], ",", 
+           RowBox[{"PlotLabel", "\[Rule]", 
+            RowBox[{"Row", "[", 
+             RowBox[{"{", 
+              RowBox[{"\"\<d = \>\"", ",", 
+               RowBox[{"PaddedForm", "[", 
+                RowBox[{
+                 RowBox[{"N", "@", "d"}], ",", 
+                 RowBox[{"{", 
+                  RowBox[{"4", ",", "2"}], "}"}]}], "]"}]}], "}"}], "]"}]}]}],
+           "]"}], ",", 
+         RowBox[{"Graphics", "[", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"Thickness", "[", ".009", "]"}], ",", "White", ",", 
+            RowBox[{"Circle", "[", 
+             RowBox[{
+              RowBox[{"{", 
+               RowBox[{"0", ",", "0"}], "}"}], ",", "r"}], "]"}], ",", 
+            RowBox[{"PointSize", "[", ".03", "]"}], ",", 
+            RowBox[{"Point", "[", 
+             RowBox[{"{", 
+              RowBox[{"d", ",", "0"}], "}"}], "]"}]}], "}"}], "]"}], ",", 
+         RowBox[{"Background", "\[Rule]", 
+          RowBox[{"GrayLevel", "[", ".2", "]"}]}], ",", 
+         RowBox[{"LabelStyle", "\[Rule]", "White"}], ",", 
+         RowBox[{"FrameStyle", "\[Rule]", 
+          RowBox[{"Directive", "[", 
+           RowBox[{
+            RowBox[{"Lighter", "@", "Gray"}], ",", 
+            RowBox[{"Thickness", "[", ".005", "]"}]}], "]"}]}], ",", 
+         RowBox[{"ImageMargins", "\[Rule]", "5"}]}], "]"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"d", ",", 
+         RowBox[{"1.5", " ", "r"}], ",", 
+         RowBox[{"4", " ", "r"}], ",", 
+         RowBox[{"r", "/", "4"}]}], "}"}]}], "]"}]}], "]"}]}], 
+  ";"}]}], "Input",
+ CellChangeTimes->{3.703419944014708*^9}],
+
+Cell[BoxData[
+ RowBox[{"(*", 
+  RowBox[{"Javascript", " ", "player", " ", "function"}], "*)"}]], "Input",
+ CellChangeTimes->{{3.703419952014078*^9, 3.703419961911577*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"htmlTemplate", "=", 
+   RowBox[{"Import", "[", 
+    RowBox[{
+    "\"\<http://uoregon.edu/~noeckel/jensPlayer/jensPlayerTemplate.js\>\"", 
+     ",", "\"\<Text\>\""}], "]"}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"jensPlayer", "[", 
+   RowBox[{
+    RowBox[{"name_", "?", "StringQ"}], ",", 
+    RowBox[{"a_", "?", "ListQ"}], ",", 
+    RowBox[{"opts", ":", 
+     RowBox[{"OptionsPattern", "[", "]"}]}]}], "]"}], ":=", 
+  RowBox[{"Module", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"delay", "=", "50"}], ",", 
+      RowBox[{"dataType", "=", "\"\<img\>\""}], ",", "htmlString", ",", 
+      "htmlBody", ",", "scaledFrames", ",", "n", ",", "i", ",", "movieFrames",
+       ",", "dimensions", ",", "frameStartTag", ",", "frameEndTag", ",", 
+      "exportFormat", ",", "imgSizeRule", ",", 
+      RowBox[{"loopOptions", "=", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"\"\<Loop\>\"", "\[Rule]", "\"\<rightLoopButton\>\""}], ",", 
+         
+         RowBox[{"\"\<None\>\"", "\[Rule]", "\"\<noLoopButton\>\""}], ",", 
+         RowBox[{
+         "\"\<Palindrome\>\"", "\[Rule]", "\"\<palindromeButton\>\""}]}], 
+        "}"}]}], ",", 
+      RowBox[{"toolHeight", "=", "25"}]}], "}"}], ",", 
+    RowBox[{
+     RowBox[{"n", "=", 
+      RowBox[{"Range", "[", 
+       RowBox[{"Length", "[", "a", "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"imgSizeRule", "=", 
+      RowBox[{"FilterRules", "[", 
+       RowBox[{
+        RowBox[{"{", "opts", "}"}], ",", "ImageSize"}], "]"}]}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"If", "[", 
+      RowBox[{
+       RowBox[{"imgSizeRule", "\[Equal]", 
+        RowBox[{"{", "}"}]}], ",", 
+       RowBox[{"imgSizeRule", "=", 
+        RowBox[{"(", 
+         RowBox[{"ImageSize", "\[Rule]", "Automatic"}], ")"}]}]}], "]"}], ";",
+      "\[IndentingNewLine]", 
+     RowBox[{"scaledFrames", "=", 
+      RowBox[{"Map", "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"Show", "[", 
+          RowBox[{"#", ",", "imgSizeRule"}], "]"}], "&"}], ",", "a"}], 
+       "]"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"dimensions", "=", 
+      RowBox[{"ImageDimensions", "[", 
+       RowBox[{"Rasterize", "[", 
+        RowBox[{"scaledFrames", "[", 
+         RowBox[{"[", "1", "]"}], "]"}], "]"}], "]"}]}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"With", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"del", "=", 
+         RowBox[{"(", 
+          RowBox[{"\"\<Delay\>\"", "/.", 
+           RowBox[{"{", "opts", "}"}]}], ")"}]}], "}"}], ",", 
+       RowBox[{"If", "[", 
+        RowBox[{
+         RowBox[{"NumericQ", "[", "del", "]"}], ",", 
+         RowBox[{"delay", "=", "del"}]}], "]"}]}], "]"}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"With", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"ind", "=", 
+         RowBox[{"(", 
+          RowBox[{"\"\<Indices\>\"", "/.", 
+           RowBox[{"{", "opts", "}"}]}], ")"}]}], "}"}], ",", 
+       RowBox[{"If", "[", 
+        RowBox[{
+         RowBox[{"ListQ", "[", "ind", "]"}], ",", 
+         RowBox[{"i", "=", 
+          RowBox[{"ind", "-", "1"}]}], ",", 
+         RowBox[{"i", "=", 
+          RowBox[{"n", "-", "1"}]}]}], "]"}]}], "]"}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"Which", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{"\"\<SVG\>\"", "/.", 
+          RowBox[{"{", "opts", "}"}]}], ")"}], "===", "True"}], ",", 
+       RowBox[{"dataType", "=", "\"\<object\>\""}], ",", 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{"\"\<SVGZ\>\"", "/.", 
+          RowBox[{"{", "opts", "}"}]}], ")"}], "===", "True"}], ",", 
+       RowBox[{"dataType", "=", "\"\<embed\>\""}]}], "]"}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"If", "[", 
+      RowBox[{
+       RowBox[{"dataType", "\[Equal]", "\"\<embed\>\""}], ",", 
+       RowBox[{
+        RowBox[{"frameStartTag", "=", "\"\<<embed src=\\\"\>\""}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"frameEndTag", "=", 
+         RowBox[{"\"\<\\\" width=\\\"\>\"", "<>", 
+          RowBox[{"ToString", "[", 
+           RowBox[{"dimensions", "[", 
+            RowBox[{"[", "1", "]"}], "]"}], "]"}], "<>", 
+          "\"\<\\\"height=\\\"\>\"", "<>", 
+          RowBox[{"ToString", "[", 
+           RowBox[{"dimensions", "[", 
+            RowBox[{"[", "2", "]"}], "]"}], "]"}], "<>", "\"\<\\\">\>\""}]}], 
+        ";", "\[IndentingNewLine]", 
+        RowBox[{"htmlString", "=", "\"\<\>\""}], ";", "\[IndentingNewLine]", 
+        RowBox[{"movieFrames", "=", 
+         RowBox[{"Table", "[", 
+          RowBox[{
+           RowBox[{"With", "[", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{"svgName", "=", 
+               RowBox[{"name", "<>", 
+                RowBox[{"ToString", "[", 
+                 RowBox[{"PaddedForm", "[", 
+                  RowBox[{"i", ",", 
+                   RowBox[{"Total", "@", 
+                    RowBox[{"DigitCount", "[", 
+                    RowBox[{"Length", "[", "scaledFrames", "]"}], "]"}]}], 
+                   ",", 
+                   RowBox[{"NumberPadding", "\[Rule]", 
+                    RowBox[{"{", 
+                    RowBox[{"\"\<0\>\"", ",", "\"\< \>\""}], "}"}]}]}], "]"}],
+                  "]"}], "<>", "\"\<.svgz\>\""}]}], "}"}], ",", 
+             RowBox[{
+              RowBox[{"Export", "[", 
+               RowBox[{"svgName", ",", 
+                RowBox[{"scaledFrames", "[", 
+                 RowBox[{"[", "i", "]"}], "]"}], ",", "\"\<SVGZ\>\""}], "]"}],
+               ";", "\[IndentingNewLine]", 
+              RowBox[{
+              "frameStartTag", "<>", "svgName", "<>", "frameEndTag"}]}]}], 
+            "]"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"i", ",", 
+             RowBox[{"Length", "[", "scaledFrames", "]"}]}], "}"}]}], "]"}]}],
+         ";", "\[IndentingNewLine]", 
+        RowBox[{"htmlString", "=", 
+         RowBox[{"StringJoin", "[", "movieFrames", "]"}]}]}], ",", 
+       RowBox[{
+        RowBox[{"If", "[", 
+         RowBox[{
+          RowBox[{"dataType", "\[Equal]", "\"\<img\>\""}], ",", 
+          RowBox[{
+           RowBox[{
+           "frameStartTag", "=", 
+            "\"\<<img src=\\\"data:image/png;base64,\>\""}], ";", 
+           "\[IndentingNewLine]", 
+           RowBox[{"frameEndTag", "=", "\"\<\\\">\>\""}], ";", 
+           "\[IndentingNewLine]", 
+           RowBox[{"movieFrames", "=", 
+            RowBox[{"Apply", "[", 
+             RowBox[{
+              RowBox[{"If", "[", 
+               RowBox[{
+                RowBox[{
+                 RowBox[{"(", 
+                  RowBox[{"\"\<Parallel\>\"", "/.", 
+                   RowBox[{"{", "opts", "}"}]}], ")"}], "===", "False"}], ",",
+                 "Map", ",", "ParallelMap"}], "]"}], ",", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{
+                 RowBox[{"ExportString", "[", 
+                  RowBox[{"#", ",", "\"\<PNG\>\""}], "]"}], "&"}], ",", 
+                "scaledFrames"}], "}"}]}], "]"}]}]}], ",", 
+          RowBox[{
+           RowBox[{
+           "frameStartTag", "=", 
+            "\"\<<object data=\\\"data:image/svg+xml;base64,\>\""}], ";", 
+           "\[IndentingNewLine]", 
+           RowBox[{
+           "frameEndTag", "=", 
+            "\"\<\\\" type=\\\"image/svg+xml\\\"></object>\>\""}], ";", 
+           "\[IndentingNewLine]", 
+           RowBox[{"movieFrames", "=", 
+            RowBox[{"Apply", "[", 
+             RowBox[{
+              RowBox[{"If", "[", 
+               RowBox[{
+                RowBox[{
+                 RowBox[{"(", 
+                  RowBox[{"\"\<Parallel\>\"", "/.", 
+                   RowBox[{"{", "opts", "}"}]}], ")"}], "===", "False"}], ",",
+                 "Map", ",", "ParallelMap"}], "]"}], ",", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{
+                 RowBox[{"ExportString", "[", 
+                  RowBox[{"#", ",", "\"\<SVG\>\""}], "]"}], "&"}], ",", 
+                "scaledFrames"}], "}"}]}], "]"}]}]}]}], "]"}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"htmlString", "=", 
+         RowBox[{"StringJoin", "@", 
+          RowBox[{"If", "[", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"(", 
+              RowBox[{"\"\<Parallel\>\"", "/.", 
+               RowBox[{"{", "opts", "}"}]}], ")"}], "===", "False"}], ",", 
+            RowBox[{"Map", "[", 
+             RowBox[{
+              RowBox[{
+               RowBox[{"(", 
+                RowBox[{"StringJoin", "[", 
+                 RowBox[{"frameStartTag", ",", 
+                  RowBox[{"StringReplace", "[", 
+                   RowBox[{
+                    RowBox[{"ExportString", "[", 
+                    RowBox[{"#", ",", "\"\<Base64\>\""}], "]"}], ",", 
+                    RowBox[{"\"\<\\n\>\"", "\[Rule]", "\"\<\>\""}]}], "]"}], 
+                  ",", "frameEndTag"}], "]"}], ")"}], "&"}], ",", 
+              "movieFrames"}], "]"}], ",", 
+            RowBox[{
+             RowBox[{"DistributeDefinitions", "[", "frameStartTag", "]"}], 
+             ";", "\[IndentingNewLine]", 
+             RowBox[{"DistributeDefinitions", "[", "frameEndTag", "]"}], ";", 
+             "\[IndentingNewLine]", 
+             RowBox[{"ParallelMap", "[", 
+              RowBox[{
+               RowBox[{
+                RowBox[{"(", 
+                 RowBox[{"StringJoin", "[", 
+                  RowBox[{"frameStartTag", ",", 
+                   RowBox[{"StringReplace", "[", 
+                    RowBox[{
+                    RowBox[{"ExportString", "[", 
+                    RowBox[{"#", ",", "\"\<Base64\>\""}], "]"}], ",", 
+                    RowBox[{"\"\<\\n\>\"", "\[Rule]", "\"\<\>\""}]}], "]"}], 
+                   ",", "frameEndTag"}], "]"}], ")"}], "&"}], ",", 
+               "movieFrames"}], "]"}]}]}], "]"}]}]}]}]}], "]"}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"htmlBody", "=", 
+      RowBox[{
+       RowBox[{"StringReplace", "[", 
+        RowBox[{"htmlTemplate", ",", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"\"\<**DATE**\>\"", "\[Rule]", 
+            RowBox[{"DateString", "[", "]"}]}], ",", 
+           RowBox[{"\"\<**DATATYPE**\>\"", "\[Rule]", "dataType"}], ",", 
+           RowBox[{"\"\<**WIDTH**\>\"", "\[Rule]", 
+            RowBox[{"ToString", "[", 
+             RowBox[{"dimensions", "[", 
+              RowBox[{"[", "1", "]"}], "]"}], "]"}]}], ",", 
+           RowBox[{"\"\<**HEIGHT**\>\"", "\[Rule]", 
+            RowBox[{"ToString", "[", 
+             RowBox[{"dimensions", "[", 
+              RowBox[{"[", "2", "]"}], "]"}], "]"}]}], ",", 
+           RowBox[{"\"\<**TOOLHEIGHT**\>\"", "\[Rule]", 
+            RowBox[{"ToString", "[", "toolHeight", "]"}]}], ",", 
+           RowBox[{"\"\<**DELAY**\>\"", "\[Rule]", 
+            RowBox[{"ToString", "[", "delay", "]"}]}], ",", 
+           RowBox[{"\"\<**COMBINEDWIDTH**\>\"", "\[Rule]", 
+            RowBox[{"ToString", "[", 
+             RowBox[{
+              RowBox[{"Length", "[", "a", "]"}], "*", 
+              RowBox[{"dimensions", "[", 
+               RowBox[{"[", "1", "]"}], "]"}]}], "]"}]}], ",", 
+           RowBox[{"\"\<**USERNAME**\>\"", "\[Rule]", "$UserName"}], ",", 
+           RowBox[{"\"\<**LOOPCONTROL**\>\"", "\[Rule]", 
+            RowBox[{"With", "[", 
+             RowBox[{
+              RowBox[{"{", 
+               RowBox[{"loopOption", "=", 
+                RowBox[{
+                 RowBox[{"(", 
+                  RowBox[{"\"\<Looping\>\"", "/.", 
+                   RowBox[{"{", "opts", "}"}]}], ")"}], "/.", 
+                 "loopOptions"}]}], "}"}], ",", 
+              RowBox[{"If", "[", 
+               RowBox[{
+                RowBox[{"MemberQ", "[", 
+                 RowBox[{
+                  RowBox[{"loopOptions", "[", 
+                   RowBox[{"[", 
+                    RowBox[{"All", ",", "2"}], "]"}], "]"}], ",", 
+                  "loopOption"}], "]"}], ",", "loopOption", ",", 
+                RowBox[{"\"\<None\>\"", "/.", "loopOptions"}]}], "]"}]}], 
+             "]"}]}], ",", 
+           RowBox[{"\"\<**INDICES**\>\"", "\[Rule]", 
+            RowBox[{"StringJoin", "@", 
+             RowBox[{"Riffle", "[", 
+              RowBox[{
+               RowBox[{"Map", "[", 
+                RowBox[{"ToString", ",", "i"}], "]"}], ",", "\"\<,\>\""}], 
+              "]"}]}]}], ",", 
+           RowBox[{"\"\<**AUTOPLAY**\>\"", "\[Rule]", 
+            RowBox[{"If", "[", 
+             RowBox[{
+              RowBox[{
+               RowBox[{"(", 
+                RowBox[{"\"\<AutoPlay\>\"", "/.", 
+                 RowBox[{"{", "opts", "}"}]}], ")"}], "===", "True"}], ",", 
+              "\"\<true\>\"", ",", "\"\<false\>\""}], "]"}]}], ",", 
+           RowBox[{"\"\<**TITLE**\>\"", "\[Rule]", "name"}]}], "}"}]}], "]"}],
+        "<>", "htmlString", "<>", "\"\<</div></body></html>\>\""}]}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"Export", "[", 
+      RowBox[{"name", ",", "htmlBody", ",", "\"\<TEXT\>\""}], "]"}], ";"}]}], 
+   "]"}]}]}], "Input"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{
+   "use", " ", "the", " ", "above", " ", "function", " ", "to", " ", "output",
+     " ", "result"}], "*)"}], "\[IndentingNewLine]", 
+  RowBox[{"jensPlayer", "[", 
+   RowBox[{"\"\<imageChargesSVG.html\>\"", ",", "images2", ",", 
+    RowBox[{"\"\<SVG\>\"", "\[Rule]", "True"}], ",", 
+    RowBox[{"\"\<Parallel\>\"", "\[Rule]", "False"}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.703420017933305*^9, 3.703420030772553*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{"open", " ", "the", " ", "file", " ", "just", " ", "created"}], 
+   "*)"}], "\[IndentingNewLine]", 
+  RowBox[{"SystemOpen", "[", "\"\<imageChargesSVG.html\>\"", "]"}]}]], "Input",\
+
+ CellChangeTimes->{{3.7034200407084503`*^9, 3.703420051099724*^9}}]
+},
+WindowSize->{808, 755},
+WindowMargins->{{38, Automatic}, {33, Automatic}},
+FrontEndVersion->"11.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (July 28, \
+2016)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 152, 3, 32, "Input"],
+Cell[713, 25, 3266, 88, 222, "Input"],
+Cell[3982, 115, 171, 3, 32, "Input"],
+Cell[4156, 120, 13009, 315, 1146, "Input"],
+Cell[17168, 437, 475, 10, 54, "Input"],
+Cell[17646, 449, 301, 7, 54, "Input"]
+}
+]
+*)
+

@@ -1,6 +1,12 @@
 ---
 layout: post
+<<<<<<< HEAD:_posts/2017-01-14-bug-fixed-this-site.md
 title:  jekyll cheatsheet and markdown and html tricks
+||||||| merged common ancestors
+title:  bug fixed for this blog and jekyll techniques
+=======
+title:  Jekyll and Latex techniques and bug fixs for this site
+>>>>>>> 43fac45ef431f6b7b2abe9eac87c4fd6523e4781:_posts/2017-01-14-bug-fixed-jekyll-latex-technique-collection.md
 date:   2017-01-15 19:06:05
 categories: Jekyll
 tags: bug_fixed jekyll_technique jekyll_code
@@ -65,6 +71,7 @@ for example
 <a href="#top">link to top</a>
 ```
 
+<<<<<<< HEAD:_posts/2017-01-14-bug-fixed-this-site.md
 ### Add looping video
 
 This will put a video playing continously in the frame. 
@@ -85,5 +92,16 @@ This will put a video playing continously in the frame.
 
 
 
+||||||| merged common ancestors
+=======
+### add a spoiler
+>>>>>>> 43fac45ef431f6b7b2abe9eac87c4fd6523e4781:_posts/2017-01-14-bug-fixed-jekyll-latex-technique-collection.md
 
+```
+<details> 
+  <summary>Q1: What is the best Language in the World? </summary>
+   A1: JavaScript 
+</details>
+
+```
 
