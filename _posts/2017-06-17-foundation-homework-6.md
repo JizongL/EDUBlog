@@ -16,6 +16,12 @@ Let $$f : X \rightarrowtail Y$$ and $$g : Y \rightarrowtail Z$$. Prove that
 $$g \circ f:X \rightarrowtail Z$$ 
 is a bijection
 
+
+
+
+
+
+
 [Yahoo answer](https://answers.yahoo.com/question/index?qid=20101117050746AAXR2qr)
 
 

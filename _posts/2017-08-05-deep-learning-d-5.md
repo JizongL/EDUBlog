@@ -10,6 +10,13 @@ tags: note perceptron
 
 <img src = "{{ root_url | prepend: site.baseurl}}/asset/deep learning/post images/day-5/hq-perceptron.png" width = "500">
 
+
+
+
+
+
+
+
 Data, like test scores and grades, is fed into a network of interconnected nodes. These individual nodes are called [perceptrons](https://en.wikipedia.org/wiki/Perceptron) or neurons, and they are the basic unit of a neural network. Each one looks at input data and decides how to categorize that data. In the example above, the input either passes a threshold for grades and test scores or doesn't, and so the two categories are: yes (passed the threshold) and no (didn't pass the threshold).
 
 

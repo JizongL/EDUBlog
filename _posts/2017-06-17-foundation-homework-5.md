@@ -17,6 +17,12 @@ Prove the triangle inequality, and the related assertion that $$\lvert c \lvert 
 [reference](http://2000clicks.com/MathHelp/BasicArithmeticTriangleInequality.aspx)
 
 
+
+
+
+
+
+
 ### Exercise 5.3 
 
 For $$n \in \mathbb{N^+}$$, $$a_i \in \mathbb{R} (1 ≤ i ≤ n)$$, prove that

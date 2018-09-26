@@ -6,6 +6,8 @@ categories: Math
 tags: abstract_algebra classnote
 ---
 
+* content
+{: toc}
 
 [dihedral group examples](https://www.maa.org/sites/default/files/images/upload_library/4/vol1/architecture/Math/dihedral.html)
 
@@ -15,6 +17,13 @@ tags: abstract_algebra classnote
 ### The well-ordering principle
 
 every nonempty subset of the set of positive integers has a least element. 
+
+
+
+
+
+
+
 
 Definition: Let a be an integer and let d be a nonzero integer, we say that d devides a if there exists an integer b such that a=db.
 (In this case we also say that a is a multiple of d or that d is a divisor (factor) of a)
@@ -76,4 +85,7 @@ $$0 = \{3k | k \in \mathbb{Z}\} = \{0,3,6,...\} \\
 1 = \{3k +1 | k \in \mathbb{Z} \} = \{1,4,7,...\} \\
 2 = \{3k +2 | k \in \mathbb{Z} \} = \{2,5,8,...\} \\
 $$
+
+
+
 

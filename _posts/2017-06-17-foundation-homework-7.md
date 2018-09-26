@@ -11,6 +11,11 @@ tags: exercise homework divisibility division_algorithm
 ### Exercise 7.2 
 Are $$15,462,227$$ and $$15,462,229$$ relatively prime?
 
+
+
+
+
+
 gcd(a,b)=gcd(a,b−a)
 
 15,462,229-15,462,227=2
