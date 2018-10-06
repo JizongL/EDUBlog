@@ -208,3 +208,38 @@ The editor has the following merge conflict indicators:
 
 
 Be careful that a file might have merge conflicts in multiple parts of the file, so make sure you check the entire file for merge conflict indicators - a quick search for `<<<` should help you locate all of them.
+
+
+### Undoing changes
+`git revert`
+`git reset`
+
+
+**If changing the last commit, just run**
+
+`git commit --amend`
+
+**Add forgotten files to commits.**
+
+
+`git commit --amend`
+edit the file(s)
+save the file(s)
+stage the file(s)
+and run `git commit --amend`
+
+`git commit --amend -m "an updated commit message"`
+
+**reverting a commit**
+
+`git revert db7e87a`
+
+
+Git does keep track of everything for about 30 days before it completely erases anything.
+To access this content, you'll need to use the `git reflog` command.
+
+
+
+need to look up git rebase
+[bitbucket articles 1](https://www.atlassian.com/git/tutorials/rewriting-history/git-rebase)
+[bitbucket articles 2](https://www.atlassian.com/git/tutorials/rewriting-history)

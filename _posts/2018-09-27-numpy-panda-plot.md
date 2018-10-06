@@ -39,3 +39,7 @@ print("Number of testing samples is", len(test_data))
 print(train_data[:10])
 print(test_data[:10])
 ```
+
+`np.random.choice(data.index, size, replace = T or F)`
+
+`pd.concat(data, pd.get_dummies(data['column name'],prefix = 'rank'), axis = 1)`
