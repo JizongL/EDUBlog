@@ -65,3 +65,11 @@ Leave to His sovereign sway
 To choose and to command;
 So shalt thou, wondering, own that way,
 How wise, how strong this hand.
+
+
+### Overcoming Negative Internal Chatter
+For to set the mind on the flesh is death, but to set the mind on the Spirit is life and peace.
+
+Romans 8:5
+
+[Overcoming Negative Internal Chatter](http://girlfriendsingod.com/overcoming-negative-internal-chatter/)
