@@ -13,11 +13,16 @@ tags: form input css html
 
 `<fieldset>` and `<legend>`
 
-The fieldset element is used to group together related inputs and labels.
+* The `<fieldset>` element is used to group together related inputs and labels.
 
-The for attribute goes on a label, and its value should be set to the ID of the input it's for.
+* The for attribute goes on a label, and its value should be set to the ID of the input it's for.
 
 While the label element requires opening and closing tags, inputs do not.
+
+
+
+
+
 
 ```javascript
 <label for="first-name">First name</label>
@@ -42,10 +47,14 @@ We lean slightly towards the first method because when the label wraps the input
  <input type="tel" pattern="[0-9/-]*" name="phone" id="phone" placeholder="888-888-8888" title="A typical U.S. phone number" required/>
  ```
 
+
+
  The main difference between the `placeholder` and `value` attributes is that the value attribute value text stays in place when a control has focus unless a user manually deletes it.
 
  [value vs placeholder](https://codepen.io/shayhowe/pen/lHnFm)
- 
+
+ `required`
+Validation also occurs specific to a control’s type. For example, an `<input>` element with a type attribute value of email will require not only that a value exist within the control, but also that it is a valid email address.
 
 ### Type
 
@@ -73,14 +82,21 @@ the type attribute doesn’t apply here, but the name attribute is still used.
 <textarea name="comment">Add your comment here</textarea>
 ```
 ### Other input types
-radio
-checkbox
+`radio`
+
+`checkbox`
+
 [drop-down list](https://codepen.io/shayhowe/pen/fvzDK)
+
 [Multiple Selections](https://codepen.io/shayhowe/pen/DoEKh) Just added multiple inside select tag.
 
 [hidden input](https://www.w3schools.com/tags/tryit.asp?filename=tryhtml5_input_type_hidden)
+
 [submit button](https://codepen.io/shayhowe/pen/evnop)
-[File input](https://codepen.io/shayhowe/pen/pngud)Unfortunately, styling an <input> element that has a type attribute value of file is a tough task with CSS
+
+[File input](https://codepen.io/shayhowe/pen/pngud)Unfortunately, styling an `<input>` element that has a
+
+type attribute value of file is a tough task with CSS
 
 ## Key words to look up
 ` Form processing` (a deeper topic to explore)
@@ -90,8 +106,11 @@ check out [PHP5 Tutorial](https://www.w3schools.com/php/default.asp)
 
 ## Download and Links
 [Wave accessibility tool](http://wave.webaim.org/)
+
 [Creating Accessible Forms](https://webaim.org/techniques/forms/#ensure)
+
 Be sure to include important cues or instructions in associated labels or at the beginning of the form.
+
 [A form of madness](http://diveinto.html5doctor.com/forms.html) must read this one.
 
 ## quiz

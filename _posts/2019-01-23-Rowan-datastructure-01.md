@@ -20,6 +20,13 @@ new ArrayList<student>();
 
 its important because it's specific no need for debugger.
 
+
+
+
+
+
+
+
 ### iterators
 allow you to step through.
 

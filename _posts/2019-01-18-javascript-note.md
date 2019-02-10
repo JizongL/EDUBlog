@@ -19,9 +19,32 @@ To get JavaScript into a web page, there are two main options.
 
 let and var declare a variable; const declares a constant. A constant cannot be reassigned to a new value.
 
-Transpiling is when you use a program to rewrite ES6 code as ES5 so it can run in all browsers.
 
-But unless you have a specific reason not to use const or let, you should abandon var entirely.
+
+
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+    <body>
+        <script>src = "app.js"</script>
+    </body>
+</html>
+```
+
+
+*With jquery*
+
+```javascript
+<script src="https://www.somewhere-on-the-internet.com/coolLibrary.js"></script>
+```
+
+
+
+
+*Transpiling* is when you use a program to rewrite ES6 code as ES5 so it can run in all browsers.
+
+But unless you have a specific reason not to use `const` or `let`, you should abandon `var` entirely.
 
 `const` is used to define constant values, which is another way of saying variables whose value cannot be reassigned.
 
@@ -95,6 +118,69 @@ const Myfunction = (para) => //something
 
 ```
 When defining an arrow function that takes a single parameter, the parentheses are optional:
+
+
+### Immediately invoking a function expression-IIFE
+
+Notice the `()`, without it, the IIFE will throw an error.
+
+```
+(function () { return 'abc' }())
+'abc'
+```
+
+### Closure 
+
+to reference a specific instance of a local binding in an enclosing scope—is called closure.
+
+```javascript
+//A function is defined, it creates a local binding, and //return a function that accesses and returns the local // binding. 
+function wrapValue(n){
+  let local = n;
+  return ()=> local;
+}
+let wrap1 = wrapValue(1);
+let wrap2 = wrapValue(2);
+console.log(wrap1());
+console.log(wrap2());
+
+```
+more creative example
+
+```javascript
+function multiplier(factor){
+  return number => number*factor;
+}
+console.log(multiplier(5));
+
+```
+
+### recursion 
+
+e.g factorial function 
+```javascript
+function factorial(n){
+  if(n===1){
+    return 1;
+  } else{
+    return n*factorial(n-1);
+  }
+}
+
+console.log(factorial(4));
+```
+decide if a number is even or not. 
+
+```javascript
+function isEven(n) {
+  if (n == 0) return true;
+  else if (n == 1) return false;
+  else if (n < 0) return isEven(-n);
+  else return isEven(n - 2);
+}
+```
+
+
 
 ## template strings
 
@@ -183,7 +269,7 @@ function analyzeNumber(num) {
   }
 }
 ```
-Ternary operator
+### Ternary operator
 ```
 function getFee(isMember) {
   return (isMember ? "$2.00" : "$10.00");
@@ -192,7 +278,7 @@ function getFee(isMember) {
 console.log(getFee(true));
 // expected output: "$2.00"
 ```
-Error handling
+### Error handling
 
 `try`, `catch`, `finally`
 
@@ -218,6 +304,20 @@ The browser will run the catch block and then continue running the next line of 
 `throw`
 intentionally throw an error.
 
+
+
+
+```
+try {
+  throw 'myException';
+}
+catch (e) {
+  // do something
+}
+
+```
+
+### Switch
 `switch`
 
 ```
@@ -288,7 +388,53 @@ console.log(myArray);
 .filter()
 .map()
 .sort()
+.indexOf()
+.lastIndexOf()
+.concat()
 ```
+
+
+Use `.slice()` to remove an item from array
+
+```javascript
+function remove(array,index){
+  return array.slice(0,index).concat(index+1)
+}
+console.log(remove(["a", "b", "c", "d", "e"], 2));
+// → ["a", "b", "d", "e"]
+```
+
+## Rest Parameters
+Notice that the parameter of the funciton is not an array, but just numbers. 
+```javascript
+function max(...numbers) {
+  let result = -Infinity;
+  for (let number of numbers) {
+    if (number > result) result = number;
+  }
+  return result;
+}
+console.log(max(4, 1, 9, -2));
+// → 9
+```
+
+spread an array into another array 
+
+```javascript
+arrayOne = [2,3];
+arrayTwo = [1,...arrayOne,4,5]
+
+console.log(arrayTwo)
+```
+
+### Math object
+
+`.Math.abs()`
+`.Math.ceil()`
+`.Math.floor()`
+`.Math.round()`
+
+
 
 #### work with comparing function
 
@@ -440,14 +586,28 @@ myFamily.sayHi();
 
 ```
 
-## Beware the pass-by-reference gotcha
-
-
-
-
+`Object.assign`
 `Object.keys`
 
-### Factory functions
+```javascript
+let journal = [];
+
+function addEntry(events, squirrel) {
+  journal.push({events, squirrel});
+}
+
+addEntry(["work", "touched tree", "pizza", "running",
+          "television"], false);
+addEntry(["work", "ice cream", "cauliflower", "lasagna",
+          "touched tree", "brushed teeth"], false);
+
+
+
+console.log(Object.keys(journal))
+// return [0,1] 
+```
+
+## Factory functions
 In this example, mammal is a factory function. The job of a factory function is to create an individual instance of some model.
 
 ```
@@ -482,6 +642,8 @@ oneEyedBadger.explainYourSelf();
 In this challenge, you'll practice [grokking](https://en.wikipedia.org/wiki/Grok) (that is, understanding) code written by someone other than yourself.
 
 
+
+
 ## Question to ask
 
 
@@ -505,6 +667,9 @@ for the drilling, I was able to figure out if I change it from `a-b` to `b-a`, t
 
 * If you use myVar = <...>, there will be no side effects; if you use myVar.someAttribute = <...>, there will be side effects. from Object lesson 3.
 
+
+
+
 ## seminar
 
 object
@@ -524,6 +689,7 @@ pet_info['name']="David"
 
 ...
 &hellip;
+
 
 
 ## download and links

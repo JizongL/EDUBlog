@@ -17,6 +17,11 @@ tags: trading AI
 #### Sector specific Risks
 regulation, legilation, materials costs ...
 
+
+
+
+
+
 ### Idiosyncratic risks.
 inherent to individual stocks.
 labor strike, managerial change...
