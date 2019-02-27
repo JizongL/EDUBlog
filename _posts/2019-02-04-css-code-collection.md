@@ -3,7 +3,7 @@ layout: post
 title:  Free Code Camp Note
 date:   2019-01-31 10:05
 categories: code_collection
-tags: css 
+tags: css
 ---
 
 * content
@@ -36,8 +36,8 @@ div{
 ```
 ### Create stripes with `repeating-linear-gradient()`
 
-```css
-  div{ 
+```
+  div{
     border-radius: 20px;
     width: 70%;
     height: 400px;
@@ -52,7 +52,9 @@ div{
   }
 
 </style>
-
-<div></div>
 ```
 
+
+### grid model
+
+[grid model](https://repl.it/@thinkful/CSS-Responsive-Grid-Challenge-Solution)

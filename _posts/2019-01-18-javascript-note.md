@@ -96,9 +96,20 @@ an argument is a value that gets passed to the function when it's called. A para
 
  call signature ()
 
-Note that functions that do not set an explicit return value via return still return something, namely, undefined
+Note that functions that do not set an explicit return value via return still return something, namely, `undefined`
 
-hoisting
+## hoisting
+
+```javascript
+var sayhello;
+
+sayhello = function(){
+    console.log("hello");
+}
+
+```
+
+
 
 Default function parameters
 
@@ -129,12 +140,12 @@ Notice the `()`, without it, the IIFE will throw an error.
 'abc'
 ```
 
-### Closure 
+### Closure
 
 to reference a specific instance of a local binding in an enclosing scope—is called closure.
 
 ```javascript
-//A function is defined, it creates a local binding, and //return a function that accesses and returns the local // binding. 
+//A function is defined, it creates a local binding, and //return a function that accesses and returns the local // binding.
 function wrapValue(n){
   let local = n;
   return ()=> local;
@@ -155,9 +166,9 @@ console.log(multiplier(5));
 
 ```
 
-### recursion 
+### recursion
 
-e.g factorial function 
+e.g factorial function
 ```javascript
 function factorial(n){
   if(n===1){
@@ -169,7 +180,7 @@ function factorial(n){
 
 console.log(factorial(4));
 ```
-decide if a number is even or not. 
+decide if a number is even or not.
 
 ```javascript
 function isEven(n) {
@@ -405,7 +416,7 @@ console.log(remove(["a", "b", "c", "d", "e"], 2));
 ```
 
 ## Rest Parameters
-Notice that the parameter of the funciton is not an array, but just numbers. 
+Notice that the parameter of the funciton is not an array, but just numbers.
 ```javascript
 function max(...numbers) {
   let result = -Infinity;
@@ -418,7 +429,7 @@ console.log(max(4, 1, 9, -2));
 // → 9
 ```
 
-spread an array into another array 
+spread an array into another array
 
 ```javascript
 arrayOne = [2,3];
@@ -452,7 +463,8 @@ console.log(myArray)
 ```
 
 #### work with Anonymous function
-```
+
+```javascript
 const myArray=[200,20,2,100,1,10];
 myArray.sort(function(a,b){
     return a-b
@@ -460,9 +472,10 @@ myArray.sort(function(a,b){
 console.log(myArray)
 ```
 
-#### use arrow function with sort()
+use arrow function with sort()
 
-```
+```javascript
+// anonymous
 myArray.sort((a,b) => a -b);
 console.log(myArray)
 
@@ -533,7 +546,7 @@ it's best practice to default to putting 'use strict'; at the top of all your Ja
  object literal.
 
 Key does not use quotation mark.
-```
+```javascript
 const ledZeppelin = {
   singer: 'Robert Plant',
   guitar: 'Jimmy Page',
@@ -544,7 +557,8 @@ const ledZeppelin = {
 ```
 
 Key uses quotation marks, to include a space in between.
-```
+
+```javascript
 const ledZeppelin2 = {
   'lead singer': 'Robert Plant',
   'lead guitar': 'Jimmy Page',
@@ -555,7 +569,7 @@ When an object has a value that is a function, it is called [method](https://rep
 
 ### add, delete and update values.
 
-```
+```javascript
 const foo = {
     bar: 'bizz';
 }
@@ -567,8 +581,6 @@ foo.mar = 'dizz';
 foo.bar = 'cizz';
 
 delete foo.bar;
-
-
 ```
 
 ### Self-reference and `this`
@@ -604,11 +616,13 @@ addEntry(["work", "ice cream", "cauliflower", "lasagna",
 
 
 console.log(Object.keys(journal))
-// return [0,1] 
+// return [0,1]
 ```
 
 ## Factory functions
 In this example, mammal is a factory function. The job of a factory function is to create an individual instance of some model.
+
+
 
 ```
 function mammal(name,numEyes){
@@ -635,8 +649,18 @@ tiger.explainYourSelf();
 
 const oneEyedBadger = mammal('badger',1);
 oneEyedBadger.explainYourSelf();
+
+
 ```
 
+## JSON
+`JSON.stringify` and `JSON.parse`
+
+```javascript
+let string = JSON.stringify({squirrel:false,events:['weekend']});
+console.log(string);
+console.log(JSON.parse(string).events);
+```
 
 
 In this challenge, you'll practice [grokking](https://en.wikipedia.org/wiki/Grok) (that is, understanding) code written by someone other than yourself.
@@ -649,7 +673,7 @@ In this challenge, you'll practice [grokking](https://en.wikipedia.org/wiki/Grok
 
 * Ask how the mechanism of the .sort() and function.
 
-```
+```javascript
 
 myArray.sort((a,b)=> a-b);
 
@@ -658,6 +682,7 @@ function greatestToLeast(array) {
   // your code goes here
   return array.sort((a,b)=>b-a);
 }
+
 ```
 for the drilling, I was able to figure out if I change it from `a-b` to `b-a`, then it becomes from greatest to least.
 

@@ -9,18 +9,18 @@ tags: jquery javascript
 * content
 {: toc}
 
-## Document Ojbect Model 
+## Document Ojbect Model
 `.getElementsByTagName()`
 `.getElementsById()`
 `appendChild()`
 `insertBefore()`
 `document.createTextNode()`
 
-## DOM Traversal and Manipulation 
+## DOM Traversal and Manipulation
 e.g
 `let paragraphElements = $('p')`
- 
-e.g 
+
+e.g
 
  ```javascript
 function doHelloWorld() {
@@ -30,7 +30,7 @@ function doHelloWorld() {
 
 doHelloWorld();
  ```
-css code for styling and DOM minapulation should be separated. 
+css code for styling and DOM minapulation should be separated.
 
 ### .find() and .parent()
 
@@ -43,7 +43,7 @@ Then apply `parent()` or `find()`
 `someChild.find('some-child-name').addClass('some-css-name')`
 
 
- ### prop() Disable an element 
+ ### prop() Disable an element
 
  ```
  $("button").prop("disabled",true);
@@ -54,7 +54,7 @@ Then apply `parent()` or `find()`
  `.html()`
  `.text()`
 
-### remove element 
+### remove element
  `.remove`
 `.appendTo()`
 
@@ -83,7 +83,7 @@ $('.js-form').submit(event => {
 
 `event.currentTarget` has been replaced with `this`.
 `this` is more common in jQuery.
-`this` only refers to the element within the callback function. 
+`this` only refers to the element within the callback function.
 
 
 Finally, note that in the context of callback functions, this will not behave as expected if you use ES6 arrow functions. If you need `this` to refer to the event object, stick with the `function` keyword.
@@ -92,11 +92,11 @@ Finally, note that in the context of callback functions, this will not behave as
 
 
 ### .append() and .appendTo()
-They perform the same task. 
+They perform the same task.
 `$( "<p>Test</p>" ).appendTo( ".inner" );`
 `$( ".inner" ).appendTo( "<p>Test</p>" );`
 
-### Toggle and hiding with delegation 
+### Toggle and hiding with delegation
 read the note from the following [link](https://repl.it/@JizongL/toggling-and-hiding-button?language=html&folderId=)
 
 
@@ -135,3 +135,6 @@ $( "p" ).on({
     "mouseover": function() { console.log( "hovered!" ); }
 });
 ```
+
+
+[jQuery Link](https://code.jquery.com/jquery-3.2.1.min.js)

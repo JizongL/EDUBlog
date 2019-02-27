@@ -2,13 +2,55 @@
 layout: post
 title: Thinkful EI Study note day 1
 date: 2019-02-09 17:32
-categories: Thinkful 
+categories: Thinkful
 tags: EI_program local_dev_environment
 ---
 
 * content
 {: toc}
 
+partner:
+
+### Basic Guide
+
+Thankful daily routine
+
+Workshop (10:00am - 11:00am ET)
+
+Pair Programming (11:00am - 12:45pm ET)
+
+[start a session](https://sessions.thinkful.com/DL-James)
+
+[Pomodoro timer](https://www.marinaratimer.com/ZxGCo4A)
+
+Lunch Break (12:45pm - 1:30pm ET)
+
+Group Review (1:30pm - 2:00pm ET)
+
+Afternoon Paired Programming (2:00pm - 5:30pm ET)
+
+One-on-one Mentor Sessions (between 5:30pm- 9pm ET)
+
+*note*
+Fill out the reflection form on your dashboard every day at 6pm ET
+
+[absence form](https://thinkful.typeform.com/to/CmatYh)
+
+[Cohort Schedule](https://docs.google.com/document/d/1_hgcn-Xoi4dlz09CpHdCDWnl8hZx7GXqjHlRstrj8mg/edit)
+
+Job hunting
+[Location tech resources](https://docs.google.com/document/d/16qw43Glc1FDwgW1sHRI2941hATmD5ijCYtr6GQyPezE/edit)
+
+Conference List for 2019
+[See list](https://docs.google.com/document/d/1UY_kOf0WFEAV_TQD4YsFmCG8oKJRjMegf03PXcT3kNU/edit)
+
+[graduation criteria](https://docs.google.com/document/d/1OrzppMJlzhLIYxqcm61MEIEdSmefp9VAvLhMX_Vr9gM/edit)
+
+
+on Slack: with technical issue
+`/create ticket`
+
+[Cohort contacts](https://docs.google.com/spreadsheets/d/1wU130_ZEomaWzgps-1k8KJ-giEQm4O0NC-WcYv0DC6k/edit#gid=0)
 
 ## Local Dev environment setup(MAC)
 
@@ -39,11 +81,11 @@ test node install
 
 `mkdir hello_node && cd hello_node`
 `echo "console.log("hello world")" > hello.js`
-`cat hello.js` confirm file created properly. 
+`cat hello.js` confirm file created properly.
 `node hello.js`
 
 [Express generator](https://www.npmjs.com/package/express-generator)
-`npm install -g express-generator` install globally 
+`npm install -g express-generator` install globally
 `express hello_express` test create a new app
 `cd hello_express` and `npm install` install dependencies listed in `package.json`
 `npm start`
@@ -51,26 +93,26 @@ test node install
 
 
 Installing ESLint
-compared to JLint, JHint, ESLint is most popular and customizable 
+compared to JLint, JHint, ESLint is most popular and customizable
 
-function 
+function
 static analysis to find syntax errors, and problematic code before you run the code
 
-installed globally 
+installed globally
 `npm install -g eslint`
-And configuration file is placed in your root directory so it will run across all projects. 
+And configuration file is placed in your root directory so it will run across all projects.
 
-installed locally 
+installed locally
 `--save-dev` option like npm install `eslint --save-dev` so an entry is placed in the devDependencies property in package.json. And a configuration file is placed in the root of the project which overrides the global configuration and allows for project specific configuration.
 
 `cd ~/`
 `.eslintrc.json`
 
-paste the following into the json file 
+paste the following into the json file
 
 ```js
 {
-    /** 
+    /**
     * ESLint: http://eslint.org/docs/user-guide/configuring
     */
 
@@ -105,17 +147,17 @@ paste the following into the json file
 read more about on [Specifying Environments](https://eslint.org/docs/user-guide/configuring#specifying-environments)
 
 
-ESLint basic 
+ESLint basic
 
 `eslint filename.js`
 `eslint --fix filename.js`
 
-Setup VSCode 
+Setup VSCode
 
 Open Extension
 `Shift+Command+X`
 
-## Introduction 
+## Introduction
 
 Executing Javascript through NodeJS
 
@@ -123,17 +165,39 @@ config to create an alias
 `git config --global alias.lg "log --oneline --all --graph --decorate"`
 
 
-github collaboration exercise 
+github collaboration exercise
 create new local repo
 `git init`
 `touch README.md`
 add and commit
-create repo in github 
+create repo in github
 sync local to remote
 
 If error occured Github “fatal: remote origin already exists”
 `git remote set-url origin git@github.com:ppreyer/first_app.git`
 
-This can discard uncommitted changes 
+This can discard uncommitted changes
 `git checkout -- <filename>`
 
+Auto create boiler plate
+Typing `!` and hitting `<tab>`
+
+
+## Review
+### command line
+`ls -a` see hidden files
+`cd ../..` back to parent folder
+`rm -i someFileOrFolder` prompt about to delete
+
+
+
+### git
+`git branch -d branchName` delete branch name
+`rm -rf cats` perminant delete
+`mv foo.txt bar.txt` move files
+`git add -u` stage any files that it's already tracking but that have unstaged changes
+`git checkout HEAD~2` two commits earlier than wherever HEAD is currently pointing to.
+`git reset HEAD~1` which will move us back to one commit earlier, but not change files.
+`git reset --hard HEAD~1` hard reset, bring back to earlier commit also change files.
+
+### Javascript
