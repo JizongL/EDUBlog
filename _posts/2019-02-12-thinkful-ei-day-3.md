@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Thinkful EI Study note day 3
+title: Thinkful EI study note day 3
 date: 2019-02-12 13:47
 categories: Thinkful
 tags: EI_program jquery interactive_web_apps

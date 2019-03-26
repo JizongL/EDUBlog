@@ -1,9 +1,9 @@
 ---
-type: post
-title: Thinkful EI Project Demo-Quiz App
-date: 2019-2-27 9:47
+layout: post
+title: Thinkful EI Study project
+date: 2019-02-26 13:47
 categories: Thinkful
-tags: thinkful EI_program jQuery javascript project_demo
+tags: EI_program jquery interactive_web_apps
 ---
 
 * content

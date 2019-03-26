@@ -53,8 +53,69 @@ div{
 
 </style>
 ```
-
+### overflow-wrap
+[checkout t](https://codepen.io/impressivewebs/pen/ZLBvav)
 
 ### grid model
 
 [grid model](https://repl.it/@thinkful/CSS-Responsive-Grid-Challenge-Solution)
+
+
+### Input with search icon
+```
+#search-input {
+  background-image: url('https://www.w3schools.com/css/searchicon.png');
+  background-position: 10px 12px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+  margin-top:12px;
+}
+```
+
+## React
+### Message Notification
+![img](https://tf-curricula-prod.s3.amazonaws.com/curricula/da13a510-00f5-4649-9416-c29d8f2f4761/ei-react-v1/assets2/react_testing_components/react_testing_06.png)
+```
+.messages{
+  display:block;
+  position:relative;
+  padding: 0 12px;
+  height:22px;
+  line-height:26px;
+  font-size:11px;
+  font-weight:bold;
+  color:#666;
+  text-decoration: none;
+  text-shadow: 0 1px white;
+  background:#FAFAFA;
+  width:100px;
+  box-shadow:inset 0 0 3px rgba(0,0,0,0.1);
+  margin:15px auto;
+
+}
+
+.messages .unread_count{
+  display:block;
+  position: absolute;
+  top:-10px;
+  right:3px;
+  line-height:14px;
+  height:14px;
+  padding: 0 5px;
+  font-family:Arial, sans-serif;
+  font-size:9px;
+  color:white;
+  text-shadow:0 1px rgba(0,0,0,0.25);
+  border:1px solid;
+  border-radius:10px;
+  box-shadow:inset 0 1px rgba(255,255,255,0.3),0 1px 1px;
+  background:#67c1ef;
+  border-color:#30aae9;
+}
+
+
+```

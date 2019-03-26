@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  Jquery note
-date:   2019-02-05 17:43
+title:  RESTful API
+date:   2019-02-29 17:43
 categories: Thinkful
-tags: jquery javascript
+tags: jquery javascript restful_api
 ---
 
 ## Key terms
@@ -50,7 +50,46 @@ The ISP sends that IP address back to the browser
 `https://www.youtube.com/results?search_query=how+the+Internet+works`
 
 
-infinite scroll behavior
+### request-response cycle
+
+
+![the request response cycle](https://tf-curricula-prod.s3.amazonaws.com/curricula/3c281ad7-5b2b-4ca0-9c9a-2eb707683595/ei-async-web-apps-v1/assets2/async_how_web_apps_work/ip_address.png)
+
+
+![requestResponseCycle](https://tf-curricula-prod.s3.amazonaws.com/curricula/3c281ad7-5b2b-4ca0-9c9a-2eb707683595/ei-async-web-apps-v1/assets2/async_how_web_apps_work/url.png)
+
+
+
+### The cycle steps
+
+* The browser parses the URL
+
+* The browser sends the domain name to the ISP
+
+* The ISP looks up the IP address in the DNS
+
+* The ISP sends the IP address back to the browser
+
+* The browser opens a connection to the server located at the IP address
+
+* The browser sends a request to the server
+
+* The server sends a response
+
+* Repeat steps 6 and 7 until the browser has all of the resources it needs
+
+
+
+## APIs & AJAX
+
+AJAX - asynchronous JavaScript and XML
+
+In the old time, twitter would have to load the entire page.
+
+* infinite scroll behavior solve the issue.
+
+
+
 
 Web apps have two parts – a client that requests and displays resources and a server that exposes those resources.
 
@@ -108,11 +147,58 @@ Check [details](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status)
 
  chain multiple query `&`
 
+
+### JSON
+
+```
+{
+message: “What more could I lose?!”
+}
+
+{
+"message": "What more could I lose?"
+}
+```
+
 ### youtube
 `client ID`
 807660904906-6gpsls7qqfq895aco4dlpaalqs3tbrpn.apps.googleusercontent.com
 `client secret`
 ozhEM4CzkGfGSogkOehvuGQk
+
+### Promises
+
+`.then` and `.catch`
+
+```javascript
+function getDogImage() {
+  const options = {method: 'GET'};
+  fetch('https://dog.ceo/api/breeds/image/random', options)
+    .then(response => response.json())
+    .then(responseJson => console.log(responseJson));
+}
+
+```
+
+
+
+Now, let’s say you ordered first, but your food takes a long time to prepare. Elsewhere in the restaurant, someone at a different table ordered food after you, but it’s much quicker to prepare. It would be silly if they had to wait to receive their food until after you receive yours just because you ordered first.
+
+Without promises — if this was a blocking call — our app would be frozen, unable to do other work while waiting for the response to return. But with promises, our app can continue executing other operations, and when the API eventually returns a response, it will carry out the behavior indicated in the .then block. The .then method's name is well-chosen.
+
+
+* Make an initial fetch call
+
+* Followed by a .then block that calls `response.json()`
+
+* Followed by another .then block that carries out your desired actions on the resulting data
+
+add the following, so it would catch error when internet is down.
+
+ `.catch(error => alert('Something went wrong. Try again later.'));`
+
+Inside the catch block, any action can be assigned in case of error.
+
 
 
 
