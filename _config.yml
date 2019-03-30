@@ -7,7 +7,7 @@
 
 # Site settings
 title: TmmGeek
-brief-intro: Artificial Intelligence and Big Data student
+brief-intro: Frontend Developer with a tint in Data Science
 baseurl: "/TmmGeekBlog" # the subpath of your site, e.g. /blog
 url: "http://www.tmmlab.com" # the base hostname & protocol for your site
 
@@ -44,8 +44,8 @@ markdown: kramdown
 # highlighter: pygments
 contact_PK: 970b952628537ad7a2e389fdd91bd127
 
-# for mathjax markdown display, also see 
-redcarpet: 
+# for mathjax markdown display, also see
+redcarpet:
 
 extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "strikethrough", "superscript", "with_toc_data"]
 
