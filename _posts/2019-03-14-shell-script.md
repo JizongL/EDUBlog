@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  Command Line and Shell script
-date:   2018-10-09 11:28
+date:   2018-03-14 11:28
 categories: websites
 tags: developers websites
 ---

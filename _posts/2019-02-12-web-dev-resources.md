@@ -1,7 +1,7 @@
 ---
 type: post
 title: Thinkful EI program tool page
-date: 02-12-2019 17:25
+date: 2019-02-12 17:25
 categories: Thinkful
 tag: thinkful homework resource links
 ---

@@ -1,7 +1,7 @@
 ---
 type: post
 title: Project profolio prep
-date: 03-07-2019 11:15
+date: 2019-03-07 11:15
 categories: Thinkful
 tag: thinkful portfolio project
 ---
@@ -50,10 +50,6 @@ Outside the tech, I also enjoy volunteering, drawing and playing the piano. Also
 
 
 
-
-
-For each project you showcase in your portfolio, you'll need to write up the following:
-
 ### Project title
 
 Bookmark
@@ -68,8 +64,15 @@ t see details, edit and delete existing bookmark. It also has rating filter and 
 HTML, CSS, Javascript, jQuery, Herokuapp API
 
 ### Link to live app
+[See app](https://thinkful-ei-bee.github.io/BookmarkDavidL/)
 
 ### Link to repo
+[See repo](https://github.com/thinkful-ei-bee/BookmarkDavidL)
+
+
+
+
+
 
 
 ## Designing a layout

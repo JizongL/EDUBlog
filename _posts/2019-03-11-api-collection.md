@@ -1,7 +1,7 @@
 ---
 type: post
 title: API collection
-date: 03-11-2019 11:15
+date: 2019-03-11 11:15
 categories: Thinkful
 tag: thinkful api
 ---
