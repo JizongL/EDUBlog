@@ -497,3 +497,6 @@ describe('My components',()=>{
 In the event listener example, why <img onClick={makeDoggy}>, but not <img onClick={makeDoggy(e)}>
 
 why sometimes I need to run `sudo npx create-react-app name-of-project`?
+
+
+How to import font awesome icons
