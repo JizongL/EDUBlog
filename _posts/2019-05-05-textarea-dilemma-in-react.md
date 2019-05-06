@@ -62,7 +62,7 @@ index.js:1437 Warning: Use the `defaultValue` or `value` props instead of settin
 ```
 
 ## To reason a way out.
-After thinking for a while, I noticed that in order for the value to be preset, I will have to use the `value`, but the `value` tag is immutable, so perhaps I can set up a state property, which is set to have the same value of the preset value of the `value` tag. So when I key down to make any change, the update will happen from the end of that value onward. To do this I will also need an `onChange` handler function to update the state property, which in turns update the `<textarea>` form field. After messing around for a moment, it finally worked(see the figure below). The code is as follow.
+After thinking for a while, I noticed that in order for the value to be preset, I will have to use the `value`, but the `value` tag is immutable, so perhaps I can set up a state property, which is set to have the same value of the preset value of the `value` tag. So when I key down to make any change, the update will happen from the end of that value onward. To do this I will also need an `onChange` handler function to update the state property, which in turns update the `<textarea>` form field. After messing around for a moment, it finally worked(see the figure be). The code is as follow.
 
 state setup
 ```

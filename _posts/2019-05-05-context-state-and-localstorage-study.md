@@ -5,6 +5,9 @@ categories: React
 tags: react javascript fullstack frontend textarea
 ---
 
+* content
+{: toc}
+
 ## Introduction
 
 Upon working on my [Capstone Project](), I came across an issue with refreshing my login and logout
@@ -120,6 +123,23 @@ render(){
 
 
 
+<img src="{{root_url | prepend: site.baseurl}}/asset/full_stack_dev/react/context-state-localStorage/loginworking.png">
+
+Now unfortunately, it does not refresh once the user login in to the account, it still shows the login and signup links, until the page is refreshed. Nevertheless, when the user logout, it does refresh properly.
+
+<img src="{{root_url | prepend: site.baseurl}}/asset/full_stack_dev/react/context-state-localStorage/logoutnotworking.png">
+
+To reason why this happened, we know that once the user click the submit button in the login form, the token is received from the server and saved in localStorage(see the figure). Although `TokenService.hasAuthToken()` is true now, state has not been updated in the header component. Then state property `hideLogout` is updated once the page is refreshed. when the user click the logout link, the handler function clear the auth-token from the local storage and reset the state property `hideLogout` to true in the header component, that is why the header is updated properly when the user logout.
+
+<img src="{{root_url | prepend: site.baseurl}}/asset/full_stack_dev/react/context-state-localStorage/localStorage.png">
+
+
+## Use Context?
+At this point, I was thinking that there should be a context to help trigger the reset state during the login process. So when the token is received from the server, the context will help reset the state at the same time therefore the header can be rendered.
+
+
+
+## Solution
 So, the `TokenService.hasAuthToken` is still the best tool for updating the header. After trying
 exhausting the other methods associated with state and context, I came up with the following snippet that is working.  
 
