@@ -76,3 +76,10 @@ https://www.chartjs.org/
 
 ## CSS
 [button generator](http://button.csscook.com/)
+
+## career and jobs
+
+[job recourses](https://docs.google.com/document/d/1r4LOVxkqWnToX7PLv5LJYcajN8PewAU4kb6HzMpunQk/edit)
+
+
+[jobtrack.io](https://jobtrack.trilogyed.com/a/login)

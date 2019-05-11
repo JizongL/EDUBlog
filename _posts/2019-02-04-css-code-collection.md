@@ -10,7 +10,31 @@ tags: css
 {: toc}
 
 
+### margin:0 auto can be used to center things
+the 0 is bottom and top, and `auto` is auto setting the left and right.
+just to resize the element you want to center, then use this `margin` setup,
+without needing to use flex box. 
 
+
+### use !important to hack fontawesome size when using React fontawesome library
+I tried to reset the size of the icons with the `div` wrapper, it didn't work.
+however, I can hack this by using the `!important`, since it's only changing the size of
+the icons, it won't mess things up in the future.
+
+```css
+.social_icon{
+
+
+  width:30px !important;
+  height:30px;
+  color:white;
+  margin-left:16px;
+  margin-right:0;
+  border-radius:100%;  
+  text-align:right;  
+  list-style:none;
+}
+```
 ### box-shadow for thumbnail
 
 ```css
@@ -18,6 +42,13 @@ tags: css
   box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 }
 ```
+
+### relative and absolute
+https://jsbin.com/kenikuqulu/1/edit?css,js,output
+
+### flex box workshop example
+[flex box workshop](https://bit.ly/tjsworkshops)
+
 
 ### Gradual CSS Linear Gradient
 

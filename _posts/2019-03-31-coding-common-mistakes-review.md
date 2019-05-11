@@ -8,6 +8,11 @@ tags: react javascript review
 
 ## Basic Javascript mistakes
 
+
+
+
+
+
 forget to put `return` inside `{...}`
 
 ```javascript
@@ -85,6 +90,30 @@ app.get('/book',(req,res)=>{
 ```
 now it works.
 
+### setup sticky footer
+
+html code
+```
+<body class="Site">
+  <header>…</header>
+  <main class="Site-content">…</main>
+  <footer>…</footer>
+</body>
+```
+
+The CSS
+```
+.App{
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+main{
+  flex: 1;
+}
+```
+
+reference from [here](https://philipwalton.github.io/solved-by-flexbox/demos/sticky-footer/)
 
 ### module.exports = {a,b}
 it's easy to write it
@@ -106,7 +135,26 @@ return (
           </label>
 ```
 
-## Chai testing
+### use jex in react
+no need to use `${tag}` here, because in react, it uses jex instead of string.
+
+```js
+let optionsKey = options.map((option,index)=>
+      {return <option key={index} value={option}>{option.split('_').join(' ')}</option>})
+
+```
+
+
+## testing
+
+### Jest Mocking function when testing
+```
+jest.mock('react-plotly.js', () => () => <div/>)
+jest.mock('react-particles-js', () => () => <div/>)
+```
+to avoid run into the details of third party library during testing.
+
+see [Jest Doc](https://jestjs.io/docs/en/mock-functions) for reference.
 
 ### this.retries() only works with unbound function during chai test.
 
