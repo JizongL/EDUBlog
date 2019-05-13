@@ -207,3 +207,79 @@ Webpack - Configuring
 npm install --save-dev webpack webpack-cli webpack-dev-server html-webpack-plugin style-loader css-loader file-loader
 ```
 
+```
+mkdir src && cd src
+touch index.html
+touch index.js
+```
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>First Webpack Project</title>
+</head>
+<body>
+  <div id="root"></div>
+</body>
+</html>
+```
+
+
+```js
+import $ from 'jquery';
+
+function main() {
+  console.log('DOM is loaded');
+
+  const startMsg = $('<p>Webpack is working!</p>');
+  $('#root').append(startMsg);
+}
+
+$(main);
+```
+
+
+
+```js
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+
+module.exports = {
+  entry: './src/index.js',
+  output: {
+    path: __dirname + '/dist',
+    filename: 'index_bundle.js'
+  },
+  mode: 'production',
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: './src/assets/index.html',
+    })
+  ],
+  module: {
+    rules: [
+      {
+        test: /\.css$/,
+        use: [
+          'style-loader',
+          'css-loader'
+        ]
+      },
+      {
+        test: /\.(png|svg|jpg|gif)$/,
+        use: [
+          'file-loader'
+        ]
+      }
+    ]
+  }
+};
+```
+
+`npx webpack --mode production`
+
+`npm install -g http-server`
+
