@@ -13,7 +13,7 @@ tags: css
 ### margin:0 auto can be used to center things
 the 0 is bottom and top, and `auto` is auto setting the left and right.
 just to resize the element you want to center, then use this `margin` setup,
-without needing to use flex box. 
+without needing to use flex box.
 
 
 ### use !important to hack fontawesome size when using React fontawesome library
@@ -149,4 +149,9 @@ div{
 }
 
 
+```
+
+### put a div tag on top of everything with z index
+```
+ z-index: 99 !important;
 ```
