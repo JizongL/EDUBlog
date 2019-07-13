@@ -46,7 +46,7 @@ layout: default
                         <ul>
                         {% endif %}
                         <li class="relatedPost">
-                            <a href="{{ site.url }}{{ post.url }}">{{ post.title }}
+                            <a href="{{ root_url | prepend: site.baseurl }}{{ post.url }}">{{ post.title }}
                             {% if post.series %}
                                 (Series: {{ post.series }})
                             {% endif %}
@@ -100,6 +100,7 @@ layout: default
 }());
 </script>
 <script src="{{ "/js/pageContent.js " | prepend: site.baseurl }}" charset="utf-8"></script>
+<!-- MathJax markdown script -->
 <script type="text/javascript"
     src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>

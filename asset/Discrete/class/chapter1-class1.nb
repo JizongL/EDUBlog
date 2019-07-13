@@ -1,0 +1,468 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     15301,        460]
+NotebookOptionsPosition[     14100,        415]
+NotebookOutlinePosition[     14456,        431]
+CellTagsIndexPosition[     14413,        428]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[TextData[{
+ StyleBox["Propositional Logic",
+  FontWeight->"Bold"],
+ "\ndefinition\nA declarative statement that is either true or false. \n\n\
+What time is it?\n\np = \[OpenCurlyDoubleQuote]Michael\[CloseCurlyQuote]s PC \
+runs Linux\[CloseCurlyDoubleQuote]\n~p = ",
+ StyleBox["It\[CloseCurlyQuote]s not the case",
+  FontWeight->"Bold"],
+ " that Michael\[CloseCurlyQuote]s PC runs Linux\[CloseCurlyDoubleQuote]\n\n"
+}], "Text",
+ CellChangeTimes->{{3.693048368705718*^9, 3.693048422976996*^9}}],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.6930924865372143`*^9, 3.693092603920231*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"table", "=", 
+   RowBox[{"BooleanTable", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"p", ",", "q", ",", 
+       RowBox[{"p", "||", "q"}], ",", 
+       RowBox[{"And", "[", 
+        RowBox[{"p", ",", "q"}], "]"}], ",", 
+       RowBox[{"Xor", "[", 
+        RowBox[{"p", ",", "q"}], "]"}], ",", 
+       RowBox[{"Implies", "[", 
+        RowBox[{"p", ",", "q"}], "]"}], ",", 
+       RowBox[{"Implies", "[", 
+        RowBox[{"q", ",", "p"}], "]"}], ",", 
+       RowBox[{"Implies", "[", 
+        RowBox[{
+         RowBox[{"!", "q"}], ",", 
+         RowBox[{"!", "p"}]}], "]"}], ",", 
+       RowBox[{"Implies", "[", 
+        RowBox[{
+         RowBox[{"!", "p"}], ",", 
+         RowBox[{"!", "q"}]}], "]"}], ",", 
+       RowBox[{"And", "[", 
+        RowBox[{
+         RowBox[{"Implies", "[", 
+          RowBox[{"p", ",", "q"}], "]"}], ",", 
+         RowBox[{"Implies", "[", 
+          RowBox[{"q", ",", "p"}], "]"}]}], "]"}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"p", ",", "q"}], "}"}]}], "]"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.6930485428660393`*^9, 3.693048585810807*^9}, {
+   3.693048617052741*^9, 3.693048626706994*^9}, {3.693048711505702*^9, 
+   3.693048744487996*^9}, {3.6930487777448378`*^9, 3.693048955987857*^9}, 
+   3.693049234000903*^9, {3.693049711676206*^9, 3.693049717810225*^9}, {
+   3.693050462521837*^9, 3.693050463927956*^9}}],
+
+Cell[BoxData[
+ RowBox[{"(*", 
+  RowBox[{
+   RowBox[{
+   "find", " ", "out", " ", "how", " ", "to", " ", "do", " ", 
+    "\"\<exclusive or\>\""}], ",", " ", 
+   RowBox[{"and", " ", "type", " ", "the", " ", "symbols"}]}], 
+  "*)"}]], "Input",
+ CellChangeTimes->{{3.693049207444029*^9, 3.693049226767417*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"TableForm", "[", 
+  RowBox[{"table", ",", 
+   RowBox[{"TableHeadings", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{"Automatic", ",", 
+      RowBox[{"{", 
+       RowBox[{
+       "\"\<p\>\"", ",", "\"\<q\>\"", ",", "\"\<p \[Or] q\>\"", ",", 
+        "\"\<p \[And] q\>\"", ",", "\"\<p \[CirclePlus] q\>\"", ",", 
+        "\"\<p -> q\>\"", ",", "\"\<converse q -> p\>\"", ",", 
+        "\"\<contrapositive ~q -> ~p\>\"", ",", "\"\<Inverse ~p -> ~q\>\"", 
+        ",", "\"\<Biconditional p <-> q\>\""}], "}"}]}], "}"}]}]}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.693048958486268*^9, 3.693049012704373*^9}, {
+  3.693049049728354*^9, 3.6930491106451483`*^9}, {3.69304973257801*^9, 
+  3.69304973719273*^9}, {3.69305034418626*^9, 3.693050441257399*^9}, {
+  3.693050486429077*^9, 3.693050493678183*^9}}],
+
+Cell[BoxData[
+ TagBox[
+  TagBox[GridBox[{
+     {
+      StyleBox["\[Null]",
+       ShowStringCharacters->False], 
+      TagBox["\<\"p\"\>",
+       HoldForm], 
+      TagBox["\<\"q\"\>",
+       HoldForm], 
+      TagBox["\<\"p \[Or] q\"\>",
+       HoldForm], 
+      TagBox["\<\"p \[And] q\"\>",
+       HoldForm], 
+      TagBox["\<\"p \[CirclePlus] q\"\>",
+       HoldForm], 
+      TagBox["\<\"p -> q\"\>",
+       HoldForm], 
+      TagBox["\<\"converse q -> p\"\>",
+       HoldForm], 
+      TagBox["\<\"contrapositive ~q -> ~p\"\>",
+       HoldForm], 
+      TagBox["\<\"Inverse ~p -> ~q\"\>",
+       HoldForm], 
+      TagBox["\<\"Biconditional p <-> q\"\>",
+       HoldForm]},
+     {"1", "True", "True", "True", "True", "False", "True", "True", "True", 
+      "True", "True"},
+     {"2", "True", "False", "True", "False", "True", "False", "True", "False",
+       "True", "False"},
+     {"3", "False", "True", "True", "False", "True", "True", "False", "True", 
+      "False", "False"},
+     {"4", "False", "False", "False", "False", "False", "True", "True", 
+      "True", "True", "True"}
+    },
+    GridBoxAlignment->{
+     "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+      "RowsIndexed" -> {}},
+    GridBoxDividers->{
+     "Columns" -> {False, True, {False}, False}, "ColumnsIndexed" -> {}, 
+      "Rows" -> {False, True, {False}, False}, "RowsIndexed" -> {}},
+    GridBoxSpacings->{"Columns" -> {
+        Offset[0.27999999999999997`], {
+         Offset[2.0999999999999996`]}, 
+        Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+        Offset[0.2], {
+         Offset[0.4]}, 
+        Offset[0.2]}, "RowsIndexed" -> {}}],
+   {OutputFormsDump`HeadedRows, OutputFormsDump`HeadedColumns}],
+  Function[BoxForm`e$, 
+   TableForm[
+   BoxForm`e$, 
+    TableHeadings -> {
+     Automatic, {
+      "p", "q", "p \[Or] q", "p \[And] q", "p \[CirclePlus] q", "p -> q", 
+       "converse q -> p", "contrapositive ~q -> ~p", "Inverse ~p -> ~q", 
+       "Biconditional p <-> q"}}]]]], "Output",
+ CellChangeTimes->{
+  3.693049111266387*^9, 3.6930503467293863`*^9, 3.6930503791382847`*^9, {
+   3.6930504424290247`*^9, 3.6930504944300623`*^9}}]
+}, Open  ]],
+
+Cell[TextData[{
+ StyleBox["Bit operations\n\n",
+  FontWeight->"Bold"],
+ Cell[BoxData[
+  TagBox[GridBox[{
+     {"1", "1", "1", "1", "0", "1"},
+     {"0", "0", "1", "1", "1", "1"},
+     {"0", "0", "1", "1", "0", "1"}
+    },
+    GridBoxAlignment->{
+     "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+      "RowsIndexed" -> {}},
+    GridBoxSpacings->{"Columns" -> {
+        Offset[0.27999999999999997`], {
+         Offset[2.0999999999999996`]}, 
+        Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+        Offset[0.2], {
+         Offset[0.4]}, 
+        Offset[0.2]}, "RowsIndexed" -> {}}],
+   Function[BoxForm`e$, 
+    TableForm[BoxForm`e$]]]],
+  CellChangeTimes->{{3.6930508470239964`*^9, 3.693050868332737*^9}}],
+ StyleBox["\n",
+  FontWeight->"Bold"]
+}], "Text",
+ CellChangeTimes->{{3.693049192252948*^9, 3.693049198452232*^9}, {
+  3.693049340077454*^9, 3.693049343397464*^9}, {3.693050791975658*^9, 
+  3.693050821268621*^9}, {3.693050874279097*^9, 3.6930508782346973`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"BitAnd", "[", 
+  RowBox[{"61", ",", "15"}], "]"}]], "Input",
+ CellChangeTimes->{{3.693050824321755*^9, 3.693050830716723*^9}}],
+
+Cell[BoxData["13"], "Output",
+ CellChangeTimes->{3.69305083191645*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"IntegerDigits", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"61", ",", "15", ",", "13"}], "}"}], ",", "2", ",", "6"}], "]"}],
+   "//", "TableForm"}]], "Input",
+ CellChangeTimes->{{3.6930508353661633`*^9, 3.693050867858151*^9}}],
+
+Cell[BoxData[
+ TagBox[GridBox[{
+    {"1", "1", "1", "1", "0", "1"},
+    {"0", "0", "1", "1", "1", "1"},
+    {"0", "0", "1", "1", "0", "1"}
+   },
+   GridBoxAlignment->{
+    "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+     "RowsIndexed" -> {}},
+   GridBoxSpacings->{"Columns" -> {
+       Offset[0.27999999999999997`], {
+        Offset[2.0999999999999996`]}, 
+       Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+       Offset[0.2], {
+        Offset[0.4]}, 
+       Offset[0.2]}, "RowsIndexed" -> {}}],
+  Function[BoxForm`e$, 
+   TableForm[BoxForm`e$]]]], "Output",
+ CellChangeTimes->{{3.6930508470239964`*^9, 3.693050868332737*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["1.3 Propositional Equivalence ", "Subsubsection",
+ CellChangeTimes->{{3.693049347893173*^9, 3.693049365360457*^9}}],
+
+Cell[TextData[{
+ "Tautology -> always true\np v ~p\nContradiction -> always false\np ^ ~p\n\
+Propositions are logical equivalence if they have the same true values. \n\n\
+",
+ StyleBox["De Morgan\[CloseCurlyQuote]s Laws",
+  FontWeight->"Bold"],
+ "\n(make truth table)\nedit \n\n",
+ StyleBox["homework",
+  FontWeight->"Bold"],
+ "\n",
+ StyleBox["1.1 ",
+  FontWeight->"Bold"],
+ "\n",
+ StyleBox["5,12,13",
+  FontWeight->"Bold"],
+ ",16,22,31,32,43\n",
+ StyleBox["1.3",
+  FontWeight->"Bold"],
+ "\n5,8,16,26"
+}], "Text",
+ CellChangeTimes->{{3.693049369660459*^9, 3.693049459601083*^9}, {
+  3.693049596839669*^9, 3.693049613085527*^9}, {3.6930496457637568`*^9, 
+  3.693049661235025*^9}, {3.69304976302523*^9, 3.693049807582428*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"table2", " ", "=", " ", 
+  RowBox[{"BooleanTable", "[", 
+   RowBox[{"{", 
+    RowBox[{"r", ",", "p", ",", "q", ",", 
+     RowBox[{"!", "r"}], ",", 
+     RowBox[{"Implies", "[", 
+      RowBox[{"p", ",", 
+       RowBox[{"!", "r"}]}], "]"}], ",", 
+     RowBox[{"Implies", "[", 
+      RowBox[{"q", ",", 
+       RowBox[{"!", "r"}]}], "]"}], ",", 
+     RowBox[{
+      RowBox[{"Implies", "[", 
+       RowBox[{"p", ",", 
+        RowBox[{"!", "r"}]}], "]"}], "||", 
+      RowBox[{"Implies", "[", 
+       RowBox[{"q", ",", 
+        RowBox[{"!", "r"}]}], "]"}]}]}], "}"}], "]"}]}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+    "True", ",", "True", ",", "True", ",", "False", ",", "False", ",", 
+     "False", ",", "False"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+    "False", ",", "True", ",", "True", ",", "True", ",", "True", ",", "True", 
+     ",", "True"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+    "True", ",", "True", ",", "False", ",", "False", ",", "False", ",", 
+     "True", ",", "True"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+    "False", ",", "True", ",", "False", ",", "True", ",", "True", ",", "True",
+      ",", "True"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+    "True", ",", "False", ",", "True", ",", "False", ",", "True", ",", 
+     "False", ",", "True"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+    "False", ",", "False", ",", "True", ",", "True", ",", "True", ",", "True",
+      ",", "True"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+    "True", ",", "False", ",", "False", ",", "False", ",", "True", ",", 
+     "True", ",", "True"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+    "False", ",", "False", ",", "False", ",", "True", ",", "True", ",", 
+     "True", ",", "True"}], "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{3.693092606498948*^9}]
+}, Open  ]],
+
+Cell[TextData[{
+ StyleBox["Let p, q, and r be the propositions ",
+  FontWeight->"Bold"],
+ "\np : You have the flu.\nq : You miss the final examination.\nr : You pass \
+the course.\n\na) p \[RightArrow] q\nb) \[Not]q <-> r\nc) q \[RightArrow] \
+\[Not]r\nd) p \[Or] q \[Or] r\ne) (p\[RightArrow]\[Not]r) \[Or] (q\
+\[RightArrow]\[Not]r)\nf) (p\[And]q) \[Or] (\[Not]q\[And]r)"
+}], "Text",
+ CellChangeTimes->{{3.6930931222552147`*^9, 3.693093227374897*^9}}],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.6930932112840767`*^9, 3.69309321520925*^9}},
+ EmphasizeSyntaxErrors->True],
+
+Cell[BoxData[
+ RowBox[{"(*", 
+  RowBox[{"Truth", " ", "table", " ", "for", " ", "e"}], "*)"}]], "Input",
+ CellChangeTimes->{{3.693093238695204*^9, 3.693093245758527*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"TableForm", "[", 
+  RowBox[{"table2", ",", 
+   RowBox[{"TableHeadings", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{"Automatic", ",", 
+      RowBox[{"{", 
+       RowBox[{
+       "\"\<r\>\"", ",", "\"\<p\>\"", ",", "\"\<q\>\"", ",", "\"\<~r\>\"", 
+        ",", "\"\<p->~r\>\"", ",", "\"\<q->~r\>\"", ",", 
+        "\"\<(p->~r)\[Or](q->~r)\>\""}], "}"}]}], "}"}]}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.693092614204957*^9, 3.693092699004987*^9}}],
+
+Cell[BoxData[
+ TagBox[
+  TagBox[GridBox[{
+     {
+      StyleBox["\[Null]",
+       ShowStringCharacters->False], 
+      TagBox["\<\"r\"\>",
+       HoldForm], 
+      TagBox["\<\"p\"\>",
+       HoldForm], 
+      TagBox["\<\"q\"\>",
+       HoldForm], 
+      TagBox["\<\"~r\"\>",
+       HoldForm], 
+      TagBox["\<\"p->~r\"\>",
+       HoldForm], 
+      TagBox["\<\"q->~r\"\>",
+       HoldForm], 
+      TagBox["\<\"(p->~r)\[Or](q->~r)\"\>",
+       HoldForm]},
+     {"1", "True", "True", "True", "False", "False", "False", "False"},
+     {"2", "False", "True", "True", "True", "True", "True", "True"},
+     {"3", "True", "True", "False", "False", "False", "True", "True"},
+     {"4", "False", "True", "False", "True", "True", "True", "True"},
+     {"5", "True", "False", "True", "False", "True", "False", "True"},
+     {"6", "False", "False", "True", "True", "True", "True", "True"},
+     {"7", "True", "False", "False", "False", "True", "True", "True"},
+     {"8", "False", "False", "False", "True", "True", "True", "True"}
+    },
+    GridBoxAlignment->{
+     "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+      "RowsIndexed" -> {}},
+    GridBoxDividers->{
+     "Columns" -> {False, True, {False}, False}, "ColumnsIndexed" -> {}, 
+      "Rows" -> {False, True, {False}, False}, "RowsIndexed" -> {}},
+    GridBoxSpacings->{"Columns" -> {
+        Offset[0.27999999999999997`], {
+         Offset[2.0999999999999996`]}, 
+        Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+        Offset[0.2], {
+         Offset[0.4]}, 
+        Offset[0.2]}, "RowsIndexed" -> {}}],
+   {OutputFormsDump`HeadedRows, OutputFormsDump`HeadedColumns}],
+  Function[BoxForm`e$, 
+   TableForm[
+   BoxForm`e$, 
+    TableHeadings -> {
+     Automatic, {
+      "r", "p", "q", "~r", "p->~r", "q->~r", 
+       "(p->~r)\[Or](q->~r)"}}]]]], "Output",
+ CellChangeTimes->{3.693092699968646*^9}]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{1248, 822},
+WindowMargins->{{Automatic, 26}, {-33, Automatic}},
+FrontEndVersion->"11.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (July 28, \
+2016)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 497, 10, 201, "Text"],
+Cell[1058, 32, 94, 1, 32, "Input"],
+Cell[1155, 35, 1397, 36, 54, "Input"],
+Cell[2555, 73, 306, 8, 32, "Input"],
+Cell[CellGroupData[{
+Cell[2886, 85, 819, 17, 75, "Input"],
+Cell[3708, 104, 2172, 59, 103, "Output"]
+}, Open  ]],
+Cell[5895, 166, 1021, 27, 121, "Text"],
+Cell[CellGroupData[{
+Cell[6941, 197, 150, 3, 32, "Input"],
+Cell[7094, 202, 70, 1, 32, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[7201, 208, 267, 7, 32, "Input"],
+Cell[7471, 217, 678, 18, 63, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[8186, 240, 121, 1, 35, "Subsubsection"],
+Cell[8310, 243, 723, 22, 296, "Text"],
+Cell[CellGroupData[{
+Cell[9058, 269, 604, 18, 32, "Input"],
+Cell[9665, 289, 1244, 35, 75, "Output"]
+}, Open  ]],
+Cell[10924, 327, 452, 8, 220, "Text"],
+Cell[11379, 337, 123, 2, 32, "Input"],
+Cell[11505, 341, 170, 3, 32, "Input"],
+Cell[CellGroupData[{
+Cell[11700, 348, 471, 11, 32, "Input"],
+Cell[12174, 361, 1898, 50, 175, "Output"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+

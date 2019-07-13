@@ -274,6 +274,25 @@ Syntax Theme: Atom Dark or One Dark
 
     首页的卡片翻动效果非常赞。
 
+## IoT
+- [Exploring Arduino](http://www.exploringarduino.com/content/ch2/)
+
+- [Spark Fun](www.sparkfun.com)
+
+## graph theory
+-[Kiran Kuppa youtube channel](https://www.youtube.com/playlist?list=PLoJC20gNfC2gmT_5WgwYwGMvgCjYVsIQg)
+
+## LaTex tools
+-[Detexify](http://detexify.kirelabs.org/classify.html)
+-[StackExchange reference](http://meta.math.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference)
+
+## math
+
+- [The Math Page](http://www.themathpage.com/alg/difference-two-squares-2.htm)
+
+## python
+- [Nael Shiab](http://naelshiab.com/tutorial-how-to-code-a-robot-reporter/)
+
 ## Comments
 
 {% include comments.html %}
