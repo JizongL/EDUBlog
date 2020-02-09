@@ -6,7 +6,7 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-title: TmmGeek
+title: ddd
 brief-intro: Artificial Intelligence and Big Data Developer
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://gaohaoyang.github.io" # the base hostname & protocol for your site
@@ -14,13 +14,13 @@ url: "https://gaohaoyang.github.io" # the base hostname & protocol for your site
 permalink: /:year/:month/:day/:title/
 
 # other links
-twitter_username: JizongLiang
+twitter_username: dsl
 facebook_username: gaohaoyang.water
-github_username:  JizongL
+github_username:  dsl
 email: 2015rpro@gmail.com
 weibo_username: CindeFella
 zhihu_username: gaohaoyang
-linkedIn_username: jizongliang
+linkedIn_username: dsl
 dribbble_username:
 
 description_footer: Computer and Math related
